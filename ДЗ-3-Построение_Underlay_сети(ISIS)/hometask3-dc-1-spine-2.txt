@@ -1,0 +1,27 @@
+dc1-spine-2# show running-config isis
+
+!Command: show running-config isis
+!Running configuration last done at: Sat Mar  4 17:20:09 2023
+!Time: Sat Mar  4 17:46:29 2023
+
+version 9.3(7a) Bios:version  
+feature isis
+
+router isis otus
+  net 47.0000.0000.0001.c002.00
+  is-type level-2
+
+interface loopback1
+  ip router isis otus
+
+interface loopback2
+  ip router isis otus
+
+interface Ethernet1/1
+  ip router isis otus
+
+interface Ethernet1/2
+  ip router isis otus
+
+interface Ethernet1/3
+  ip router isis otus
