@@ -94,7 +94,7 @@
 |dc1-leaf-03| 10  |    2        |  2   |   5  | /32| #p2p-link-from-dc1-leaf-03-to-dc1-spine-2|
 
 #### Проверка работы протокола:
-'
+```
 dc1-leaf-03# sh running-config section bgp
 show running-config | section bgp
 feature bgp
@@ -118,10 +118,10 @@ route-map rd-conn, permit, sequence 10
   Match clauses:
     interface: loopback0 loopback1 
   Set clauses:
-'
+```
 
 Проверка маршрутной информации
-'
+```
 dc1-leaf-03# show ip route 
 IP Route Table for VRF "default"
 '*' denotes best ucast next-hop
@@ -159,8 +159,9 @@ IP Route Table for VRF "default"
     *via 10.4.3.1, Vlan43, [0/0], 05:57:17, direct
 10.4.3.1/32, ubest/mbest: 1/0, attached
     *via 10.4.3.1, Vlan43, [0/0], 05:57:17, local
-'
-###Проверка связности\
+```
+###Проверка связности
+```
 dc1-leaf-03# ping 10.0.1.1 source-interface loopback 1
 PING 10.0.1.1 (10.0.1.1): 56 data bytes
 64 bytes from 10.0.1.1: icmp_seq=0 ttl=253 time=12.458 ms
