@@ -1,0 +1,23 @@
+dc1-leaf-02# sh running-config section bgp
+show running-config | section bgp
+feature bgp
+router bgp 65002
+  router-id 10.0.1.2
+  bestpath as-path multipath-relax
+  reconnect-interval 12
+  address-family ipv4 unicast
+    redistribute direct route-map rd-conn
+    maximum-paths 64
+  template peer spine
+    remote-as 65000
+    timers 3 9
+    address-family ipv4 unicast
+  neighbor 10.2.1.2
+    inherit peer spine
+  neighbor 10.2.2.2
+    inherit peer spine
+dc1-leaf-02# show route-map rd-conn
+route-map rd-conn, permit, sequence 10 
+  Match clauses:
+    interface: loopback0 loopback1 
+  Set clauses:
