@@ -1,0 +1,66 @@
+dc1-spine-2# show running-config 
+
+nv overlay evpn
+feature bgp
+feature interface-vlan
+feature vn-segment-vlan-based
+feature nv overlay
+
+
+vlan 1
+
+route-map rd-conn permit 10
+  match interface loopback1 
+vrf context management
+
+
+interface Vlan1
+
+interface Ethernet1/1
+  description p2p-link-from-dc1-leaf-01-to-dc1-spine-2
+  no switchport
+  ip address 10.2.2.0/31
+  no shutdown
+
+interface Ethernet1/2
+  description p2p-link-from-dc1-leaf-02-to-dc1-spine-2
+  no switchport
+  ip address 10.2.2.2/31
+  no shutdown
+
+interface Ethernet1/3
+  description p2p-link-from-dc1-leaf-03-to-dc1-spine-2
+  no switchport
+  ip address 10.2.2.4/31
+  no shutdown
+
+interface mgmt0
+  vrf member management
+
+interface loopback1
+  description Loopback1-Spine2
+  ip address 10.0.2.0/32
+
+interface loopback2
+  description Loopback2-Spine2
+  ip address 10.1.2.0/32
+
+
+router bgp 65000
+  router-id 10.0.2.0
+  reconnect-interval 12
+  address-family ipv4 unicast
+    redistribute direct route-map rd-conn
+  address-family l2vpn evpn
+  neighbor 10.2.2.1
+    remote-as 65001
+    timers 3 9
+    address-family ipv4 unicast
+  neighbor 10.2.2.3
+    remote-as 65002
+    timers 3 9
+    address-family ipv4 unicast
+  neighbor 10.2.2.5
+    remote-as 65003
+    timers 3 9
+    address-family ipv4 unicast

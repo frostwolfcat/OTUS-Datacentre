@@ -37,7 +37,6 @@ router bgp 65001
       send-community
       send-community extended
       route-map unchanged out
-      rewrite-evpn-rt-asn
   neighbor 10.0.1.3
     remote-as 65003
     update-source loopback1

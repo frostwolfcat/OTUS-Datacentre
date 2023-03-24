@@ -1,0 +1,144 @@
+dc1-leaf-01# show running-config 
+
+version 9.3(7a) Bios:version  
+hostname dc1-leaf-01
+
+nv overlay evpn
+feature bgp
+feature interface-vlan
+feature vn-segment-vlan-based
+feature nv overlay
+
+
+vlan 1,41-43,1000
+vlan 41
+  name lf1-srv
+  vn-segment 10041
+vlan 42
+  name lf2-srv
+  vn-segment 10042
+vlan 43
+  name lf3-srv
+  vn-segment 10043
+vlan 1000
+  vn-segment 10000
+
+route-map UNCHANGED permit 10
+  set ip next-hop unchanged
+route-map rd-conn permit 10
+  match interface loopback1 
+vrf context PROD
+  vni 10000
+  rd 10.0.1.1:10000
+  address-family ipv4 unicast
+    route-target both auto
+    route-target both auto evpn
+vrf context management
+
+
+interface Vlan1
+
+interface Vlan41
+  description dc1-leaf-01-vl41
+  no shutdown
+  vrf member PROD
+
+interface Vlan42
+  description dc1-leaf-03-vl42
+  no shutdown
+  vrf member PROD
+
+interface Vlan43
+  description dc1-leaf-03-vl43
+  no shutdown
+  vrf member PROD
+
+interface Vlan1000
+  no shutdown
+  vrf member PROD
+  no ip redirects
+  ip forward
+
+interface nve1
+  no shutdown
+  host-reachability protocol bgp
+  source-interface loopback1
+  member vni 10000 associate-vrf
+  member vni 10041-10050
+    ingress-replication protocol bgp
+
+interface Ethernet1/1
+  description p2p-link-from-dc1-leaf-01-to-dc1-spine-1
+  no switchport
+  ip address 10.2.1.1/31
+  no shutdown
+
+interface Ethernet1/2
+  description p2p-link-from-dc1-leaf-01-to-dc1-spine-2
+  no switchport
+  ip address 10.2.2.1/31
+  no shutdown
+
+interface Ethernet1/6
+  switchport access vlan 43
+
+interface Ethernet1/7
+  switchport access vlan 41
+  spanning-tree port type edge
+
+interface loopback1
+  description Loopback1-Leaf1
+  ip address 10.0.1.1/32
+
+interface loopback2
+  description Loopback2-Leaf1
+  ip address 10.1.2.1/32
+
+router bgp 65001
+  router-id 10.0.1.1
+  bestpath as-path multipath-relax
+  reconnect-interval 12
+  address-family ipv4 unicast
+    redistribute direct route-map rd-conn
+    maximum-paths 64
+  address-family l2vpn evpn
+  template peer spine
+    remote-as 65000
+    timers 3 9
+    address-family ipv4 unicast
+      allowas-in 2
+  neighbor 10.0.1.2
+    remote-as 65002
+    update-source loopback1
+    ebgp-multihop 3
+    address-family l2vpn evpn
+      send-community
+      send-community extended
+      route-map UNCHANGED out
+      rewrite-evpn-rt-asn
+  neighbor 10.0.1.3
+    remote-as 65003
+    update-source loopback1
+    ebgp-multihop 2
+    address-family l2vpn evpn
+      send-community
+      send-community extended
+      route-map UNCHANGED out
+      rewrite-evpn-rt-asn
+  neighbor 10.2.1.0
+    inherit peer spine
+  neighbor 10.2.2.0
+    inherit peer spine
+evpn
+  vni 10041 l2
+    rd 10.0.1.1:10041
+    route-target import auto
+    route-target export auto
+  vni 10042 l2
+    rd 10.0.1.1:10042
+    route-target import auto
+    route-target export auto
+  vni 10043 l2
+    rd 10.0.1.1:10043
+    route-target import auto
+    route-target export auto

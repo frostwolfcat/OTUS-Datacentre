@@ -1,5 +1,5 @@
-dc1-leaf-01# sh running-config section bgp
-show running-config | section bgp
+route-map rd-conn permit 10
+  match interface loopback1
 feature bgp
 router bgp 65001
   router-id 10.0.1.1
@@ -12,13 +12,7 @@ router bgp 65001
     remote-as 65000
     timers 3 9
     address-family ipv4 unicast
-      capability additional-paths receive
   neighbor 10.2.1.0
     inherit peer spine
   neighbor 10.2.2.0
     inherit peer spine
-dc1-leaf-01# show route-map rd-conn
-route-map rd-conn, permit, sequence 10 
-  Match clauses:
-    interface: loopback0 loopback1 
-  Set clauses:
