@@ -1,7 +1,5 @@
 dc1-spine-1# show running-config 
 
-hostname dc1-spine-1
-
 nv overlay evpn
 feature bgp
 feature interface-vlan
@@ -35,6 +33,11 @@ interface Ethernet1/3
   no switchport
   ip address 10.2.1.4/31
   no shutdown
+interface Ethernet1/4
+  description p2p-link-from-dc1-leaf-03-to-dc1-spine-1
+  no switchport
+  ip address 10.2.1.6/31
+  no shutdown
 
 interface loopback1
   description Loopback1-Spine1
@@ -63,5 +66,9 @@ router bgp 65000
     address-family ipv4 unicast
   neighbor 10.2.1.5
     remote-as 65003
+    timers 3 9
+    address-family ipv4 unicast
+  neighbor 10.2.1.7
+    remote-as 65001
     timers 3 9
     address-family ipv4 unicast

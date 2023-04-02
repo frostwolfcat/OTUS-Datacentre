@@ -1,0 +1,370 @@
+dc1-leaf-04# show running-config
+
+!Command: show running-config
+!Running configuration last done at: Sun Apr  2 21:50:41 2023
+!Time: Sun Apr  2 22:03:01 2023
+
+version 9.3(7a) Bios:version
+hostname dc1-leaf-04
+vdc dc1-leaf-04 id 1
+  limit-resource vlan minimum 16 maximum 4094
+  limit-resource vrf minimum 2 maximum 4096
+  limit-resource port-channel minimum 0 maximum 511
+  limit-resource u4route-mem minimum 248 maximum 248
+  limit-resource u6route-mem minimum 96 maximum 96
+  limit-resource m4route-mem minimum 58 maximum 58
+  limit-resource m6route-mem minimum 8 maximum 8
+
+cfs eth distribute
+nv overlay evpn
+feature bgp
+feature fabric forwarding
+feature udld
+feature interface-vlan
+feature vn-segment-vlan-based
+feature lacp
+feature vpc
+feature nv overlay
+
+no password strength-check
+username admin password 5 $5$HMJOFC$Jg9WJqEsZsou18PEVNmSvv5Ev7tiw8VRRTlw1.Wyrb8
+ role network-admin
+ip domain-lookup
+spanning-tree mode mst
+copp profile strict
+snmp-server user admin network-admin auth md5 0x38b3da896e52f981cc0318eb64efc8cb
+ priv 0x38b3da896e52f981cc0318eb64efc8cb localizedkey
+rmon event 1 log trap public description FATAL(1) owner PMON@FATAL
+rmon event 2 log trap public description CRITICAL(2) owner PMON@CRITICAL
+rmon event 3 log trap public description ERROR(3) owner PMON@ERROR
+rmon event 4 log trap public description WARNING(4) owner PMON@WARNING
+rmon event 5 log trap public description INFORMATION(5) owner PMON@INFO
+
+fabric forwarding anycast-gateway-mac 0001.0001.0001
+vlan 1,41-43,1000
+vlan 41
+  name lf1-srv
+  vn-segment 10041
+vlan 42
+  name lf2-srv
+  vn-segment 10042
+vlan 43
+  name lf3-srv
+  vn-segment 10043
+vlan 1000
+  vn-segment 10000
+
+ip prefix-list secondary seq 5 permit 10.0.1.141/32
+route-map UNCHANGED permit 10
+  set ip next-hop unchanged
+route-map rd-conn permit 10
+  match interface loopback1
+route-map rd-conn permit 20
+  match ip address prefix-list secondary
+vrf context PROD
+  vni 10000
+  rd auto
+  address-family ipv4 unicast
+    route-target both auto
+    route-target both auto evpn
+vrf context management
+port-channel load-balance src-dst mac
+vpc domain 14
+  peer-switch
+  role priority 200
+  peer-keepalive destination 172.16.0.0 source 172.16.0.1
+  delay restore 240
+  peer-gateway
+  layer3 peer-router
+  auto-recovery
+  delay restore interface-vlan 80
+  ip arp synchronize
+
+
+interface Vlan1
+  no ip redirects
+  no ipv6 redirects
+
+interface Vlan41
+  description dc1-leaf-01-vl41
+  no shutdown
+  vrf member PROD
+  no ip redirects
+  no ipv6 redirects
+  fabric forwarding mode anycast-gateway
+
+interface Vlan42
+  description dc1-leaf-03-vl42
+  no shutdown
+  vrf member PROD
+  no ip redirects
+  ip address 10.4.2.254/24
+  no ipv6 redirects
+  fabric forwarding mode anycast-gateway
+
+interface Vlan43
+  description dc1-leaf-03-vl43
+  no shutdown
+  vrf member PROD
+  no ip redirects
+  ip address 10.4.3.254/24
+  no ipv6 redirects
+  fabric forwarding mode anycast-gateway
+
+interface Vlan1000
+  no shutdown
+  vrf member PROD
+  no ip redirects
+  ip forward
+  no ipv6 redirects
+
+interface port-channel6
+  switchport mode trunk
+  switchport trunk allowed vlan 41
+  spanning-tree port type normal
+  vpc 6
+
+interface port-channel7
+  description VPC-LINK-to-10.4.3.3-srv
+  switchport access vlan 41
+  vpc 7
+
+interface port-channel12
+
+interface port-channel100
+
+interface port-channel1000
+  description vpc-peer-link
+  switchport mode trunk
+  spanning-tree port type network
+  vpc peer-link
+
+interface nve1
+  no shutdown
+  host-reachability protocol bgp
+  advertise virtual-rmac
+  source-interface loopback1
+  member vni 10000 associate-vrf
+  member vni 10041-10050
+    ingress-replication protocol bgp
+
+interface Ethernet1/1
+  description p2p-link-from-dc1-leaf-03-to-dc1-spine-1
+  no switchport
+  ip address 10.2.1.7/31
+  no shutdown
+
+interface Ethernet1/2
+  description p2p-link-from-dc1-leaf-03-to-dc1-spine-2
+  no switchport
+  ip address 10.2.2.7/31
+  no shutdown
+
+interface Ethernet1/3
+  description vpc-peer-link-member
+  switchport mode trunk
+  channel-group 1000 mode active
+
+interface Ethernet1/4
+  description vpc-peer-link-member
+  switchport mode trunk
+  channel-group 1000 mode active
+
+interface Ethernet1/5
+
+interface Ethernet1/6
+  description to-srv
+  switchport mode trunk
+  switchport trunk allowed vlan 41
+  channel-group 6
+
+interface Ethernet1/7
+  switchport access vlan 41
+  spanning-tree port type edge
+  channel-group 7
+
+interface Ethernet1/8
+
+interface Ethernet1/9
+
+interface Ethernet1/10
+
+interface Ethernet1/11
+
+interface Ethernet1/12
+
+interface Ethernet1/13
+
+interface Ethernet1/14
+
+interface Ethernet1/15
+
+interface Ethernet1/16
+
+interface Ethernet1/17
+
+interface Ethernet1/18
+
+interface Ethernet1/19
+
+interface Ethernet1/20
+
+interface Ethernet1/21
+
+interface Ethernet1/22
+
+interface Ethernet1/23
+
+interface Ethernet1/24
+
+interface Ethernet1/25
+
+interface Ethernet1/26
+
+interface Ethernet1/27
+
+interface Ethernet1/28
+
+interface Ethernet1/29
+
+interface Ethernet1/30
+
+interface Ethernet1/31
+
+interface Ethernet1/32
+
+interface Ethernet1/33
+
+interface Ethernet1/34
+
+interface Ethernet1/35
+
+interface Ethernet1/36
+
+interface Ethernet1/37
+
+interface Ethernet1/38
+
+interface Ethernet1/39
+
+interface Ethernet1/40
+
+interface Ethernet1/41
+
+interface Ethernet1/42
+
+interface Ethernet1/43
+
+interface Ethernet1/44
+
+interface Ethernet1/45
+
+interface Ethernet1/46
+
+interface Ethernet1/47
+
+interface Ethernet1/48
+
+interface Ethernet1/49
+
+interface Ethernet1/50
+
+interface Ethernet1/51
+
+interface Ethernet1/52
+
+interface Ethernet1/53
+
+interface Ethernet1/54
+
+interface Ethernet1/55
+
+interface Ethernet1/56
+
+interface Ethernet1/57
+
+interface Ethernet1/58
+
+interface Ethernet1/59
+
+interface Ethernet1/60
+
+interface Ethernet1/61
+
+interface Ethernet1/62
+
+interface Ethernet1/63
+
+interface Ethernet1/64
+
+interface mgmt0
+  vrf member management
+  ip address 172.16.0.1/31
+
+interface loopback0
+
+interface loopback1
+  description Loopback1-Leaf3
+  ip address 10.0.1.4/32
+  ip address 10.0.1.141/32 secondary
+
+interface loopback2
+  description Loopback2-Leaf3
+  ip address 10.1.2.4/32
+icam monitor scale
+
+line console
+line vty
+router bgp 65001
+  router-id 10.0.1.4
+  bestpath as-path multipath-relax
+  reconnect-interval 12
+  address-family ipv4 unicast
+    redistribute direct route-map rd-conn
+    maximum-paths 64
+  address-family l2vpn evpn
+    advertise-pip
+  template peer spine
+    remote-as 65000
+    timers 3 9
+    address-family ipv4 unicast
+      allowas-in 2
+  neighbor 10.0.1.2
+    remote-as 65002
+    update-source loopback1
+    ebgp-multihop 3
+    address-family l2vpn evpn
+      send-community
+      send-community extended
+      route-map UNCHANGED out
+      rewrite-evpn-rt-asn
+  neighbor 10.0.1.3
+    remote-as 65003
+    update-source loopback1
+    ebgp-multihop 2
+    address-family l2vpn evpn
+      send-community
+      send-community extended
+      route-map UNCHANGED out
+      rewrite-evpn-rt-asn
+  neighbor 10.2.1.6
+    inherit peer spine
+  neighbor 10.2.2.6
+    inherit peer spine
+  vrf PROD
+    address-family ipv4 unicast
+      advertise l2vpn evpn
+      maximum-paths 64
+evpn
+  vni 10041 l2
+    rd 10.0.1.141:10041
+    route-target import auto
+    route-target export auto
+  vni 10042 l2
+    rd 10.0.1.141:10042
+    route-target import auto
+    route-target export auto
+  vni 10043 l2
+    rd 10.0.1.141:10043
+    route-target import auto
+    route-target export auto

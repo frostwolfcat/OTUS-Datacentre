@@ -1,0 +1,23 @@
+interface Vlan41
+  no shutdown
+  ip address 10.4.1.10/24
+
+interface port-channel6
+  no switchport
+
+interface port-channel12
+  description po-to-vpc-leaf
+  switchport mode trunk
+  switchport trunk allowed vlan 41
+
+interface Ethernet1/1
+  description members-po-to-vpc-nexus
+  switchport mode trunk
+  switchport trunk allowed vlan 41
+  channel-group 12
+
+interface Ethernet1/2
+  description members-po-to-vpc-nexus
+  switchport mode trunk
+  switchport trunk allowed vlan 41
+  channel-group 12
