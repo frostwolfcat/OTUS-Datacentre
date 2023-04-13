@@ -1,8 +1,8 @@
 dc1-leaf-03# show running-config 
 
 !Command: show running-config
-!Running configuration last done at: Sun Apr  2 21:44:25 2023
-!Time: Sun Apr  2 22:17:04 2023
+!Running configuration last done at: Thu Apr 13 20:02:21 2023
+!Time: Thu Apr 13 20:20:39 2023
 
 version 9.3(7a) Bios:version
 hostname dc1-leaf-03
@@ -26,8 +26,8 @@ username admin password 5 $5$OCBLFI$8QAYrYoV8EbBTi4mwpPzDrDp6N9.bFK/qDBgMRqmo3C
  role network-admin
 ip domain-lookup
 copp profile strict
-snmp-server user admin network-admin auth md5 0x5b147ef2578635eca21816a5d706ee95
- priv 0x5b147ef2578635eca21816a5d706ee95 localizedkey
+snmp-server user admin network-admin auth md5 0x923ff6b61f57ad70b936226f56376504
+ priv 0x923ff6b61f57ad70b936226f56376504 localizedkey
 rmon event 1 log trap public description FATAL(1) owner PMON@FATAL
 rmon event 2 log trap public description CRITICAL(2) owner PMON@CRITICAL
 rmon event 3 log trap public description ERROR(3) owner PMON@ERROR

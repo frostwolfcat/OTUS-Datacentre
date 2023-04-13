@@ -1,10 +1,11 @@
 dc1-bleaf-02# show running-config
 
 !Command: show running-config
-!Running configuration last done at: Sun Apr  2 20:52:22 2023
-!Time: Sun Apr  2 22:15:27 2023
+!Running configuration last done at: Thu Apr 13 19:06:42 2023
+!Time: Thu Apr 13 20:19:37 2023
 
 version 9.3(7a) Bios:version
+
 hostname dc1-bleaf-02
 vdc dc1-bleaf-02 id 1
   limit-resource vlan minimum 16 maximum 4094
