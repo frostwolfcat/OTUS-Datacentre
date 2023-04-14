@@ -90,6 +90,45 @@
 |dc1-leaf-01|14    |100 | #dst-sw-for-vlan41-srv|
 |dc1-leaf-04|14    |200 | #dst-sw-for-vlan41-srv|
 
+Дополнения к конфигурации VPC, для корректной работы:
+
+Добавить в конфигурацию для VPC:
+
+Согласно рекомендациям Cisco, для VPC увеличить таймеры, для нивелирования проблем с ложно-положительной генерацией TCN
+
+	switch(config)# spanning-tree vlan 1-3967 hello-time 4
+	switch(config)# spanning-tree vlan 1-3967 forward-time 30
+	switch(config)# spanning-tree vlan 1-3967 max-age 40
+
+Распределить tcam для arp-supression
+
+	hardware access-list tcam region racl 512
+	hardware access-list tcam region arp-ether 256 double-wide
+	
+
+Увеличить MTU до 9216
+
+    If the fabric only contains Cisco Nexus 9000 and 7000 series switches, then the
+    MTU should be set to 9216.
+
+
+Убрать проверку peer-as-check для распространения маршрутов между нодами
+
+	neighbor 10.0.1.2 remote-as 65551
+	address-family ipv4 unicast
+	disable-peer-as-check
+	send-community both
+	
+	
+Настроить PIP и RMAC для правильной генерации L3 маршуртов в EVPN
+
+	switch(config)# router bgp 65536
+	address-family 12vpn evpn
+	advertise-pip
+	interface nve 1
+	advertise virtual-rmac
+
+
 
 **Перечень ASN для маршрутизаторов**
 
@@ -160,62 +199,11 @@
 |dc1-spine-2| 10  |    2        |  2   |   4  | /32| #p2p-link-from-dc1-leaf-03-to-dc1-spine-2|
 |dc1-leaf-03| 10  |    2        |  2   |   5  | /32| #p2p-link-from-dc1-leaf-03-to-dc1-spine-2|
 
-```
-interface Ethernet1/3
-  description p2p-link-from-dc1-leaf-04-to-dc1-spine-1
-  no switchport
-  ip address 10.2.1.6/31
-  no shutdown
 
-  neighbor 10.2.1.7
-    remote-as 65001
-    timers 3 9
-    address-family ipv4 unicast
-
-
- neighbor 10.0.1.1
-    remote-as 65001
-    update-source loopback1
-    ebgp-multihop 3
-    address-family l2vpn evpn
-      send-community
-      send-community extended
-      route-map UNCHANGED out
-
- neighbor 10.0.1.4
-    remote-as 65001
-    update-source loopback1
-    ebgp-multihop 3
-    address-family l2vpn evpn
-      send-community
-      send-community extended
-      route-map UNCHANGED out
-	  
-	  
-evpn
-  vni 10041 l2
-    rd 10.0.1.141:10041
-    route-target import auto
-    route-target export auto
-  vni 10042 l2
-    rd 10.0.1.141:10042
-    route-target import auto
-    route-target export auto
-  vni 10043 l2
-    rd 10.0.1.141:10043
-    route-target import auto
-    route-target export auto
-
-vrf context PROD
-  vni 10000
-  rd 10.0.1.141:10000
-  address-family ipv4 unicast
-    route-target both auto
-    route-target both auto evpn
-```	
 #### Проверка работы VPC:
 
 *Вывод информации о VPC*
+
 ```
 dc1-leaf-04# show vpc 
 Legend:
@@ -235,7 +223,7 @@ Graceful Consistency Check        : Enabled
 Auto-recovery status              : Enabled, timer is off.(timeout = 240s)
 Delay-restore status              : Timer is off.(timeout = 240s)
 Delay-restore SVI status          : Timer is off.(timeout = 80s)
-Operational Layer3 Peer-router    : Disabled
+Operational Layer3 Peer-router    : Enabled
 Virtual-peerlink mode             : Disabled
 
 vPC Peer-link status
@@ -253,5 +241,10 @@ Id    Port          Status Consistency Reason                Active vlans
          
                                                                                 
          
-7     Po7           up     success     success               41       
+7     Po7           up     success     success               41                 
+         
+
+Please check "show vpc consistency-parameters vpc <vpc-num>" for the 
+consistency reason of down vpc and for type-2 consistency reasons for 
+any vpc.
 ```
