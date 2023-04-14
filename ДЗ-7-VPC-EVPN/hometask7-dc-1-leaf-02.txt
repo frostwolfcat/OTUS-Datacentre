@@ -1,11 +1,10 @@
 dc1-bleaf-02# show running-config
 
 !Command: show running-config
-!Running configuration last done at: Thu Apr 13 19:06:42 2023
-!Time: Thu Apr 13 20:19:37 2023
+!Running configuration last done at: Fri Apr 14 22:05:57 2023
+!Time: Fri Apr 14 22:11:27 2023
 
 version 9.3(7a) Bios:version
-
 hostname dc1-bleaf-02
 vdc dc1-bleaf-02 id 1
   limit-resource vlan minimum 16 maximum 4094
@@ -35,6 +34,7 @@ rmon event 3 log trap public description ERROR(3) owner PMON@ERROR
 rmon event 4 log trap public description WARNING(4) owner PMON@WARNING
 rmon event 5 log trap public description INFORMATION(5) owner PMON@INFO
 
+fabric forwarding anycast-gateway-mac 0001.0002.0003
 vlan 1,41-43,1000
 vlan 41
   name lf1-srv
@@ -68,18 +68,21 @@ interface Vlan41
   no shutdown
   vrf member PROD
   ip address 10.4.1.254/24
+  fabric forwarding mode anycast-gateway
 
 interface Vlan42
   description dc1-leaf-03-vl42
   no shutdown
   vrf member PROD
   ip address 10.4.2.254/24
+  fabric forwarding mode anycast-gateway
 
 interface Vlan43
   description dc1-leaf-03-vl43
   no shutdown
   vrf member PROD
   ip address 10.4.3.254/24
+  fabric forwarding mode anycast-gateway
 
 interface Vlan1000
   no shutdown
@@ -98,29 +101,36 @@ interface nve1
 interface Ethernet1/1
   description p2p-link-from-dc1-leaf-02-to-dc1-spine-1
   no switchport
+  mtu 9216
   ip address 10.2.1.3/31
   no shutdown
 
 interface Ethernet1/2
   description p2p-link-from-dc1-leaf-02-to-dc1-spine-2
   no switchport
+  mtu 9216
   ip address 10.2.2.3/31
   no shutdown
 
 interface Ethernet1/3
+  mtu 9216
 
 interface Ethernet1/4
+  mtu 9216
 
 interface Ethernet1/5
   switchport access vlan 43
+  mtu 9216
 
 interface Ethernet1/6
   description l2vpn-probe
   switchport access vlan 41
+  mtu 9216
 
 interface Ethernet1/7
   switchport access vlan 42
   spanning-tree port type edge
+  mtu 9216
 
 interface Ethernet1/8
 

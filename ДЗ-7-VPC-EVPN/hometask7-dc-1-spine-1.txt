@@ -1,8 +1,8 @@
 dc1-spine-1# show running-config 
 
 !Command: show running-config
-!Running configuration last done at: Thu Apr 13 19:52:06 2023
-!Time: Thu Apr 13 20:18:34 2023
+!Running configuration last done at: Fri Apr 14 21:22:50 2023
+!Time: Fri Apr 14 21:23:36 2023
 
 version 9.3(7a) Bios:version
 hostname dc1-spine-1
@@ -48,32 +48,39 @@ interface Vlan1
 interface Ethernet1/1
   description p2p-link-from-dc1-leaf-01-to-dc1-spine-1
   no switchport
+  mtu 9216
   ip address 10.2.1.0/31
   no shutdown
 
 interface Ethernet1/2
   description p2p-link-from-dc1-leaf-02-to-dc1-spine-1
   no switchport
+  mtu 9216
   ip address 10.2.1.2/31
   no shutdown
 
 interface Ethernet1/3
   description p2p-link-from-dc1-leaf-03-to-dc1-spine-1
   no switchport
+  mtu 9216
   ip address 10.2.1.4/31
   no shutdown
 
 interface Ethernet1/4
   description p2p-link-from-dc1-leaf-04-to-dc1-spine-1
   no switchport
+  mtu 9216
   ip address 10.2.1.6/31
   no shutdown
 
 interface Ethernet1/5
+  mtu 9216
 
 interface Ethernet1/6
+  mtu 9216
 
 interface Ethernet1/7
+  mtu 9216
 
 interface Ethernet1/8
 

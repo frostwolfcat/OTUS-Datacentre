@@ -1,10 +1,10 @@
-dc1-leaf-01# show running-config 
+dc1-leaf-01# show running-config
 
 !Command: show running-config
-!Running configuration last done at: Thu Apr 13 20:06:40 2023
-!Time: Thu Apr 13 20:17:09 2023
+!Running configuration last done at: Fri Apr 14 22:00:49 2023
+!Time: Fri Apr 14 22:10:24 2023
 
-version 9.3(7a) Bios:version  
+version 9.3(7a) Bios:version
 hostname dc1-leaf-01
 vdc dc1-leaf-01 id 1
   limit-resource vlan minimum 16 maximum 4094
@@ -27,7 +27,7 @@ feature vpc
 feature nv overlay
 
 no password strength-check
-username admin password 5 $5$BCCCLJ$hBBnI/wwDu4HjTAT6guVKSxVBFegzpjEIyMty3TNnq5 
+username admin password 5 $5$BCCCLJ$hBBnI/wwDu4HjTAT6guVKSxVBFegzpjEIyMty3TNnq5
  role network-admin
 ip domain-lookup
 spanning-tree mode mst
@@ -54,10 +54,13 @@ vlan 43
 vlan 1000
   vn-segment 10000
 
+spanning-tree vlan 1-3967 hello-time 4
+spanning-tree vlan 1-3967 forward-time 30
+spanning-tree vlan 1-3967 max-age 40
 route-map UNCHANGED permit 10
   set ip next-hop unchanged
 route-map rd-conn permit 10
-  match interface loopback1 
+  match interface loopback1
 vrf context PROD
   vni 10000
   rd 10.0.1.1:10000
@@ -65,7 +68,10 @@ vrf context PROD
     route-target both auto
     route-target both auto evpn
 vrf context management
-port-channel load-balance src-dst mac 
+hardware access-list tcam region racl 512
+hardware access-list tcam region e-racl 256
+hardware access-list tcam region arp-ether 256 double-wide
+port-channel load-balance src-dst mac
 vpc domain 14
   peer-switch
   role priority 100
@@ -87,7 +93,7 @@ interface Vlan41
   no shutdown
   vrf member PROD
   no ip redirects
-  ip address 10.4.1.1/24
+  ip address 10.4.1.254/24
   no ipv6 redirects
   fabric forwarding mode anycast-gateway
 
@@ -96,14 +102,18 @@ interface Vlan42
   no shutdown
   vrf member PROD
   no ip redirects
+  ip address 10.4.2.254/24
   no ipv6 redirects
+  fabric forwarding mode anycast-gateway
 
 interface Vlan43
   description dc1-leaf-03-vl43
   no shutdown
   vrf member PROD
   no ip redirects
+  ip address 10.4.3.254/24
   no ipv6 redirects
+  fabric forwarding mode anycast-gateway
 
 interface Vlan1000
   no shutdown
@@ -116,14 +126,17 @@ interface port-channel6
   switchport mode trunk
   switchport trunk allowed vlan 41
   spanning-tree port type normal
+  mtu 9216
   vpc 6
 
 interface port-channel7
   description VPC-LINK-to-10.4.3.3-srv
   switchport access vlan 41
+  mtu 9216
   vpc 7
 
 interface port-channel12
+  mtu 9216
 
 interface port-channel1000
   description vpc-peer-link
@@ -134,20 +147,24 @@ interface port-channel1000
 interface nve1
   no shutdown
   host-reachability protocol bgp
+  advertise virtual-rmac
   source-interface loopback1
   member vni 10000 associate-vrf
   member vni 10041-10050
+    suppress-arp
     ingress-replication protocol bgp
 
 interface Ethernet1/1
   description p2p-link-from-dc1-leaf-01-to-dc1-spine-1
   no switchport
+  mtu 9216
   ip address 10.2.1.1/31
   no shutdown
 
 interface Ethernet1/2
   description p2p-link-from-dc1-leaf-01-to-dc1-spine-2
   no switchport
+  mtu 9216
   ip address 10.2.2.1/31
   no shutdown
 
@@ -167,11 +184,13 @@ interface Ethernet1/6
   description to-srv
   switchport mode trunk
   switchport trunk allowed vlan 41
+  mtu 9216
   channel-group 6
 
 interface Ethernet1/7
   switchport access vlan 41
   spanning-tree port type edge
+  mtu 9216
   channel-group 7
 
 interface Ethernet1/8
@@ -312,6 +331,7 @@ router bgp 65001
     redistribute direct route-map rd-conn
     maximum-paths 64
   address-family l2vpn evpn
+    advertise-pip
   template peer spine
     remote-as 65000
     timers 3 9
@@ -322,6 +342,7 @@ router bgp 65001
     update-source loopback1
     ebgp-multihop 3
     address-family l2vpn evpn
+      disable-peer-as-check
       send-community
       send-community extended
       route-map UNCHANGED out
@@ -331,6 +352,7 @@ router bgp 65001
     update-source loopback1
     ebgp-multihop 2
     address-family l2vpn evpn
+      disable-peer-as-check
       send-community
       send-community extended
       route-map UNCHANGED out
