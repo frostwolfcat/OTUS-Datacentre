@@ -155,7 +155,7 @@
 
 #### Схема
 
-![img.png](img.png)
+![img_5.png](img_5.png)
 
 
 **Адресный план:**
@@ -248,3 +248,57 @@ Please check "show vpc consistency-parameters vpc <vpc-num>" for the
 consistency reason of down vpc and for type-2 consistency reasons for 
 any vpc.
 ```
+
+## Проверка работы L2VNI и L3VNI
+
+Скриншот развернутого qemu Образа линукс Ubuntu с Bond0 агрегированным интерфейсом:
+
+![img_3.png](img_3.png)
+
+Проверка PING с ноды Docker, в сторону сервера Ubuntu с агрегацией интерфейсов в Bond0:
+
+```
+root@Docker:/home# ifconfig
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.177.0.2  netmask 255.255.0.0  broadcast 10.177.255.255
+        ether 02:42:0a:b1:00:02  txqueuelen 0  (Ethernet)
+        RX packets 28  bytes 2152 (2.1 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+eth1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.4.3.10  netmask 255.255.255.0  broadcast 0.0.0.0
+        ether 50:00:00:37:00:01  txqueuelen 1000  (Ethernet)
+        RX packets 1276  bytes 86918 (86.9 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 123  bytes 10598 (10.5 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 34  bytes 3248 (3.2 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 34  bytes 3248 (3.2 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+root@Docker:/home# ping 10.4.1.3
+PING 10.4.1.3 (10.4.1.3) 56(84) bytes of data.
+64 bytes from 10.4.1.3: icmp_seq=1 ttl=62 time=13.9 ms
+64 bytes from 10.4.1.3: icmp_seq=2 ttl=62 time=14.5 ms
+64 bytes from 10.4.1.3: icmp_seq=3 ttl=62 time=15.3 ms
+64 bytes from 10.4.1.3: icmp_seq=4 ttl=62 time=13.2 ms
+64 bytes from 10.4.1.3: icmp_seq=5 ttl=62 time=12.6 ms
+64 bytes from 10.4.1.3: icmp_seq=6 ttl=62 time=7.54 ms
+64 bytes from 10.4.1.3: icmp_seq=7 ttl=62 time=19.3 ms
+64 bytes from 10.4.1.3: icmp_seq=8 ttl=62 time=9.90 ms
+^C
+--- 10.4.1.3 ping statistics ---
+8 packets transmitted, 8 received, 0% packet loss, time 7008ms
+rtt min/avg/max/mdev = 7.538/13.280/19.252/3.293 ms
+```
+
+Проверки к нодам в разных VNI (l2vni and l3vni)
+
+![img_4.png](img_4.png)
