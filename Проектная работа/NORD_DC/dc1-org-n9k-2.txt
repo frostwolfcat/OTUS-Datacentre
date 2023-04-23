@@ -1,0 +1,3297 @@
+!RANCID-CONTENT-TYPE: cisco
+!
+!
+!
+!
+!
+!Image: Boot Image:
+!Image: 	NXOS Image: bootflash:///nxos.9.3.7.bin
+!Image: Active Packages:
+!Image: Active Base Packages:
+!Image: 	bfd-2.0.0.0-9.3.7.lib32_n9000
+!Image: 	bgp-2.0.0.0-9.3.7.lib32_n9000
+!Image: 	container-tracker-2.0.0.0-9.3.7.lib32_n9000
+!Image: 	dme-2.0.0.0-9.3.7.lib32_n9000
+!Image: 	eigrp-2.0.0.0-9.3.7.lib32_n9000
+!Image: 	ext-eth-2.0.0.0-9.3.7.lib32_n9000
+!Image: 	fcoe-2.0.0.0-9.3.7.lib32_n9000
+!Image: 	fex-2.0.0.0-9.3.7.lib32_n9000
+!Image: 	fex_images-2.0.0.0-9.3.7.lib32_n9000
+!Image: 	fhrp-2.0.0.0-9.3.7.lib32_n9000
+!Image: 	guestshell-2.0.0.0-9.3.7.lib32_n9000
+!Image: 	hw_telemetry-2.0.0.0-9.3.7.lib32_n9000
+!Image: 	icam-2.0.0.0-9.3.7.lib32_n9000
+!Image: 	isis-2.0.0.0-9.3.7.lib32_n9000
+!Image: 	lacp-2.0.0.0-9.3.7.lib32_n9000
+!Image: 	libnxsdk-2.0.0.0-9.3.7.lib32_n9000
+!Image: 	lldp-2.0.0.0-9.3.7.lib32_n9000
+!Image: 	mcast-2.0.0.0-9.3.7.lib32_n9000
+!Image: 	mpls-2.0.0.0-9.3.7.lib32_n9000
+!Image: 	mtx-device-2.0.0.0-9.3.7.lib32_n9000
+!Image: 	mtx-grpc-agent-2.1.0.0-9.3.7.lib32_n9000
+!Image: 	mtx-infra-2.0.0.0-9.3.7.lib32_n9000
+!Image: 	mtx-netconf-agent-2.0.0.0-9.3.7.lib32_n9000
+!Image: 	mtx-restconf-agent-2.0.0.0-9.3.7.lib32_n9000
+!Image: 	mtx-telemetry-2.0.0.0-9.3.7.lib32_n9000
+!Image: 	nbproxy-2.0.0.0-9.3.7.lib32_n9000
+!Image: 	nia-1.4.1.1-9.3.7.lib32_n9000
+!Image: 	ntp-2.0.0.0-9.3.7.lib32_n9000
+!Image: 	nxos-ssh-2.0.0.0-9.3.7.lib32_n9000
+!Image: 	nxsdk-2.0.0.0-9.3.7.lib32_n9000
+!Image: 	nxsdk_rpc_server-1.0-2.5.0.x86_64
+!Image: 	ospf-2.0.0.0-9.3.7.lib32_n9000
+!Image: 	rip-2.0.0.0-9.3.7.lib32_n9000
+!Image: 	sdaa-2.0.0.0-9.3.7.lib32_n9000
+!Image: 	services-2.0.0.0-9.3.7.lib32_n9000
+!Image: 	snmp-2.0.0.0-9.3.7.lib32_n9000
+!Image: 	sr-2.0.0.0-9.3.7.lib32_n9000
+!Image: 	svi-2.0.0.0-9.3.7.lib32_n9000
+!Image: 	tacacs-2.0.0.0-9.3.7.lib32_n9000
+!Image: 	telemetry-2.3.4.0-9.3.7.lib32_n9000
+!Image: 	virtualization-2.0.0.0-9.3.7.lib32_n9000
+!Image: 	vmtracker-2.0.0.0-9.3.7.lib32_n9000
+!Image: 	vtp-2.0.0.0-9.3.7.lib32_n9000
+!Image: 	vxlan-2.0.0.0-9.3.7.lib32_n9000
+!
+!
+!
+!
+!
+!BootFlash: Current Boot Variables:
+!BootFlash: sup-1
+!BootFlash: NXOS variable = bootflash:/nxos.9.3.7.bin
+!BootFlash: Boot POAP Disabled
+!BootFlash: Boot Variables on next reload:
+!BootFlash: sup-1
+!BootFlash: NXOS variable = bootflash:/nxos.9.3.7.bin
+!BootFlash: Boot POAP Disabled
+!
+!BootFlash: % Invalid command at '^' marker.
+!
+!BootFlash: % Invalid command at '^' marker.
+!
+! % Invalid command at '^' marker.
+!
+! license_FDO21281500_21.lic:
+! SERVER this_host ANY
+! VENDOR cisco
+! INCREMENT LAN_ENTERPRISE_SERVICES_PKG cisco 1.0 permanent uncounted \
+! 	VENDOR_STRING=<LIC_SOURCE>MDS_PRODUCTION</LIC_SOURCE><SKU>N93-LAN1K9</SKU> \
+! 	HOSTID=VDH=FDO21281500 \
+! 	NOTICE=<LicFileID>20170808232437000</LicFileID><LicLineID>1</LicLineID><PAK>N9K-C93180YC-EXFDO21281500</PAK> \
+! 	SIGN=D110E26CCA2A
+!
+! % Invalid command at '^' marker.
+!
+! % Invalid command at '^' marker.
+!
+!Flash: % Invalid command at '^' marker.
+!
+!Flash: nvram: % Invalid command at '^' marker.
+!
+!Flash: bootflash: % Invalid command at '^' marker.
+!
+!Flash: slot0: % Invalid command at '^' marker.
+!
+!Flash: disk0: % Invalid command at '^' marker.
+!
+!Flash: slot1: % Invalid command at '^' marker.
+!
+!Flash: disk1: % Invalid command at '^' marker.
+!
+!Flash: slot2: % Invalid command at '^' marker.
+!
+!Flash: disk2: % Invalid command at '^' marker.
+!
+!Flash: harddisk: % Invalid command at '^' marker.
+!
+!Flash: harddiska: % Invalid command at '^' marker.
+!
+!Flash: harddiskb: % Invalid command at '^' marker.
+!
+!Flash: sup-bootdisk: % Invalid command at '^' marker.
+!
+!Flash: sup-microcode: % Invalid command at '^' marker.
+!
+!Flash: slavenvram: % Invalid command at '^' marker.
+!
+!Flash: slavebootflash: % Invalid command at '^' marker.
+!
+!Flash: slaveslot0: % Invalid command at '^' marker.
+!
+!Flash: slavedisk0: % Invalid command at '^' marker.
+!
+!Flash: slaveslot1: % Invalid command at '^' marker.
+!
+!Flash: slavedisk1: % Invalid command at '^' marker.
+!
+!Flash: slaveslot2: % Invalid command at '^' marker.
+!
+!Flash: slavedisk2: % Invalid command at '^' marker.
+!
+!Flash: slavesup-bootflash: % Invalid command at '^' marker.
+!
+!Flash: sec-nvram: % Invalid command at '^' marker.
+!
+!Flash: sec-bootflash: % Invalid command at '^' marker.
+!
+!Flash: sec-slot0: % Invalid command at '^' marker.
+!
+!Flash: sec-disk0: % Invalid command at '^' marker.
+!
+!Flash: sec-slot1: % Invalid command at '^' marker.
+!
+!Flash: sec-disk1: % Invalid command at '^' marker.
+!
+!Flash: sec-slot2: % Invalid command at '^' marker.
+!
+!Flash: sec-disk2: % Invalid command at '^' marker.
+!
+!
+!Slot 1: type 48x10/25G + 6x40/100G Ethernet Module N9K-C93180YC-EX, 54 ports
+!Slot 1: part active, serial *
+!
+!CELL: % Invalid command at '^' marker.
+!
+! % Invalid command at '^' marker.
+!
+!NAME: "Chassis",  DESCR: "Nexus9000 C93180YC-EX chassis"         
+!PID: N9K-C93180YC-EX
+!VID: V01
+!SN: FDO21281500
+!NAME: "Slot 1",  DESCR: "48x10/25G + 6x40/100G Ethernet Module" 
+!PID: N9K-C93180YC-EX
+!VID: V01
+!SN: FDO21281500
+!NAME: "Power Supply 1",  DESCR: "Nexus9000 C93180YC-EX chassis Power Supply"
+!PID: NXA-PAC-650W-PE
+!VID: V01
+!SN: LIT20443FZE
+!NAME: "Power Supply 2",  DESCR: "Nexus9000 C93180YC-EX chassis Power Supply"
+!PID: NXA-PAC-650W-PE
+!VID: V02
+!SN: LIT212255E7
+!NAME: "Fan 1",  DESCR: "Nexus9000 C93180YC-EX chassis Fan Module"
+!PID: NXA-FAN-30CFM-F
+!VID: V01
+!NAME: "Fan 2",  DESCR: "Nexus9000 C93180YC-EX chassis Fan Module"
+!PID: NXA-FAN-30CFM-F
+!VID: V01
+!NAME: "Fan 3",  DESCR: "Nexus9000 C93180YC-EX chassis Fan Module"
+!PID: NXA-FAN-30CFM-F
+!VID: V01
+!NAME: "Fan 4",  DESCR: "Nexus9000 C93180YC-EX chassis Fan Module"
+!PID: NXA-FAN-30CFM-F
+!VID: V01
+!
+!VLAN: VLAN Name                             Status    Ports
+!VLAN: ---- -------------------------------- --------- -------------------------------
+!VLAN: 1    default                          active    Po1, Po9, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 270  VLAN0270                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po119
+!VLAN:                                                 Po120, Po134, Po137, Po138
+!VLAN:                                                 Eth1/7, Eth1/8, Eth1/9, Eth1/10
+!VLAN:                                                 Eth1/13, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/34, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 1720 n4-rt-ec-1/2                     active    Po1, Po9, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 1737 VLAN1737                         active    Po1, Po9, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 1739 n4-rt-asa-1.man                  active    Po1, Eth1/25, Eth1/49, Eth1/50
+!VLAN:                                                 Eth1/51, Eth1/52, Eth1/53
+!VLAN:                                                 Eth1/54
+!VLAN: 1742 asa.of.outside                   active    Po1, Po2, Po3, Po9, Eth1/23
+!VLAN:                                                 Eth1/24, Eth1/42, Eth1/43
+!VLAN:                                                 Eth1/46, Eth1/47, Eth1/49
+!VLAN:                                                 Eth1/50, Eth1/51, Eth1/52
+!VLAN:                                                 Eth1/53, Eth1/54
+!VLAN: 1743 asa.of.inside                    active    Po1, Po2, Po3, Eth1/23, Eth1/24
+!VLAN:                                                 Eth1/42, Eth1/43, Eth1/49
+!VLAN:                                                 Eth1/50, Eth1/51, Eth1/52
+!VLAN:                                                 Eth1/53, Eth1/54
+!VLAN: 1804 office.ad                        active    Po1, Po2, Po3, Po9, Po117
+!VLAN:                                                 Po119, Po120, Po127, Eth1/17
+!VLAN:                                                 Eth1/19, Eth1/20, Eth1/23
+!VLAN:                                                 Eth1/24, Eth1/27, Eth1/42
+!VLAN:                                                 Eth1/43, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 1805 soc.falcongaze                   active    Po1, Po9, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 1806 office.docs                      active    Po1, Po9, Po117, Po127, Eth1/17
+!VLAN:                                                 Eth1/27, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 1807 office.hv                        active    Po1, Po9, Po117, Po127, Eth1/17
+!VLAN:                                                 Eth1/27, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 1808 VLAN1808                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po119
+!VLAN:                                                 Po120, Po134, Po137, Po138
+!VLAN:                                                 Eth1/7, Eth1/8, Eth1/9, Eth1/10
+!VLAN:                                                 Eth1/13, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/34, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 1810 noc.srv                          active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po117
+!VLAN:                                                 Po119, Po120, Po127, Po134
+!VLAN:                                                 Po137, Po138, Eth1/7, Eth1/8
+!VLAN:                                                 Eth1/9, Eth1/10, Eth1/13
+!VLAN:                                                 Eth1/16, Eth1/17, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/27, Eth1/34
+!VLAN:                                                 Eth1/37, Eth1/38, Eth1/46
+!VLAN:                                                 Eth1/47, Eth1/49, Eth1/50
+!VLAN:                                                 Eth1/51, Eth1/52, Eth1/53
+!VLAN:                                                 Eth1/54
+!VLAN: 1811 VLAN1811                         active    Po1, Po9, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 1812 VLAN1812                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po119
+!VLAN:                                                 Po120, Po134, Po137, Po138
+!VLAN:                                                 Eth1/7, Eth1/8, Eth1/9, Eth1/10
+!VLAN:                                                 Eth1/13, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/21, Eth1/34
+!VLAN:                                                 Eth1/37, Eth1/38, Eth1/46
+!VLAN:                                                 Eth1/47, Eth1/49, Eth1/50
+!VLAN:                                                 Eth1/51, Eth1/52, Eth1/53
+!VLAN:                                                 Eth1/54
+!VLAN: 1813 hypervisors                      active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po114, Po116
+!VLAN:                                                 Po117, Po119, Po120, Po127
+!VLAN:                                                 Po134, Po137, Po138, Po141
+!VLAN:                                                 Eth1/7, Eth1/8, Eth1/9, Eth1/10
+!VLAN:                                                 Eth1/13, Eth1/14, Eth1/16
+!VLAN:                                                 Eth1/17, Eth1/19, Eth1/20
+!VLAN:                                                 Eth1/27, Eth1/34, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/41, Eth1/46
+!VLAN:                                                 Eth1/47, Eth1/49, Eth1/50
+!VLAN:                                                 Eth1/51, Eth1/52, Eth1/53
+!VLAN:                                                 Eth1/54
+!VLAN: 1814 VLAN1814                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po117
+!VLAN:                                                 Po119, Po120, Po127, Po134
+!VLAN:                                                 Po137, Po138, Eth1/7, Eth1/8
+!VLAN:                                                 Eth1/9, Eth1/10, Eth1/13
+!VLAN:                                                 Eth1/16, Eth1/17, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/27, Eth1/34
+!VLAN:                                                 Eth1/37, Eth1/38, Eth1/46
+!VLAN:                                                 Eth1/47, Eth1/49, Eth1/50
+!VLAN:                                                 Eth1/51, Eth1/52, Eth1/53
+!VLAN:                                                 Eth1/54
+!VLAN: 1815 VLAN1815                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po112, Po113, Po116
+!VLAN:                                                 Po117, Po119, Po120, Po127
+!VLAN:                                                 Po134, Po137, Po138, Po140
+!VLAN:                                                 Eth1/7, Eth1/8, Eth1/9, Eth1/10
+!VLAN:                                                 Eth1/12, Eth1/13, Eth1/16
+!VLAN:                                                 Eth1/17, Eth1/19, Eth1/20
+!VLAN:                                                 Eth1/27, Eth1/34, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/40, Eth1/46
+!VLAN:                                                 Eth1/47, Eth1/49, Eth1/50
+!VLAN:                                                 Eth1/51, Eth1/52, Eth1/53
+!VLAN:                                                 Eth1/54
+!VLAN: 1817 ipmi                             active    Po1, Po9, Eth1/2, Eth1/4
+!VLAN:                                                 Eth1/6, Eth1/18, Eth1/26
+!VLAN:                                                 Eth1/39, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 1819 bi                               active    Po1, Po9, Po101, Po103, Po105
+!VLAN:                                                 Po107, Po108, Po109, Po110
+!VLAN:                                                 Po113, Po116, Po117, Po119
+!VLAN:                                                 Po120, Po127, Po134, Po137
+!VLAN:                                                 Po138, Eth1/1, Eth1/3, Eth1/5
+!VLAN:                                                 Eth1/7, Eth1/8, Eth1/9, Eth1/10
+!VLAN:                                                 Eth1/13, Eth1/16, Eth1/17
+!VLAN:                                                 Eth1/19, Eth1/20, Eth1/27
+!VLAN:                                                 Eth1/34, Eth1/37, Eth1/38
+!VLAN:                                                 Eth1/46, Eth1/47, Eth1/49
+!VLAN:                                                 Eth1/50, Eth1/51, Eth1/52
+!VLAN:                                                 Eth1/53, Eth1/54
+!VLAN: 1822 adfs                             active    Po1, Po9, Po117, Po127, Eth1/17
+!VLAN:                                                 Eth1/27, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 1827 VLAN1827                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po119
+!VLAN:                                                 Po120, Po134, Po137, Po138
+!VLAN:                                                 Eth1/7, Eth1/8, Eth1/9, Eth1/10
+!VLAN:                                                 Eth1/13, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/34, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 1843 VLAN1843                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po119
+!VLAN:                                                 Po120, Po134, Po137, Po138
+!VLAN:                                                 Eth1/7, Eth1/8, Eth1/9, Eth1/10
+!VLAN:                                                 Eth1/13, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/34, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 1864 office.srv                       active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po117
+!VLAN:                                                 Po119, Po120, Po127, Po134
+!VLAN:                                                 Po137, Po138, Eth1/7, Eth1/8
+!VLAN:                                                 Eth1/9, Eth1/10, Eth1/13
+!VLAN:                                                 Eth1/16, Eth1/17, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/27, Eth1/34
+!VLAN:                                                 Eth1/37, Eth1/38, Eth1/46
+!VLAN:                                                 Eth1/47, Eth1/49, Eth1/50
+!VLAN:                                                 Eth1/51, Eth1/52, Eth1/53
+!VLAN:                                                 Eth1/54
+!VLAN: 1868 VLAN1868                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po117
+!VLAN:                                                 Po119, Po120, Po127, Po134
+!VLAN:                                                 Po137, Po138, Eth1/7, Eth1/8
+!VLAN:                                                 Eth1/9, Eth1/10, Eth1/13
+!VLAN:                                                 Eth1/16, Eth1/17, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/27, Eth1/34
+!VLAN:                                                 Eth1/37, Eth1/38, Eth1/46
+!VLAN:                                                 Eth1/47, Eth1/49, Eth1/50
+!VLAN:                                                 Eth1/51, Eth1/52, Eth1/53
+!VLAN:                                                 Eth1/54
+!VLAN: 1869 VLAN1869                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po119
+!VLAN:                                                 Po120, Po134, Po137, Po138
+!VLAN:                                                 Eth1/7, Eth1/8, Eth1/9, Eth1/10
+!VLAN:                                                 Eth1/13, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/34, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 1870 VLAN1870                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po119
+!VLAN:                                                 Po120, Po134, Po137, Po138
+!VLAN:                                                 Eth1/7, Eth1/8, Eth1/9, Eth1/10
+!VLAN:                                                 Eth1/13, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/34, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 1871 office.pbx                       active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po119
+!VLAN:                                                 Po120, Po134, Po137, Po138
+!VLAN:                                                 Eth1/7, Eth1/8, Eth1/9, Eth1/10
+!VLAN:                                                 Eth1/13, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/34, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 1879 VLAN1879                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po119
+!VLAN:                                                 Po120, Po134, Po137, Po138
+!VLAN:                                                 Eth1/7, Eth1/8, Eth1/9, Eth1/10
+!VLAN:                                                 Eth1/13, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/34, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 1883 prod.k8s-mz                      active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po119
+!VLAN:                                                 Po120, Po134, Po137, Po138
+!VLAN:                                                 Eth1/7, Eth1/8, Eth1/9, Eth1/10
+!VLAN:                                                 Eth1/13, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/34, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 1884 prod.k8s-xfs                     active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po119
+!VLAN:                                                 Po120, Po134, Po137, Po138
+!VLAN:                                                 Eth1/7, Eth1/8, Eth1/9, Eth1/10
+!VLAN:                                                 Eth1/13, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/34, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 1885 VLAN1885                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po119
+!VLAN:                                                 Po120, Po134, Po137, Po138
+!VLAN:                                                 Eth1/7, Eth1/8, Eth1/9, Eth1/10
+!VLAN:                                                 Eth1/13, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/34, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 1886 VLAN1886                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po119
+!VLAN:                                                 Po120, Po134, Po137, Po138
+!VLAN:                                                 Eth1/7, Eth1/8, Eth1/9, Eth1/10
+!VLAN:                                                 Eth1/13, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/34, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 1887 VLAN1887                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po119
+!VLAN:                                                 Po120, Po134, Po137, Po138
+!VLAN:                                                 Eth1/7, Eth1/8, Eth1/9, Eth1/10
+!VLAN:                                                 Eth1/13, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/34, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 1889 VLAN1889                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po119
+!VLAN:                                                 Po120, Po134, Po137, Po138
+!VLAN:                                                 Eth1/7, Eth1/8, Eth1/9, Eth1/10
+!VLAN:                                                 Eth1/13, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/34, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 1890 VLAN1890                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po119
+!VLAN:                                                 Po120, Po134, Po137, Po138
+!VLAN:                                                 Eth1/7, Eth1/8, Eth1/9, Eth1/10
+!VLAN:                                                 Eth1/13, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/34, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 1891 VLAN1891                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po119
+!VLAN:                                                 Po120, Po134, Po137, Po138
+!VLAN:                                                 Eth1/7, Eth1/8, Eth1/9, Eth1/10
+!VLAN:                                                 Eth1/13, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/34, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 1892 VLAN1892                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po119
+!VLAN:                                                 Po120, Po134, Po137, Po138
+!VLAN:                                                 Eth1/7, Eth1/8, Eth1/9, Eth1/10
+!VLAN:                                                 Eth1/13, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/34, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 1894 VLAN1894                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po119
+!VLAN:                                                 Po120, Po134, Po137, Po138
+!VLAN:                                                 Eth1/7, Eth1/8, Eth1/9, Eth1/10
+!VLAN:                                                 Eth1/13, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/34, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 1895 VLAN1895                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po119
+!VLAN:                                                 Po120, Po134, Po137, Po138
+!VLAN:                                                 Eth1/7, Eth1/8, Eth1/9, Eth1/10
+!VLAN:                                                 Eth1/13, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/34, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 2123 office.onec                      active    Po1, Po9, Po111, Po117, Po127
+!VLAN:                                                 Eth1/11, Eth1/17, Eth1/27
+!VLAN:                                                 Eth1/46, Eth1/47, Eth1/49
+!VLAN:                                                 Eth1/50, Eth1/51, Eth1/52
+!VLAN:                                                 Eth1/53, Eth1/54
+!VLAN: 2124 VLAN2124                         active    Po1, Po2, Po3, Po9, Eth1/23
+!VLAN:                                                 Eth1/24, Eth1/42, Eth1/43
+!VLAN:                                                 Eth1/46, Eth1/47, Eth1/49
+!VLAN:                                                 Eth1/50, Eth1/51, Eth1/52
+!VLAN:                                                 Eth1/53, Eth1/54
+!VLAN: 2125 VLAN2125                         active    Po1, Po2, Po3, Po9, Eth1/23
+!VLAN:                                                 Eth1/24, Eth1/42, Eth1/43
+!VLAN:                                                 Eth1/46, Eth1/47, Eth1/49
+!VLAN:                                                 Eth1/50, Eth1/51, Eth1/52
+!VLAN:                                                 Eth1/53, Eth1/54
+!VLAN: 2126 office.proxy                     active    Po1, Po9, Po117, Po127, Eth1/17
+!VLAN:                                                 Eth1/27, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 2134 VLAN2134                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po119
+!VLAN:                                                 Po120, Po134, Po137, Po138
+!VLAN:                                                 Eth1/7, Eth1/8, Eth1/9, Eth1/10
+!VLAN:                                                 Eth1/13, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/34, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 2135 VLAN2135                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po117
+!VLAN:                                                 Po119, Po120, Po127, Po134
+!VLAN:                                                 Po137, Po138, Eth1/7, Eth1/8
+!VLAN:                                                 Eth1/9, Eth1/10, Eth1/13
+!VLAN:                                                 Eth1/16, Eth1/17, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/27, Eth1/34
+!VLAN:                                                 Eth1/37, Eth1/38, Eth1/46
+!VLAN:                                                 Eth1/47, Eth1/49, Eth1/50
+!VLAN:                                                 Eth1/51, Eth1/52, Eth1/53
+!VLAN:                                                 Eth1/54
+!VLAN: 2136 VLAN2136                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po119
+!VLAN:                                                 Po120, Po134, Po137, Po138
+!VLAN:                                                 Eth1/7, Eth1/8, Eth1/9, Eth1/10
+!VLAN:                                                 Eth1/13, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/34, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 2140 dib-services                     active    Po1, Po107, Po108, Po109, Po110
+!VLAN:                                                 Po113, Po116, Po119, Po120
+!VLAN:                                                 Po134, Po137, Po138, Eth1/7
+!VLAN:                                                 Eth1/8, Eth1/9, Eth1/10, Eth1/13
+!VLAN:                                                 Eth1/16, Eth1/19, Eth1/20
+!VLAN:                                                 Eth1/34, Eth1/37, Eth1/38
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 2143 VLAN2143                         active    Po1, Po2, Po3, Po9, Eth1/23
+!VLAN:                                                 Eth1/24, Eth1/42, Eth1/43
+!VLAN:                                                 Eth1/46, Eth1/47, Eth1/49
+!VLAN:                                                 Eth1/50, Eth1/51, Eth1/52
+!VLAN:                                                 Eth1/53, Eth1/54
+!VLAN: 2151 VLAN2151                         active    Po1, Po2, Po3, Po9, Eth1/23
+!VLAN:                                                 Eth1/24, Eth1/42, Eth1/43
+!VLAN:                                                 Eth1/46, Eth1/47, Eth1/49
+!VLAN:                                                 Eth1/50, Eth1/51, Eth1/52
+!VLAN:                                                 Eth1/53, Eth1/54
+!VLAN: 2152 VLAN2152                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po119
+!VLAN:                                                 Po120, Po134, Po137, Po138
+!VLAN:                                                 Eth1/7, Eth1/8, Eth1/9, Eth1/10
+!VLAN:                                                 Eth1/13, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/34, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 2155 common.ng-main                   active    Po1, Po9, Po115, Po128, Po129
+!VLAN:                                                 Po130, Po131, Po135, Eth1/15
+!VLAN:                                                 Eth1/28, Eth1/29, Eth1/30
+!VLAN:                                                 Eth1/31, Eth1/35, Eth1/46
+!VLAN:                                                 Eth1/47, Eth1/49, Eth1/50
+!VLAN:                                                 Eth1/51, Eth1/52, Eth1/53
+!VLAN:                                                 Eth1/54
+!VLAN: 2156 VLAN2156                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po115, Po116
+!VLAN:                                                 Po119, Po120, Po128, Po129
+!VLAN:                                                 Po130, Po131, Po134, Po135
+!VLAN:                                                 Po137, Po138, Eth1/7, Eth1/8
+!VLAN:                                                 Eth1/9, Eth1/10, Eth1/13
+!VLAN:                                                 Eth1/15, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/28, Eth1/29
+!VLAN:                                                 Eth1/30, Eth1/31, Eth1/34
+!VLAN:                                                 Eth1/35, Eth1/37, Eth1/38
+!VLAN:                                                 Eth1/46, Eth1/47, Eth1/49
+!VLAN:                                                 Eth1/50, Eth1/51, Eth1/52
+!VLAN:                                                 Eth1/53, Eth1/54
+!VLAN: 2157 VLAN2157                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po115, Po116
+!VLAN:                                                 Po119, Po120, Po128, Po129
+!VLAN:                                                 Po130, Po131, Po134, Po135
+!VLAN:                                                 Po137, Po138, Eth1/7, Eth1/8
+!VLAN:                                                 Eth1/9, Eth1/10, Eth1/13
+!VLAN:                                                 Eth1/15, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/28, Eth1/29
+!VLAN:                                                 Eth1/30, Eth1/31, Eth1/34
+!VLAN:                                                 Eth1/35, Eth1/37, Eth1/38
+!VLAN:                                                 Eth1/46, Eth1/47, Eth1/49
+!VLAN:                                                 Eth1/50, Eth1/51, Eth1/52
+!VLAN:                                                 Eth1/53, Eth1/54
+!VLAN: 2158 common.ng-proxy                  active    Po1, Po9, Po115, Po128, Po129
+!VLAN:                                                 Po130, Po131, Po135, Eth1/15
+!VLAN:                                                 Eth1/28, Eth1/29, Eth1/30
+!VLAN:                                                 Eth1/31, Eth1/35, Eth1/46
+!VLAN:                                                 Eth1/47, Eth1/49, Eth1/50
+!VLAN:                                                 Eth1/51, Eth1/52, Eth1/53
+!VLAN:                                                 Eth1/54
+!VLAN: 2159 VLAN2159                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po119
+!VLAN:                                                 Po120, Po134, Po137, Po138
+!VLAN:                                                 Eth1/7, Eth1/8, Eth1/9, Eth1/10
+!VLAN:                                                 Eth1/13, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/34, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 2163 VLAN2163                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po119
+!VLAN:                                                 Po120, Po134, Po137, Po138
+!VLAN:                                                 Eth1/7, Eth1/8, Eth1/9, Eth1/10
+!VLAN:                                                 Eth1/13, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/34, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 2164 VLAN2164                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po119
+!VLAN:                                                 Po120, Po134, Po137, Po138
+!VLAN:                                                 Eth1/7, Eth1/8, Eth1/9, Eth1/10
+!VLAN:                                                 Eth1/13, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/34, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 2165 VLAN2165                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po119
+!VLAN:                                                 Po120, Po134, Po137, Po138
+!VLAN:                                                 Eth1/7, Eth1/8, Eth1/9, Eth1/10
+!VLAN:                                                 Eth1/13, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/34, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 2167 n4.gis-nr2.ext                   active    Po1, Po9, Eth1/44, Eth1/46
+!VLAN:                                                 Eth1/47, Eth1/49, Eth1/50
+!VLAN:                                                 Eth1/51, Eth1/52, Eth1/53
+!VLAN:                                                 Eth1/54
+!VLAN: 2168 n4.gis-nr2.int                   active    Po1, Po9, Eth1/45, Eth1/46
+!VLAN:                                                 Eth1/47, Eth1/49, Eth1/50
+!VLAN:                                                 Eth1/51, Eth1/52, Eth1/53
+!VLAN:                                                 Eth1/54
+!VLAN: 2232 VLAN2232                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po119
+!VLAN:                                                 Po120, Po134, Po137, Po138
+!VLAN:                                                 Eth1/7, Eth1/8, Eth1/9, Eth1/10
+!VLAN:                                                 Eth1/13, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/34, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 2234 VLAN2234                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po119
+!VLAN:                                                 Po120, Po134, Po137, Po138
+!VLAN:                                                 Eth1/7, Eth1/8, Eth1/9, Eth1/10
+!VLAN:                                                 Eth1/13, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/34, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 2235 common.is                        active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po117
+!VLAN:                                                 Po119, Po120, Po127, Po134
+!VLAN:                                                 Po137, Po138, Eth1/7, Eth1/8
+!VLAN:                                                 Eth1/9, Eth1/10, Eth1/13
+!VLAN:                                                 Eth1/16, Eth1/17, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/27, Eth1/34
+!VLAN:                                                 Eth1/37, Eth1/38, Eth1/46
+!VLAN:                                                 Eth1/47, Eth1/49, Eth1/50
+!VLAN:                                                 Eth1/51, Eth1/52, Eth1/53
+!VLAN:                                                 Eth1/54
+!VLAN: 2236 VLAN2236                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po119
+!VLAN:                                                 Po120, Po134, Po137, Po138
+!VLAN:                                                 Eth1/7, Eth1/8, Eth1/9, Eth1/10
+!VLAN:                                                 Eth1/13, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/34, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 2238 common.veeam                     active    Po1, Po9, Po117, Po127, Eth1/17
+!VLAN:                                                 Eth1/27, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 2239 VLAN2239                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po117
+!VLAN:                                                 Po119, Po120, Po127, Po134
+!VLAN:                                                 Po137, Po138, Eth1/7, Eth1/8
+!VLAN:                                                 Eth1/9, Eth1/10, Eth1/13
+!VLAN:                                                 Eth1/16, Eth1/17, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/27, Eth1/34
+!VLAN:                                                 Eth1/37, Eth1/38, Eth1/46
+!VLAN:                                                 Eth1/47, Eth1/49, Eth1/50
+!VLAN:                                                 Eth1/51, Eth1/52, Eth1/53
+!VLAN:                                                 Eth1/54
+!VLAN: 2240 VLAN2240                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po119
+!VLAN:                                                 Po120, Po134, Po137, Po138
+!VLAN:                                                 Eth1/7, Eth1/8, Eth1/9, Eth1/10
+!VLAN:                                                 Eth1/13, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/34, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 2242 VLAN2242                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po119
+!VLAN:                                                 Po120, Po134, Po137, Po138
+!VLAN:                                                 Eth1/7, Eth1/8, Eth1/9, Eth1/10
+!VLAN:                                                 Eth1/13, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/34, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 2243 VLAN2243                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po119
+!VLAN:                                                 Po120, Po134, Po137, Po138
+!VLAN:                                                 Eth1/7, Eth1/8, Eth1/9, Eth1/10
+!VLAN:                                                 Eth1/13, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/34, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 2244 VLAN2244                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po119
+!VLAN:                                                 Po120, Po134, Po137, Po138
+!VLAN:                                                 Eth1/7, Eth1/8, Eth1/9, Eth1/10
+!VLAN:                                                 Eth1/13, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/34, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 2245 VLAN2245                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po119
+!VLAN:                                                 Po120, Po134, Po137, Po138
+!VLAN:                                                 Eth1/7, Eth1/8, Eth1/9, Eth1/10
+!VLAN:                                                 Eth1/13, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/34, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 2248 VLAN2248                         active    Po1, Po9, Po103, Po107, Po108
+!VLAN:                                                 Po109, Po110, Po113, Po116
+!VLAN:                                                 Po119, Po120, Po134, Po137
+!VLAN:                                                 Po138, Eth1/3, Eth1/7, Eth1/8
+!VLAN:                                                 Eth1/9, Eth1/10, Eth1/13
+!VLAN:                                                 Eth1/16, Eth1/19, Eth1/20
+!VLAN:                                                 Eth1/34, Eth1/37, Eth1/38
+!VLAN:                                                 Eth1/46, Eth1/47, Eth1/49
+!VLAN:                                                 Eth1/50, Eth1/51, Eth1/52
+!VLAN:                                                 Eth1/53, Eth1/54
+!VLAN: 2249 VLAN2249                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po119
+!VLAN:                                                 Po120, Po134, Po137, Po138
+!VLAN:                                                 Eth1/7, Eth1/8, Eth1/9, Eth1/10
+!VLAN:                                                 Eth1/13, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/34, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 2250 VLAN2250                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po119
+!VLAN:                                                 Po120, Po134, Po137, Po138
+!VLAN:                                                 Eth1/7, Eth1/8, Eth1/9, Eth1/10
+!VLAN:                                                 Eth1/13, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/34, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 2251 common.nc                        active    Po1, Po9, Po117, Po127, Eth1/17
+!VLAN:                                                 Eth1/27, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 2252 common.nc-dbpg                   active    Po1, Po9, Po117, Po127, Eth1/17
+!VLAN:                                                 Eth1/27, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 2253 VLAN2253                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po119
+!VLAN:                                                 Po120, Po134, Po137, Po138
+!VLAN:                                                 Eth1/7, Eth1/8, Eth1/9, Eth1/10
+!VLAN:                                                 Eth1/13, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/34, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 2254 VLAN2254                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po119
+!VLAN:                                                 Po120, Po134, Po137, Po138
+!VLAN:                                                 Eth1/7, Eth1/8, Eth1/9, Eth1/10
+!VLAN:                                                 Eth1/13, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/34, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 2255 VLAN2255                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po119
+!VLAN:                                                 Po120, Po134, Po137, Po138
+!VLAN:                                                 Eth1/7, Eth1/8, Eth1/9, Eth1/10
+!VLAN:                                                 Eth1/13, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/34, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 2257 VLAN2257                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po115, Po116
+!VLAN:                                                 Po119, Po120, Po122, Po128
+!VLAN:                                                 Po129, Po130, Po131, Po134
+!VLAN:                                                 Po135, Po137, Po138, Eth1/7
+!VLAN:                                                 Eth1/8, Eth1/9, Eth1/10, Eth1/13
+!VLAN:                                                 Eth1/15, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/22, Eth1/28
+!VLAN:                                                 Eth1/29, Eth1/30, Eth1/31
+!VLAN:                                                 Eth1/34, Eth1/35, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 2259 common.mik-s                     active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po115, Po116
+!VLAN:                                                 Po119, Po120, Po122, Po128
+!VLAN:                                                 Po129, Po130, Po131, Po134
+!VLAN:                                                 Po135, Po137, Po138, Eth1/7
+!VLAN:                                                 Eth1/8, Eth1/9, Eth1/10, Eth1/13
+!VLAN:                                                 Eth1/15, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/22, Eth1/28
+!VLAN:                                                 Eth1/29, Eth1/30, Eth1/31
+!VLAN:                                                 Eth1/34, Eth1/35, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 2262 common.shd                       active    Po1, Po9, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 2263 common.ngate                     active    Po1, Po9, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 2264 vpn.openvpn                      active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po119
+!VLAN:                                                 Po120, Po134, Po137, Po138
+!VLAN:                                                 Eth1/7, Eth1/8, Eth1/9, Eth1/10
+!VLAN:                                                 Eth1/13, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/34, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 2265 office.test                      active    Po1, Po2, Po3, Po127, Eth1/23
+!VLAN:                                                 Eth1/24, Eth1/27, Eth1/42
+!VLAN:                                                 Eth1/43, Eth1/49, Eth1/50
+!VLAN:                                                 Eth1/51, Eth1/52, Eth1/53
+!VLAN:                                                 Eth1/54
+!VLAN: 2266 n4.office.rtskap-share           active    Po1, Po9, Po117, Po127, Eth1/17
+!VLAN:                                                 Eth1/27, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 2267 demo.net-mgmt                    active    Po1, Po9, Po141, Eth1/41
+!VLAN:                                                 Eth1/46, Eth1/47, Eth1/49
+!VLAN:                                                 Eth1/50, Eth1/51, Eth1/52
+!VLAN:                                                 Eth1/53, Eth1/54
+!VLAN: 2268 n4.common.omailsrv               active    Po1, Po9, Po127, Eth1/27
+!VLAN:                                                 Eth1/46, Eth1/47, Eth1/49
+!VLAN:                                                 Eth1/50, Eth1/51, Eth1/52
+!VLAN:                                                 Eth1/53, Eth1/54
+!VLAN: 2269 n4.common.expressf               active    Po1, Po9, Po117, Po127, Eth1/17
+!VLAN:                                                 Eth1/27, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 2270 n4.common.expressb               active    Po1, Po9, Po117, Po127, Eth1/17
+!VLAN:                                                 Eth1/27, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 2271 common.dns                       active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po134
+!VLAN:                                                 Po138, Eth1/7, Eth1/8, Eth1/9
+!VLAN:                                                 Eth1/10, Eth1/13, Eth1/16
+!VLAN:                                                 Eth1/34, Eth1/38, Eth1/46
+!VLAN:                                                 Eth1/47, Eth1/49, Eth1/50
+!VLAN:                                                 Eth1/51, Eth1/52, Eth1/53
+!VLAN:                                                 Eth1/54
+!VLAN: 2272 n4.common.demo-usergate          active    Po1, Po9, Po141, Eth1/41
+!VLAN:                                                 Eth1/46, Eth1/47, Eth1/49
+!VLAN:                                                 Eth1/50, Eth1/51, Eth1/52
+!VLAN:                                                 Eth1/53, Eth1/54
+!VLAN: 2328 VLAN2328                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po119
+!VLAN:                                                 Po120, Po134, Po137, Po138
+!VLAN:                                                 Eth1/7, Eth1/8, Eth1/9, Eth1/10
+!VLAN:                                                 Eth1/13, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/34, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 2329 common.offsrv                    active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po117
+!VLAN:                                                 Po127, Po134, Po138, Eth1/7
+!VLAN:                                                 Eth1/8, Eth1/9, Eth1/10, Eth1/13
+!VLAN:                                                 Eth1/16, Eth1/17, Eth1/27
+!VLAN:                                                 Eth1/34, Eth1/38, Eth1/46
+!VLAN:                                                 Eth1/47, Eth1/49, Eth1/50
+!VLAN:                                                 Eth1/51, Eth1/52, Eth1/53
+!VLAN:                                                 Eth1/54
+!VLAN: 2330 VLAN2330                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po115, Po116
+!VLAN:                                                 Po119, Po120, Po122, Po128
+!VLAN:                                                 Po129, Po130, Po131, Po134
+!VLAN:                                                 Po135, Po137, Po138, Eth1/7
+!VLAN:                                                 Eth1/8, Eth1/9, Eth1/10, Eth1/13
+!VLAN:                                                 Eth1/15, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/22, Eth1/28
+!VLAN:                                                 Eth1/29, Eth1/30, Eth1/31
+!VLAN:                                                 Eth1/34, Eth1/35, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 2331 dev.devtest1                     active    Po1, Po9, Po115, Po122, Po128
+!VLAN:                                                 Po129, Po130, Po131, Po135
+!VLAN:                                                 Eth1/15, Eth1/22, Eth1/28
+!VLAN:                                                 Eth1/29, Eth1/30, Eth1/31
+!VLAN:                                                 Eth1/35, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 2333 VLAN2333                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po119
+!VLAN:                                                 Po120, Po134, Po137, Po138
+!VLAN:                                                 Eth1/7, Eth1/8, Eth1/9, Eth1/10
+!VLAN:                                                 Eth1/13, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/34, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 2340 VLAN2340                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po119
+!VLAN:                                                 Po120, Po134, Po137, Po138
+!VLAN:                                                 Eth1/7, Eth1/8, Eth1/9, Eth1/10
+!VLAN:                                                 Eth1/13, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/34, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 2341 VLAN2341                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po119
+!VLAN:                                                 Po120, Po134, Po137, Po138
+!VLAN:                                                 Eth1/7, Eth1/8, Eth1/9, Eth1/10
+!VLAN:                                                 Eth1/13, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/34, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 2342 VLAN2342                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po119
+!VLAN:                                                 Po120, Po134, Po137, Po138
+!VLAN:                                                 Eth1/7, Eth1/8, Eth1/9, Eth1/10
+!VLAN:                                                 Eth1/13, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/34, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 2343 n4.prod.infra-it                 active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po119, Po120
+!VLAN:                                                 Po134, Po137, Po138, Eth1/7
+!VLAN:                                                 Eth1/8, Eth1/9, Eth1/10, Eth1/13
+!VLAN:                                                 Eth1/19, Eth1/20, Eth1/34
+!VLAN:                                                 Eth1/37, Eth1/38, Eth1/46
+!VLAN:                                                 Eth1/47, Eth1/49, Eth1/50
+!VLAN:                                                 Eth1/51, Eth1/52, Eth1/53
+!VLAN:                                                 Eth1/54
+!VLAN: 2344 n4.prod.infra                    active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po119
+!VLAN:                                                 Po120, Po134, Po137, Po138
+!VLAN:                                                 Eth1/7, Eth1/8, Eth1/9, Eth1/10
+!VLAN:                                                 Eth1/13, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/34, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 2345 n4.prod.internal-44              active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po134
+!VLAN:                                                 Po138, Eth1/7, Eth1/8, Eth1/9
+!VLAN:                                                 Eth1/10, Eth1/13, Eth1/16
+!VLAN:                                                 Eth1/34, Eth1/38, Eth1/46
+!VLAN:                                                 Eth1/47, Eth1/49, Eth1/50
+!VLAN:                                                 Eth1/51, Eth1/52, Eth1/53
+!VLAN:                                                 Eth1/54
+!VLAN: 2347 VLAN2347                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po119
+!VLAN:                                                 Po120, Po134, Po137, Po138
+!VLAN:                                                 Eth1/7, Eth1/8, Eth1/9, Eth1/10
+!VLAN:                                                 Eth1/13, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/34, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 2451 prod.prxmx-k8s                   active    Po1, Po9, Po119, Po120, Po137
+!VLAN:                                                 Po138, Eth1/19, Eth1/20, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 2452 n4.prod.virus-scan               active    Po1, Po9, Po119, Po120, Po137
+!VLAN:                                                 Po138, Eth1/19, Eth1/20, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 2453 n4.prod.nemizida-waf             active    Po1, Po9, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 2454 n4.prod.market                   active    Po1, Po9, Po108, Po109, Po119
+!VLAN:                                                 Po120, Po137, Po138, Eth1/8
+!VLAN:                                                 Eth1/9, Eth1/19, Eth1/20
+!VLAN:                                                 Eth1/37, Eth1/38, Eth1/46
+!VLAN:                                                 Eth1/47, Eth1/49, Eth1/50
+!VLAN:                                                 Eth1/51, Eth1/52, Eth1/53
+!VLAN:                                                 Eth1/54
+!VLAN: 2455 n4.prod.infra-223                active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po134
+!VLAN:                                                 Po138, Eth1/7, Eth1/8, Eth1/9
+!VLAN:                                                 Eth1/10, Eth1/13, Eth1/16
+!VLAN:                                                 Eth1/34, Eth1/38, Eth1/46
+!VLAN:                                                 Eth1/47, Eth1/49, Eth1/50
+!VLAN:                                                 Eth1/51, Eth1/52, Eth1/53
+!VLAN:                                                 Eth1/54
+!VLAN: 2476 n4.common.223-dmz                active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po115, Po116
+!VLAN:                                                 Po119, Po120, Po122, Po128
+!VLAN:                                                 Po129, Po130, Po131, Po134
+!VLAN:                                                 Po135, Po137, Po138, Eth1/7
+!VLAN:                                                 Eth1/8, Eth1/9, Eth1/10, Eth1/13
+!VLAN:                                                 Eth1/15, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/22, Eth1/28
+!VLAN:                                                 Eth1/29, Eth1/30, Eth1/31
+!VLAN:                                                 Eth1/34, Eth1/35, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 2477 n4-devtest-k8s-cl-shared         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po115, Po116
+!VLAN:                                                 Po119, Po120, Po122, Po128
+!VLAN:                                                 Po129, Po130, Po131, Po134
+!VLAN:                                                 Po135, Po137, Po138, Eth1/7
+!VLAN:                                                 Eth1/8, Eth1/9, Eth1/10, Eth1/13
+!VLAN:                                                 Eth1/15, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/22, Eth1/28
+!VLAN:                                                 Eth1/29, Eth1/30, Eth1/31
+!VLAN:                                                 Eth1/34, Eth1/35, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 2478 n4-devtest-common.k8s-mz2        active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po115, Po116
+!VLAN:                                                 Po119, Po120, Po122, Po128
+!VLAN:                                                 Po129, Po130, Po131, Po134
+!VLAN:                                                 Po135, Po137, Po138, Eth1/7
+!VLAN:                                                 Eth1/8, Eth1/9, Eth1/10, Eth1/13
+!VLAN:                                                 Eth1/15, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/22, Eth1/28
+!VLAN:                                                 Eth1/29, Eth1/30, Eth1/31
+!VLAN:                                                 Eth1/34, Eth1/35, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 2479 n4.devtest-dome-net              active    Po1, Po9, Po141, Eth1/41
+!VLAN:                                                 Eth1/46, Eth1/47, Eth1/49
+!VLAN:                                                 Eth1/50, Eth1/51, Eth1/52
+!VLAN:                                                 Eth1/53, Eth1/54
+!VLAN: 2480 n4.devtest-dome-internal         active    Po1, Po9, Po141, Eth1/41
+!VLAN:                                                 Eth1/46, Eth1/47, Eth1/49
+!VLAN:                                                 Eth1/50, Eth1/51, Eth1/52
+!VLAN:                                                 Eth1/53, Eth1/54
+!VLAN: 2481 common.dev-db                    active    Po1, Po9, Po115, Po128, Po129
+!VLAN:                                                 Po130, Po131, Po135, Eth1/15
+!VLAN:                                                 Eth1/28, Eth1/29, Eth1/30
+!VLAN:                                                 Eth1/31, Eth1/35, Eth1/46
+!VLAN:                                                 Eth1/47, Eth1/49, Eth1/50
+!VLAN:                                                 Eth1/51, Eth1/52, Eth1/53
+!VLAN:                                                 Eth1/54
+!VLAN: 2482 n4.devtest-dome-srv              active    Po1, Po9, Po130, Po131, Eth1/30
+!VLAN:                                                 Eth1/31, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 2486 n4.common.suset-ap               active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po119
+!VLAN:                                                 Po120, Po134, Po137, Po138
+!VLAN:                                                 Po141, Eth1/7, Eth1/8, Eth1/9
+!VLAN:                                                 Eth1/10, Eth1/13, Eth1/16
+!VLAN:                                                 Eth1/19, Eth1/20, Eth1/34
+!VLAN:                                                 Eth1/37, Eth1/38, Eth1/41
+!VLAN:                                                 Eth1/46, Eth1/47, Eth1/49
+!VLAN:                                                 Eth1/50, Eth1/51, Eth1/52
+!VLAN:                                                 Eth1/53, Eth1/54
+!VLAN: 2487 n4.common.suset-db               active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po119
+!VLAN:                                                 Po120, Po134, Po137, Po138
+!VLAN:                                                 Po141, Eth1/7, Eth1/8, Eth1/9
+!VLAN:                                                 Eth1/10, Eth1/13, Eth1/16
+!VLAN:                                                 Eth1/19, Eth1/20, Eth1/34
+!VLAN:                                                 Eth1/37, Eth1/38, Eth1/41
+!VLAN:                                                 Eth1/46, Eth1/47, Eth1/49
+!VLAN:                                                 Eth1/50, Eth1/51, Eth1/52
+!VLAN:                                                 Eth1/53, Eth1/54
+!VLAN: 2716 VLAN2716                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po119
+!VLAN:                                                 Po120, Po134, Po137, Po138
+!VLAN:                                                 Eth1/7, Eth1/8, Eth1/9, Eth1/10
+!VLAN:                                                 Eth1/13, Eth1/16, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/34, Eth1/37
+!VLAN:                                                 Eth1/38, Eth1/46, Eth1/47
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 2732 VLAN2732                         active    Po1, Po9, Po107, Po108, Po109
+!VLAN:                                                 Po110, Po113, Po116, Po117
+!VLAN:                                                 Po119, Po120, Po127, Po134
+!VLAN:                                                 Po137, Po138, Eth1/7, Eth1/8
+!VLAN:                                                 Eth1/9, Eth1/10, Eth1/13
+!VLAN:                                                 Eth1/16, Eth1/17, Eth1/19
+!VLAN:                                                 Eth1/20, Eth1/27, Eth1/34
+!VLAN:                                                 Eth1/37, Eth1/38, Eth1/46
+!VLAN:                                                 Eth1/47, Eth1/49, Eth1/50
+!VLAN:                                                 Eth1/51, Eth1/52, Eth1/53
+!VLAN:                                                 Eth1/54
+!VLAN: 2765 n4.heartbeat.proxmox             active    Po1, Eth1/32, Eth1/33, Eth1/36
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: 2767 n4.proxmox.heartbeat             active    Po1, Eth1/32, Eth1/33, Eth1/36
+!VLAN:                                                 Eth1/49, Eth1/50, Eth1/51
+!VLAN:                                                 Eth1/52, Eth1/53, Eth1/54
+!VLAN: VLAN Type         Vlan-mode
+!VLAN: ---- -----        ----------
+!VLAN: 1    enet         CE     
+!VLAN: 270  enet         CE     
+!VLAN: 1720 enet         CE     
+!VLAN: 1737 enet         CE     
+!VLAN: 1739 enet         CE     
+!VLAN: 1742 enet         CE     
+!VLAN: 1743 enet         CE     
+!VLAN: 1804 enet         CE     
+!VLAN: 1805 enet         CE     
+!VLAN: 1806 enet         CE     
+!VLAN: 1807 enet         CE     
+!VLAN: 1808 enet         CE     
+!VLAN: 1810 enet         CE     
+!VLAN: 1811 enet         CE     
+!VLAN: 1812 enet         CE     
+!VLAN: 1813 enet         CE     
+!VLAN: 1814 enet         CE     
+!VLAN: 1815 enet         CE     
+!VLAN: 1817 enet         CE     
+!VLAN: 1819 enet         CE     
+!VLAN: 1822 enet         CE     
+!VLAN: 1827 enet         CE     
+!VLAN: 1843 enet         CE     
+!VLAN: 1864 enet         CE     
+!VLAN: 1868 enet         CE     
+!VLAN: 1869 enet         CE     
+!VLAN: 1870 enet         CE     
+!VLAN: 1871 enet         CE     
+!VLAN: 1879 enet         CE     
+!VLAN: 1883 enet         CE     
+!VLAN: 1884 enet         CE     
+!VLAN: 1885 enet         CE     
+!VLAN: 1886 enet         CE     
+!VLAN: 1887 enet         CE     
+!VLAN: 1889 enet         CE     
+!VLAN: 1890 enet         CE     
+!VLAN: 1891 enet         CE     
+!VLAN: 1892 enet         CE     
+!VLAN: 1894 enet         CE     
+!VLAN: 1895 enet         CE     
+!VLAN: 2123 enet         CE     
+!VLAN: 2124 enet         CE     
+!VLAN: 2125 enet         CE     
+!VLAN: 2126 enet         CE     
+!VLAN: 2134 enet         CE     
+!VLAN: 2135 enet         CE     
+!VLAN: 2136 enet         CE     
+!VLAN: 2140 enet         CE     
+!VLAN: 2143 enet         CE     
+!VLAN: 2151 enet         CE     
+!VLAN: 2152 enet         CE     
+!VLAN: 2155 enet         CE     
+!VLAN: 2156 enet         CE     
+!VLAN: 2157 enet         CE     
+!VLAN: 2158 enet         CE     
+!VLAN: 2159 enet         CE     
+!VLAN: 2163 enet         CE     
+!VLAN: 2164 enet         CE     
+!VLAN: 2165 enet         CE     
+!VLAN: 2167 enet         CE     
+!VLAN: 2168 enet         CE     
+!VLAN: 2232 enet         CE     
+!VLAN: 2234 enet         CE     
+!VLAN: 2235 enet         CE     
+!VLAN: 2236 enet         CE     
+!VLAN: 2238 enet         CE     
+!VLAN: 2239 enet         CE     
+!VLAN: 2240 enet         CE     
+!VLAN: 2242 enet         CE     
+!VLAN: 2243 enet         CE     
+!VLAN: 2244 enet         CE     
+!VLAN: 2245 enet         CE     
+!VLAN: 2248 enet         CE     
+!VLAN: 2249 enet         CE     
+!VLAN: 2250 enet         CE     
+!VLAN: 2251 enet         CE     
+!VLAN: 2252 enet         CE     
+!VLAN: 2253 enet         CE     
+!VLAN: 2254 enet         CE     
+!VLAN: 2255 enet         CE     
+!VLAN: 2257 enet         CE     
+!VLAN: 2259 enet         CE     
+!VLAN: 2262 enet         CE     
+!VLAN: 2263 enet         CE     
+!VLAN: 2264 enet         CE     
+!VLAN: 2265 enet         CE     
+!VLAN: 2266 enet         CE     
+!VLAN: 2267 enet         CE     
+!VLAN: 2268 enet         CE     
+!VLAN: 2269 enet         CE     
+!VLAN: 2270 enet         CE     
+!VLAN: 2271 enet         CE     
+!VLAN: 2272 enet         CE     
+!VLAN: 2328 enet         CE     
+!VLAN: 2329 enet         CE     
+!VLAN: 2330 enet         CE     
+!VLAN: 2331 enet         CE     
+!VLAN: 2333 enet         CE     
+!VLAN: 2340 enet         CE     
+!VLAN: 2341 enet         CE     
+!VLAN: 2342 enet         CE     
+!VLAN: 2343 enet         CE     
+!VLAN: 2344 enet         CE     
+!VLAN: 2345 enet         CE     
+!VLAN: 2347 enet         CE     
+!VLAN: 2451 enet         CE     
+!VLAN: 2452 enet         CE     
+!VLAN: 2453 enet         CE     
+!VLAN: 2454 enet         CE     
+!VLAN: 2455 enet         CE     
+!VLAN: 2476 enet         CE     
+!VLAN: 2477 enet         CE     
+!VLAN: 2478 enet         CE     
+!VLAN: 2479 enet         CE     
+!VLAN: 2480 enet         CE     
+!VLAN: 2481 enet         CE     
+!VLAN: 2482 enet         CE     
+!VLAN: 2486 enet         CE     
+!VLAN: 2487 enet         CE     
+!VLAN: 2716 enet         CE     
+!VLAN: 2732 enet         CE     
+!VLAN: 2765 enet         CE     
+!VLAN: 2767 enet         CE     
+!VLAN: Remote SPAN VLANs
+!VLAN: -------------------------------------------------------------------------------
+!VLAN: Primary  Secondary  Type             Ports
+!VLAN: -------  ---------  ---------------  -------------------------------------------
+!
+!STACK: % Ambiguous command at '^' marker.
+!
+!
+!
+!
+!DEBUG: slot  1
+!DEBUG: =======
+!DEBUG: Debug level is set to Detail 
+!DEBUG: Debug level is set to Minor(1) 
+!DEBUG: L2RIB Enabled Debugs:
+!DEBUG:  default for new sessions logging level: 3
+!Command: show running-config
+!Running configuration last done at: Fri Apr  7 17:39:18 2023
+
+version 9.3(7) Bios:version 07.68 
+hostname n4-rt-n9k-2
+vdc n4-rt-n9k-2 id 1
+  limit-resource vlan minimum 16 maximum 4094
+  limit-resource vrf minimum 2 maximum 4096
+  limit-resource port-channel minimum 0 maximum 511
+  limit-resource u4route-mem minimum 248 maximum 248
+  limit-resource u6route-mem minimum 96 maximum 96
+  limit-resource m4route-mem minimum 58 maximum 58
+  limit-resource m6route-mem minimum 8 maximum 8
+
+feature bash-shell
+feature vrrp
+feature tacacs+
+cfs eth distribute
+feature ospf
+feature bgp
+feature interface-vlan
+feature hsrp
+feature lacp
+feature vpc
+feature lldp
+clock timezone UTC 3 0
+
+no password strength-check
+username admin password 5 $5$9A5UnXm6$C8VWuqeVy4bYIC/UPIc4n2Wz7nZKzJHI6wpk7dEsa78  role network-admin
+username enable password 5 $5$eZYGooeO$z5qnaUWyn6ZyBzzX3JecNQJDEelUsjl/HPOo6hNpMu3  role network-admin
+username enable passphrase  lifetime 99999 warntime 7
+username ssumin password 5 $5$LNZTEBAZ$1mA1q7MHKSciCFKhaLVyO3elU8iBshU0p8155UQDZzB  role network-admin
+username ssumin passphrase  lifetime 99999 warntime 7
+username ccrt password 5 $5$8oaZo96G$/KZRJ2CbxPndvIp31LISsT5XoO7631j2dDMAfQ1MBJ6  role network-admin
+username ccrt passphrase  lifetime 99999 warntime 7
+no ip domain-lookup
+ip domain-name rtcn
+ip tacacs source-interface loopback0
+tacacs-server timeout 2
+tacacs-server deadtime 1
+tacacs-server host 172.18.10.12 key 7 "jicaJAqk" 
+tacacs-server host 172.18.100.12 key 7 "jicaJAqk" 
+aaa group server tacacs+ rtstender 
+    server 172.18.10.12 
+    server 172.18.100.12 
+object-group ip address 1c-buh
+  10 host 172.18.11.232 
+  20 host 172.18.11.231 
+  30 host 172.18.11.233 
+object-group ip address 1c-buh-fm-rdp
+  10 172.20.25.0/24 
+  20 172.20.33.0/24 
+  30 172.20.34.0/24 
+  40 172.20.36.0/24 
+  50 172.19.7.0/24 
+  60 172.19.24.0/24 
+  70 172.18.25.0/24 
+  75 172.20.20.0/24 
+  80 172.20.48.0/24 
+  90 172.20.28.0/24 
+  100 172.16.100.0/23 
+  110 172.20.100.0/23 
+  120 host 172.26.6.60 
+  130 host 172.26.6.133 
+  140 host 172.19.9.230 
+  150 host 172.20.37.136 
+object-group ip port 8080-8090
+  10 eq 8080 
+  20 eq 8090 
+object-group ip address FriendWork-access
+  10 172.19.24.0/24 
+  20 172.20.28.0/24 
+  30 172.20.34.0/24 
+  40 172.20.36.0/24 
+  50 172.16.5.0/24 
+  60 172.16.100.0/23 
+  70 172.17.100.0/23 
+  80 172.20.100.0/23 
+  90 172.16.106.0/26 
+object-group ip port ad-clients-tcp
+  10 range 389 636 
+  20 range 3268 3269 
+  30 range 135 139 
+  40 eq 88 
+  50 gt 49151 
+object-group ip port ad-clients-udp
+  70 gt 49151 
+  80 range 135 139 
+  90 range 389 464 
+  100 range 53 123 
+object-group ip port ad-svc-tcp
+  10 eq 88 
+  100 gt 1024 
+  110 range 135 139 
+  120 range 3268 3269 
+  130 range 389 636 
+object-group ip port ad-svc-udp
+  80 gt 1024 
+  90 range 135 139 
+  100 range 389 464 
+  110 range 53 123 
+object-group ip address addc-office
+  10 host 172.18.4.100 
+  20 host 172.18.4.200 
+  30 host 172.18.215.100 
+object-group ip address addc-office-alfa-bravo
+  10 host 172.18.4.100 
+  20 host 172.18.4.200 
+object-group ip address addc-office-clients
+  10 172.18.21.0/24 
+  20 172.18.25.0/24 
+  30 host 172.18.100.40 
+  60 host 172.26.5.81 
+  70 host 172.26.5.60 
+  80 host 172.26.5.55 
+  90 host 172.26.5.52 
+  100 host 172.26.5.83 
+  110 host 172.26.5.51 
+  120 host 172.26.5.57 
+  130 host 172.26.5.58 
+  140 host 172.26.5.56 
+  150 host 172.26.5.53 
+  160 host 172.26.5.54 
+  170 host 172.18.79.5 
+  180 host 172.18.13.13 
+  190 172.18.36.0/24 
+object-group ip address addc-office-fm-addc
+  10 host 172.26.4.33 
+  20 host 172.26.4.2 
+  30 host 172.26.4.49 
+  40 host 172.26.4.105 
+  70 host 172.16.5.44 
+  80 host 172.16.5.40 
+  90 host 10.17.9.17 
+  100 host 10.16.9.17 
+  110 host 10.38.4.50 
+  120 host 10.38.5.253 
+object-group ip address addc-office-fm-dns
+  10 172.18.0.0/16 
+  20 172.21.0.0/16 
+  30 172.27.0.0/17 
+  40 192.168.1.0/24 
+  50 185.179.86.0/24 
+  100 host 10.16.9.17 
+  110 host 10.17.9.17 
+  150 10.30.165.0/24 
+  160 10.30.160.0/24 
+  170 host 10.38.4.50 
+  180 host 10.38.5.253 
+object-group ip address addc-office-fm-ldap
+  10 host 185.179.86.26 
+  20 host 185.179.86.66 
+  30 host 172.18.39.148 
+  40 host 172.18.38.17 
+  60 host 172.26.4.90 
+  150 host 172.26.4.5 
+  160 host 172.26.4.34 
+  170 host 172.26.4.51 
+  180 host 192.168.1.5 
+  190 host 172.18.142.10 
+  200 host 172.18.72.59 
+  210 172.18.214.0/24 
+  220 172.18.164.0/24 
+  230 172.16.106.0/24 
+  240 172.16.5.0/24 
+  250 172.21.0.0/16 
+  260 172.18.10.0/24 
+  270 172.18.100.0/24 
+object-group ip address addc-office-fm-ntp
+  10 172.21.0.0/16 
+  20 172.18.0.0/16 
+  30 185.179.84.0/24 
+  40 172.26.0.0/16 
+  50 185.179.86.0/24 
+  60 172.20.0.0/16 
+  70 172.27.0.0/16 
+object-group ip address addc-share
+  10 host 172.18.4.88 
+  20 host 172.18.4.99 
+  30 host 172.18.4.60 
+object-group ip address addc-share-fm-smb
+  10 172.18.6.0/24 
+  20 172.18.7.0/24 
+  30 172.18.10.0/24 
+  40 172.18.21.0/24 
+  50 172.18.25.0/24 
+  60 172.18.45.0/24 
+  70 172.18.19.0/24 
+  80 172.26.5.0/24 
+  90 172.18.129.0/29 
+  120 host 172.18.72.54 
+  130 host 172.26.6.247 
+  140 host 172.26.6.207 
+  150 host 172.26.6.145 
+  160 host 172.26.7.182 
+  170 host 172.26.6.93 
+  180 host 172.26.6.182 
+  190 host 172.26.6.60 
+  200 172.27.8.0/24 
+  210 172.27.22.0/24 
+  220 172.27.23.0/24 
+  230 host 172.27.7.128 
+  240 host 172.27.7.2 
+  250 172.18.135.0/24 
+object-group ip address addrbook
+  10 host 172.18.6.35 
+object-group ip address addrbook-access
+  10 172.27.80.0/21 
+  20 172.27.8.0/24 
+  30 172.18.0.0/16 
+  40 172.26.4.0/22 
+  50 192.168.1.0/24 
+  60 host 185.179.86.50 
+  70 host 10.30.165.11 
+  80 172.26.24.0/24 
+  90 host 172.16.5.57 
+  100 172.16.100.0/23 
+  110 172.17.100.0/23 
+  120 172.17.104.0/23 
+  130 172.20.100.0/23 
+  140 172.20.104.0/23 
+object-group ip address bankclients
+  10 host 172.18.6.45 
+object-group ip address common-net
+  60 172.18.19.0/24 
+  70 172.18.68.0/24 
+  110 172.18.128.0/19 
+object-group ip address confluence
+  10 host 172.18.6.28 
+object-group ip address confluence-access
+  10 172.18.21.0/24 
+  20 host 172.17.35.29 
+  30 host 172.28.4.59 
+  40 host 172.28.254.10 
+  50 172.26.4.0/22 
+object-group ip address confluence-access-8090
+  10 172.27.8.0/24 
+  20 host 172.27.7.128 
+  30 host 172.27.7.2 
+object-group ip address consultant
+  10 host 172.18.6.15 
+object-group ip address consultant-access
+  10 172.18.21.0/24 
+  20 172.18.25.0/24 
+  30 172.16.100.0/23 
+  40 host 172.16.5.57 
+  50 10.38.91.0/24 
+  60 10.38.7.0/24 
+object-group ip address delta-addc-office
+  10 host 172.18.215.100 
+object-group ip address dev-kubworker-infra
+  10 host 172.18.130.206 
+  20 host 172.18.131.206 
+  30 host 172.18.131.207 
+  40 host 172.18.130.207 
+  50 host 172.18.130.32 
+  60 host 172.18.130.33 
+  70 host 172.18.130.34 
+  80 host 172.18.131.208 
+  90 host 172.18.131.209 
+object-group ip address dev-net
+  10 172.20.34.0/24 
+object-group ip address devtest-net
+  10 172.18.192.0/24 
+  20 172.18.162.0/24 
+object-group ip port dns-ntp
+  10 eq 53 
+  20 eq 123 
+object-group ip address docs
+  10 host 172.18.6.3 
+  20 host 172.18.6.50 
+object-group ip address docs-fm-4080
+  10 172.18.21.0/24 
+  20 172.26.5.0/24 
+  30 172.26.6.0/24 
+  40 172.26.7.0/24 
+object-group ip address docs-fm-web
+  10 host 172.18.129.16 
+  20 172.27.8.0/24 
+  30 172.18.21.0/24 
+  40 172.18.25.0/24 
+  50 host 172.26.4.29 
+  60 172.26.5.0/24 
+  70 172.26.6.0/24 
+  80 172.26.7.0/24 
+  90 172.26.24.0/24 
+  100 host 185.179.86.50 
+  110 host 192.168.1.81 
+  120 host 172.18.129.6 
+  130 172.16.5.0/24 
+  140 172.16.100.0/23 
+  150 172.16.104.0/23 
+  160 172.16.106.0/26 
+  170 host 172.24.0.3 
+  180 172.20.100.0/23 
+  190 172.17.100.0/23 
+  200 172.17.104.0/23 
+  210 172.20.104.0/23 
+  220 172.19.128.0/24 
+object-group ip port fsso-client
+  10 range 8000 8002 
+object-group ip address fsso-collector
+  10 host 172.18.10.40 
+  20 host 172.18.100.40 
+object-group ip address hr-box
+  10 host 172.18.6.80 
+  20 host 172.18.6.81 
+  30 host 172.18.6.82 
+  40 host 172.18.6.83 
+  50 host 172.18.6.84 
+  60 host 172.18.6.85 
+object-group ip address hr-box-access
+  10 host 172.19.18.101 
+  20 host 172.19.18.102 
+  30 172.19.22.0/24 
+  40 172.20.34.0/24 
+  50 172.20.34.0/24 
+  60 172.19.22.0/24 
+object-group ip address hr-box-fm-rdp
+  10 host 172.19.18.103 
+object-group ip address hr-box-fm-web
+  10 172.20.0.0/16 
+  15 172.18.25.0/24 
+  20 172.19.0.0/16 
+  30 host 172.16.5.55 
+  40 host 172.16.5.56 
+  50 host 172.18.11.231 
+  60 host 172.18.11.232 
+  70 host 10.38.4.11 
+  80 172.16.5.0/24 
+  90 172.16.100.0/23 
+  100 172.16.104.0/23 
+  110 172.16.106.0/24 
+  120 172.20.100.0/23 
+  130 172.20.104.0/23 
+  140 172.20.106.0/24 
+  150 172.17.100.0/23 
+  160 10.38.91.0/24 
+  170 10.38.7.0/24 
+  180 172.26.0.0/19 
+  190 host 10.38.4.10 
+  200 172.17.104.0/23 
+  210 host 185.179.86.50 
+  220 host 10.38.5.107 
+  230 host 10.38.5.108 
+object-group ip address hr-box-terminal
+  10 host 172.18.6.86 
+  20 host 172.18.6.87 
+object-group ip port hrbox-tcp
+  10 eq 80 
+  20 eq 443 
+  30 eq 22 
+  40 eq 9001 
+object-group ip address internet-bank
+  10 host 91.217.180.86 
+  20 host 193.164.146.4 
+  30 host 185.11.49.86 
+  40 host 217.14.50.188 
+  50 host 194.54.14.131 
+  60 host 193.200.10.100 
+  70 host 217.14.50.179 
+  80 host 194.54.14.137 
+  90 host 95.213.134.166 
+  100 host 95.213.134.164 
+  110 host 95.213.134.165 
+  120 host 95.213.134.167 
+  130 host 5.143.251.117 
+  140 host 217.14.50.160 
+  150 host 193.164.146.155 
+  160 host 193.164.146.156 
+  170 host 108.177.14.94 
+  180 host 93.184.220.29 
+object-group ip address kpshare
+  10 host 172.18.166.10 
+object-group ip address kpshare-fm-rdp
+  10 host 172.20.37.251 
+  20 host 172.19.4.220 
+object-group ip address kpshare-fm-smb
+  10 host 10.32.13.15 
+  20 172.18.25.0/24 
+  25 172.20.20.0/24 
+  30 172.20.17.0/24 
+  40 172.19.7.0/24 
+  50 172.19.8.0/24 
+  60 host 172.19.26.220 
+  70 host 172.19.11.209 
+  80 host 172.19.9.230 
+  100 host 172.19.26.219 
+  110 host 172.19.4.220 
+  120 host 172.19.8.215 
+object-group ip port ksc-c2s-tcp
+  60 eq 139 
+  70 eq 445 
+  80 range 13000 17001 
+object-group ip port ksc-c2s-udp
+  10 range 13000 15000 
+  20 range 137 138 
+object-group ip address ksc-office
+  10 host 172.18.4.230 
+object-group ip address ksc-office-client
+  10 172.26.0.0/16 
+  20 172.18.0.0/16 
+object-group ip address ksc-office-fm-sql
+  10 host 172.18.66.5 
+  20 172.18.136.0/24 
+  30 host 172.18.5.10 
+object-group ip port ksc-s2c-udp
+  40 eq 137 
+  50 range 13000 15001 
+object-group ip address lawer-share
+  10 host 172.18.4.70 
+object-group ip address lawer-share-fm-smb
+  10 host 172.26.5.201 
+  20 host 172.26.4.51 
+object-group ip port ldap-tcp
+  10 eq 389 
+  20 eq 636 
+object-group ip port ldap-udp
+  10 eq 389 
+object-group ip address megaplan
+  10 host 172.18.6.10 
+object-group ip address megaplan-access
+  10 172.18.21.0/24 
+  20 172.18.25.0/24 
+  30 host 172.18.27.35 
+  40 host 172.18.27.37 
+  50 172.26.4.0/22 
+  60 172.26.24.0/24 
+  70 host 185.179.86.50 
+  80 host 172.18.46.250 
+  90 host 172.18.5.10 
+  100 host 172.19.18.43 
+  110 172.18.129.0/24 
+  120 172.16.5.0/24 
+  130 172.16.100.0/23 
+  140 172.16.104.0/23 
+  150 172.16.106.0/26 
+  160 172.20.100.0/23 
+  170 10.30.165.0/24 
+  180 192.168.1.0/24 
+  190 192.168.33.0/24 
+  200 172.18.10.0/24 
+  210 172.27.8.0/24 
+  220 172.27.80.0/21 
+  230 host 172.24.0.3 
+  240 host 192.168.31.30 
+  250 host 172.18.234.100 
+  260 10.38.91.0/24 
+  270 172.17.100.0/23 
+  280 172.17.104.0/23 
+  290 172.20.104.0/23 
+  300 172.19.128.0/24 
+  310 10.38.7.0/24 
+object-group ip address megaplan-fm-ssh
+  10 host 172.26.5.7 
+  20 host 172.18.27.35 
+  30 host 172.26.5.70 
+object-group ip address megaplan-test
+  10 host 172.18.6.11 
+  20 host 172.18.6.12 
+object-group ip address multicom
+  10 95.128.224.0/22 
+  20 host 95.128.229.106 
+object-group ip port multicom-tcp
+  10 eq 80 
+  20 eq 443 
+  30 eq 64271 
+object-group ip port multicom-udp
+  10 eq 5060 
+  20 range 4000 4999 
+  30 range 10000 20000 
+object-group ip address nps-old
+  10 host 172.18.4.33 
+  20 host 172.18.4.34 
+object-group ip address nps-old-access
+  10 172.18.38.0/24 
+  20 172.21.249.0/24 
+object-group ip address ntp
+  10 host 185.179.86.114 
+  20 host 185.179.86.122 
+object-group ip address off-logs-agr
+  10 host 172.18.4.39 
+object-group ip address off-logs-agr-access
+  10 host 172.18.6.45 
+  20 host 172.18.19.18 
+  30 host 172.18.215.100 
+object-group ip address office-net
+  10 172.18.11.224/28 
+  20 172.18.6.0/24 
+  30 172.18.5.0/24 
+  40 172.18.7.0/24 
+  50 172.18.71.0/24 
+object-group ip address office-vh1
+  10 host 172.18.7.10 
+object-group ip address office-vh1-fm-smb
+  10 host 172.18.19.18 
+  20 host 172.18.19.12 
+  30 host 172.18.19.19 
+  40 host 172.18.19.11 
+  50 host 172.18.19.24 
+  60 host 172.18.19.100 
+object-group ip address office-vh3
+  10 host 172.18.7.30 
+object-group ip address office-vh3-fm-smb
+  10 host 172.18.6.3 
+  20 host 172.18.11.231 
+  30 host 172.18.130.173 
+  40 host 172.18.141.70 
+  50 host 172.18.141.71 
+  60 host 172.18.152.11 
+  70 host 172.18.192.11 
+  80 host 172.18.192.173 
+  90 host 172.18.19.18 
+  100 host 172.18.19.12 
+  110 host 172.18.4.10 
+  120 host 172.18.4.20 
+  130 host 172.18.6.4 
+  140 host 172.18.19.19 
+  150 host 172.18.19.175 
+  160 host 172.18.19.11 
+  170 host 172.18.19.24 
+  180 host 172.18.11.232 
+object-group ip address ofhv-fm-rdp
+  10 172.20.33.0/24 
+  20 172.20.34.0/24 
+  30 172.20.35.0/24 
+  40 172.20.36.0/24 
+  50 172.19.22.0/24 
+  60 172.19.67.0/24 
+object-group ip address onec
+  10 host 172.18.11.231 
+  20 host 172.18.11.232 
+object-group ip address onec-fm-smb
+  10 host 172.18.25.135 
+  20 host 172.18.25.141 
+  30 host 172.18.25.145 
+  40 host 172.18.25.149 
+  50 host 172.18.25.155 
+  60 host 172.18.25.158 
+  70 host 172.20.20.135 
+  80 host 172.20.20.141 
+  90 host 172.20.20.145 
+  100 host 172.20.20.149 
+  110 host 172.20.20.155 
+  120 host 172.20.20.158 
+object-group ip address oro-task
+  10 172.18.6.90/31 
+  20 172.18.6.92/31 
+  30 host 172.18.6.94 
+object-group ip address ovmail
+  10 host 172.18.64.8 
+object-group ip address ovmail-fm-rdp
+  10 host 172.18.27.35 
+  20 host 172.18.131.206 
+  30 host 172.18.128.10 
+  40 host 172.20.36.0 
+  50 host 172.20.34.0 
+  60 host 172.20.35.0 
+object-group ip address ovmail-fm-smtp
+  10 172.20.0.0/18 
+  20 172.18.25.0/24 
+  30 172.19.24.0/24 
+  40 172.19.26.0/24 
+  50 172.19.23.0/24 
+  60 host 172.18.19.18 
+  70 172.18.6.0/24 
+  80 host 172.18.137.100 
+  90 172.18.4.0/24 
+  100 host 172.18.141.70 
+  110 host 172.18.147.34 
+  120 host 172.18.72.59 
+  130 172.18.130.0/24 
+  140 host 172.18.213.20 
+  150 host 172.18.11.231 
+  160 host 172.18.11.232 
+  170 host 172.18.131.206 
+  180 172.18.10.0/24 
+  190 172.18.100.0/24 
+  200 172.26.4.0/24 
+object-group ip address pbx
+  10 host 172.18.71.10 
+object-group ip address pbx-fm-ssh
+  10 172.20.34.0/24 
+  20 host 172.18.234.100 
+  30 172.20.36.0/24 
+  40 172.19.4.0/24 
+  50 172.18.10.0/24 
+  60 172.20.35.0/24 
+  70 host 172.19.18.33 
+object-group ip address pbx-fm-web
+  10 172.19.0.0/18 
+  20 172.20.0.0/18 
+  30 host 172.18.27.75 
+object-group ip port pbx-udp
+  10 eq 5060 
+  20 range 10000 20000 
+object-group ip port phone-udp
+  10 eq 5060 
+  20 range 4000 6000 
+  30 range 10000 20000 
+object-group ip address phones
+  10 172.18.21.0/24 
+  20 172.18.41.0/24 
+  30 172.19.0.0/18 
+  40 172.20.0.0/18 
+  50 host 172.26.7.50 
+object-group ip address printers
+  10 172.20.10.0/24 
+object-group ip address private-nets
+  10 10.0.0.0/8 
+  20 172.16.0.0/12 
+  30 192.168.0.0/16 
+object-group ip port share-tcp
+  30 eq 445 
+  40 range 137 139 
+object-group ip address soc-net
+  10 172.18.72.48/28 
+  20 172.18.73.0/24 
+  30 172.18.76.0/24 
+  40 172.18.45.0/24 
+object-group ip address teamcity-office
+  10 host 172.18.6.74 
+object-group ip address teamcity-office-fm-web
+  10 host 172.26.5.81 
+  20 host 172.26.5.50 
+  30 host 172.20.18.128 
+object-group ip address veeam
+  10 172.18.138.0/24 
+object-group ip address vpn-all
+  10 172.19.0.0/16 
+object-group ip port web
+  10 eq 80 
+  20 eq 443 
+object-group ip address wss-sql
+  10 host 172.18.6.4 
+object-group ip address wsus
+  10 172.18.144.0/24 
+object-group ip port zabbix-c2s
+  10 range 10050 10051 
+object-group ip address zabbix-office
+  10 host 172.18.4.16 
+object-group ip address zabbix-office-client
+  10 host 185.179.86.26 
+  20 172.18.10.0/24 
+  30 172.18.38.0/24 
+  40 172.21.249.0/24 
+object-group ip address zabbix-office-fm-web
+  10 host 172.26.5.70 
+  20 172.18.130.0/24 
+  30 172.18.131.0/24 
+  40 host 172.18.145.11 
+object-group ip address zabbix-prod
+  10 host 172.18.94.3 
+object-group ip address zulu
+  10 host 172.18.4.45 
+ip access-list 15
+  10 permit ip 172.18.10.0/24 any 
+  20 permit ip 172.18.100.0/24 any 
+ip access-list ad-to
+  10 permit tcp any any established 
+  20 permit udp any eq domain addrgroup addc-office-alfa-bravo 
+  30 permit udp addrgroup ntp eq ntp addrgroup addc-office-alfa-bravo 
+  40 permit udp addrgroup vpn-all addrgroup addc-office-alfa-bravo portgroup dns-ntp 
+  50 permit udp addrgroup ksc-office-client addrgroup ksc-office portgroup ksc-c2s-udp 
+  70 permit tcp addrgroup ksc-office-client addrgroup ksc-office portgroup ksc-c2s-tcp 
+  80 permit tcp addrgroup ksc-office-fm-sql addrgroup ksc-office eq 1433 
+  90 permit tcp addrgroup addc-share-fm-smb addrgroup addc-share portgroup share-tcp 
+  100 permit tcp addrgroup lawer-share-fm-smb addrgroup lawer-share portgroup share-tcp 
+  110 permit udp addrgroup addc-office-fm-addc addrgroup addc-office-alfa-bravo portgroup ad-svc-udp 
+  120 permit tcp addrgroup addc-office-fm-addc addrgroup addc-office-alfa-bravo portgroup ad-svc-tcp 
+  130 permit udp addrgroup addc-office-clients addrgroup addc-office-alfa-bravo portgroup ad-clients-udp 
+  140 permit tcp addrgroup addc-office-clients addrgroup addc-office-alfa-bravo portgroup ad-clients-tcp 
+  150 permit tcp addrgroup addc-office-fm-dns 172.18.4.0/24 eq domain 
+  160 permit udp addrgroup addc-office-fm-dns 172.18.4.0/24 eq domain 
+  170 permit udp addrgroup addc-office-fm-ntp 172.18.4.0/24 eq ntp 
+  200 permit tcp addrgroup zabbix-office-fm-web addrgroup addc-office-alfa-bravo portgroup web 
+  210 permit tcp addrgroup zabbix-office-client addrgroup addc-office-alfa-bravo portgroup zabbix-c2s 
+  220 permit tcp addrgroup zabbix-office-client eq 161 addrgroup zabbix-office 
+  230 permit ip addrgroup off-logs-agr-access addrgroup off-logs-agr 
+  240 permit ip addrgroup fsso-collector addrgroup addc-office-alfa-bravo 
+  250 permit ip addrgroup docs addrgroup addc-office-alfa-bravo 
+  260 permit ip addrgroup wss-sql addrgroup addc-office-alfa-bravo 
+  270 permit ip addrgroup delta-addc-office addrgroup addc-office-alfa-bravo 
+  280 permit ip addrgroup devtest-net addrgroup addc-office-alfa-bravo 
+  290 permit ip addrgroup common-net addrgroup addc-office-alfa-bravo 
+  300 permit ip addrgroup soc-net addrgroup addc-office-alfa-bravo 
+  310 permit ip addrgroup office-net addrgroup addc-office-alfa-bravo 
+  320 permit ip addrgroup devtest-net addrgroup zabbix-office 
+  330 permit ip addrgroup soc-net addrgroup zabbix-office 
+  340 permit ip addrgroup office-net addrgroup zabbix-office 
+  350 permit ip addrgroup common-net addrgroup zabbix-office 
+  360 permit ip addrgroup nps-old-access addrgroup nps-old 
+  370 permit ip addrgroup confluence 172.18.4.0/24 
+  380 permit tcp 172.21.249.24/29 addrgroup addc-office-alfa-bravo portgroup fsso-client 
+  390 permit ip 172.18.7.0/24 addrgroup zulu 
+  400 permit ip 172.18.72.128/25 172.18.4.0/24 
+  410 permit ip 172.19.0.0/18 172.18.4.0/24 
+  420 permit ip 172.20.0.0/18 172.18.4.0/24 
+  430 permit icmp any any 
+ip access-list adfs-to
+  10 permit tcp any any established 
+  13 permit ip addrgroup addc-office 172.18.9.128/25 
+  20 permit ip addrgroup veeam 172.18.9.128/25 
+  30 permit ip addrgroup ksc-office 172.18.9.128/25 
+  40 permit tcp addrgroup zulu 172.18.9.128/25 
+  50 permit tcp addrgroup zabbix-office 172.18.9.128/25 eq 10050 
+  60 permit tcp addrgroup ofhv-fm-rdp 172.18.9.128/25 eq 3389 
+  70 permit tcp addrgroup dev-kubworker-infra 172.18.9.128/25 eq 9273 
+  80 permit ip addrgroup dev-net 172.18.9.128/25 
+ip access-list docs-from
+  10 permit tcp addrgroup bankclients addrgroup internet-bank portgroup web 
+  20 permit ip addrgroup bankclients addrgroup private-nets 
+  30 deny ip addrgroup bankclients any 
+  40 deny tcp 172.18.6.11/32 172.18.64.8/32 eq smtp 
+  50 deny tcp 172.18.6.12/32 172.18.64.8/32 eq smtp 
+  60 permit ip addrgroup megaplan-test addrgroup private-nets 
+  70 permit ip addrgroup megaplan-test 185.179.86.50/32 
+  80 deny ip addrgroup megaplan-test any 
+  100 permit ip 172.18.6.0/24 any 
+ip access-list docs-to
+  10 permit tcp any any established 
+  20 permit ip addrgroup addc-office 172.18.6.0/24 
+  30 permit udp addrgroup ntp 172.18.6.0/24 
+  40 permit ip addrgroup ksc-office 172.18.6.0/24 
+  50 permit ip addrgroup veeam 172.18.6.0/24 
+  60 permit tcp addrgroup addrbook-access addrgroup addrbook portgroup web 
+  70 permit tcp addrgroup confluence-access addrgroup confluence portgroup 8080-8090 
+  80 permit tcp addrgroup confluence-access-8090 addrgroup confluence eq 8090 
+  90 permit tcp addrgroup consultant-access addrgroup consultant eq 445 
+  100 permit tcp addrgroup docs-fm-web addrgroup docs portgroup web 
+  110 permit tcp addrgroup docs-fm-4080 addrgroup docs eq 4080 
+  120 permit tcp addrgroup teamcity-office-fm-web addrgroup teamcity-office portgroup web 
+  130 permit tcp addrgroup megaplan-access addrgroup megaplan portgroup web 
+  140 permit tcp addrgroup megaplan-fm-ssh addrgroup megaplan eq 22 
+  150 permit tcp addrgroup hr-box-fm-rdp addrgroup hr-box-terminal eq 3389 
+  160 permit tcp addrgroup hr-box-access addrgroup hr-box portgroup hrbox-tcp 
+  170 permit tcp addrgroup hr-box-fm-web 172.18.6.85/32 eq 443 
+  175 permit tcp 172.26.5.0/24 addrgroup oro-task eq 22 
+  176 permit tcp 172.26.5.0/24 addrgroup oro-task eq 443 
+  180 permit tcp 172.20.36.0 0.0.0.255 172.18.6.84/32 eq 9001 
+  190 permit tcp 172.18.25.0/24 172.18.6.45/32 eq 3389 
+  200 permit tcp 172.18.130.0/23 172.18.6.2/32 eq 9273 
+  210 permit ip 172.18.192.7/32 172.18.6.74/32 
+  220 permit ip 172.18.134.5/32 172.18.6.0/24 
+  230 permit ip 172.18.128.10/32 172.18.6.0/24 
+  240 permit ip 172.18.19.0/24 172.18.6.0/24 
+  250 permit ip 172.18.4.0/24 172.18.6.0/24 
+  260 permit ip 172.19.0.0/18 172.18.6.0/24 
+  270 permit ip 172.20.0.0/18 172.18.6.0/24 
+  280 permit tcp 10.38.0.0/16 172.18.6.3/32 
+  290 permit icmp any any 
+  300 permit tcp addrgroup FriendWork-access addrgroup hr-box-terminal portgroup web 
+ip access-list kpshare-to
+  10 permit tcp any any established 
+  20 permit ip addrgroup addc-office 172.18.166.0/24 
+  25 permit ip 172.18.5.5/32 172.18.166.0/24 
+  30 permit udp addrgroup ntp 172.18.166.0/24 
+  40 permit ip addrgroup ksc-office 172.18.166.0/24 
+  50 permit ip addrgroup veeam 172.18.166.0/24 
+  60 permit tcp addrgroup kpshare-fm-smb addrgroup kpshare eq 445 
+  70 permit tcp addrgroup kpshare-fm-rdp addrgroup kpshare eq 3389 
+ip access-list offsrv-to
+  10 permit tcp any any established 
+  13 permit ip addrgroup addc-office 172.18.64.0/24 
+  20 permit tcp addrgroup wsus 172.18.64.0/24 
+  30 permit ip addrgroup veeam 172.18.64.0/24 
+  40 permit udp addrgroup ntp 172.18.64.0/24 
+  50 permit ip addrgroup ksc-office 172.18.64.0/24 
+  60 permit tcp addrgroup zabbix-office 172.18.64.0/24 eq 10050 
+  70 permit tcp addrgroup zabbix-prod 172.18.64.0/24 eq 10050 
+  80 permit udp 8.8.8.8/32 eq domain addrgroup ovmail 
+  90 permit udp 8.8.4.4/32 eq domain addrgroup ovmail 
+  100 permit tcp addrgroup ovmail-fm-smtp addrgroup ovmail eq smtp 
+  110 permit tcp addrgroup ovmail-fm-smtp addrgroup ovmail eq 143 
+  120 permit tcp addrgroup 1c-buh addrgroup ovmail eq pop3 
+  190 permit ip 172.20.0.0/18 172.18.64.0/24 
+  200 permit icmp any any 
+ip access-list ofhv-to
+  10 permit tcp any any established 
+  13 permit ip addrgroup addc-office 172.18.7.0/24 
+  20 permit ip addrgroup veeam 172.18.7.0/24 
+  30 permit ip addrgroup ksc-office 172.18.7.0/24 
+  40 permit tcp addrgroup zulu 172.18.7.0/24 
+  50 permit tcp addrgroup zabbix-office 172.18.7.0/24 eq 10050 
+  60 permit tcp addrgroup ofhv-fm-rdp 172.18.7.0/24 eq 3389 
+  70 permit tcp addrgroup dev-kubworker-infra 172.18.7.0/24 eq 9273 
+  80 permit tcp addrgroup office-vh3-fm-smb addrgroup office-vh3 eq 445 
+  90 permit tcp addrgroup office-vh1-fm-smb addrgroup office-vh1 eq 445 
+  100 permit tcp addrgroup onec 172.18.7.0/24 eq 445 
+ip access-list onec-to
+  10 permit tcp any any established 
+  11 permit udp 172.18.11.224/28 addrgroup addc-office 
+  12 permit tcp 172.18.11.224/28 addrgroup addc-office 
+  13 permit ip addrgroup addc-office 172.18.11.224/28 
+  20 permit tcp addrgroup wsus 172.18.11.224/28 
+  30 permit ip addrgroup veeam 172.18.11.224/28 
+  40 permit ip addrgroup ksc-office 172.18.11.224/28 
+  50 permit tcp addrgroup zabbix-office 172.18.11.224/28 eq 10050 
+  60 permit ip 172.18.5.5/32 172.18.11.224/28 
+  70 permit udp addrgroup printers addrgroup 1c-buh 
+  80 permit tcp addrgroup 1c-buh-fm-rdp addrgroup 1c-buh eq 3389 
+  90 permit tcp addrgroup onec-fm-smb addrgroup 1c-buh eq 445 
+  100 permit tcp 172.18.25.0/24 addrgroup 1c-buh eq 6220 
+  110 permit tcp 172.20.28.0/24 addrgroup 1c-buh eq 6220 
+  200 permit icmp any any 
+ip access-list pbx-from
+  10 permit tcp 172.18.71.0/24 any established 
+  20 permit udp 172.18.71.0/24 addrgroup addc-office portgroup dns-ntp 
+  30 permit tcp 172.18.71.0/24 addrgroup zabbix-office eq 10050 
+  40 permit icmp addrgroup pbx addrgroup multicom 
+  50 permit udp addrgroup pbx portgroup multicom-udp addrgroup multicom 
+  60 permit icmp addrgroup pbx addrgroup phones 
+  70 permit udp addrgroup pbx portgroup pbx-udp addrgroup phones portgroup phone-udp 
+  80 deny ip any 10.0.0.0/8 
+  90 deny ip any 172.16.0.0/12 
+  100 deny ip any 192.168.0.0/16 
+  110 permit tcp addrgroup pbx any eq www 
+  120 permit tcp addrgroup pbx any eq 443 
+ip access-list pbx-to
+  10 permit tcp any any established 
+  20 permit tcp addrgroup zabbix-office 172.18.71.0/24 eq 10050 
+  30 permit udp addrgroup addc-office portgroup dns-ntp 172.18.71.0/24 
+  40 permit tcp addrgroup pbx-fm-ssh addrgroup pbx eq 22 
+  50 permit tcp addrgroup pbx-fm-web addrgroup pbx eq www 
+  60 permit icmp addrgroup multicom addrgroup pbx 
+  70 permit tcp addrgroup multicom addrgroup pbx portgroup multicom-tcp 
+  80 permit udp addrgroup multicom addrgroup pbx portgroup multicom-udp 
+  90 permit icmp addrgroup phones addrgroup pbx 
+  100 permit udp addrgroup phones portgroup phone-udp addrgroup pbx portgroup pbx-udp 
+ip access-list ssh-access
+  10 permit tcp 172.20.35.0 0.0.0.255 any eq 22 
+  20 permit tcp 89.207.95.221/32 any eq 22 
+  21 permit tcp 89.207.95.221/32 any eq telnet 
+  30 permit tcp 77.238.99.90/32 any eq 22 
+  40 permit tcp 46.61.178.94/32 any eq 22 
+  50 permit tcp 172.18.0.0 0.0.0.255 any eq 22 
+  60 permit tcp 172.18.1.0 0.0.0.255 any eq 22 
+  70 permit tcp 172.18.2.0 0.0.0.255 any eq 22 
+  80 permit tcp 172.18.10.0 0.0.0.255 any eq 22 
+  90 permit tcp 172.18.11.192 0.0.0.15 any eq 22 
+  100 permit tcp 172.18.35.0 0.0.0.255 any eq 22 
+  120 permit tcp 172.18.100.0 0.0.0.255 any eq 22 
+  130 permit tcp 172.18.160.0 0.0.0.255 any eq 22 
+  140 permit tcp 172.19.3.0 0.0.0.255 any eq 22 
+  150 permit tcp 172.20.35.0 0.0.0.255 any eq 22 
+vlan access-map vam-ng-hc 10
+  match ip address cap-ng-hc
+  action forward
+copp profile strict
+snmp-server user ccrt network-admin auth md5 0x9f1a3b991543d853ed41474d2229fc2e priv 0x9f1a3b991543d853ed41474d2229fc2e localizedkey
+snmp-server user admin network-admin auth md5 0x4eecaedb8926eb4e5a9247d86b214e43 priv 0x4eecaedb8926eb4e5a9247d86b214e43 localizedkey
+snmp-server user enable network-admin auth md5 0x937a1c44f218b4d3b7cecd10ddf7f4c7 priv 0x937a1c44f218b4d3b7cecd10ddf7f4c7 localizedkey
+snmp-server user ssumin network-admin auth md5 0xc41fa7d0c5b828c3651fede4217112c9 priv 0xc41fa7d0c5b828c3651fede4217112c9 localizedkey
+rmon event 1 description FATAL(1) owner PMON@FATAL
+rmon event 2 description CRITICAL(2) owner PMON@CRITICAL
+rmon event 3 description ERROR(3) owner PMON@ERROR
+rmon event 4 description WARNING(4) owner PMON@WARNING
+rmon event 5 description INFORMATION(5) owner PMON@INFO
+snmp-server community bublic group network-operator
+snmp-server community bublic use-ipv4acl 15
+ntp server 172.18.10.12 prefer use-vrf management
+ntp server 172.18.100.12 use-vrf management
+ntp source-interface loopback0
+aaa authentication login default group rtstender local 
+aaa authentication login console group rtstender local 
+aaa authorization config-commands default group rtstender local 
+aaa authorization commands default group rtstender local 
+aaa accounting default group rtstender local 
+
+ip route 0.0.0.0/0 172.21.7.29
+ip route 172.18.4.0/24 172.21.7.29 name n4-rt-asa-1/2.inside.outside
+ip route 172.18.165.0/24 172.21.7.29 name n4-rt-asa-1/2.inside.outside
+vlan 1,270,1720,1737,1739,1742-1743,1804-1808,1810-1815,1817,1819,1822,1827,1843,1864,1868-1871,1879,1883-1887,1889-1892,1894-1895,2123-2126,2134-2136,2140,2143,2151-2152,2155-2159,2163-2165,2167-2168,2232,2234-2236,2238-2240,2242-2245,2248-2255,2257,2259,2262-2272,2328-2331,2333,2340-2345,2347,2451-2455,2476-2482,2486-2487,2716,2732,2765,2767
+vlan 1720
+  name n4-rt-ec-1/2
+vlan 1739
+  name n4-rt-asa-1.man
+vlan 1742
+  name asa.of.outside
+vlan 1743
+  name asa.of.inside
+vlan 1804
+  name office.ad
+vlan 1805
+  name soc.falcongaze
+vlan 1806
+  name office.docs
+vlan 1807
+  name office.hv
+vlan 1810
+  name noc.srv
+vlan 1813
+  name hypervisors
+vlan 1817
+  name ipmi
+vlan 1819
+  name bi
+vlan 1822
+  name adfs
+vlan 1864
+  name office.srv
+vlan 1871
+  name office.pbx
+vlan 1883
+  name prod.k8s-mz
+vlan 1884
+  name prod.k8s-xfs
+vlan 2123
+  name office.onec
+vlan 2126
+  name office.proxy
+vlan 2140
+  name dib-services
+vlan 2155
+  name common.ng-main
+vlan 2158
+  name common.ng-proxy
+vlan 2167
+  name n4.gis-nr2.ext
+vlan 2168
+  name n4.gis-nr2.int
+vlan 2235
+  name common.is
+vlan 2238
+  name common.veeam
+vlan 2251
+  name common.nc
+vlan 2252
+  name common.nc-dbpg
+vlan 2259
+  name common.mik-s
+vlan 2262
+  name common.shd
+vlan 2263
+  name common.ngate
+vlan 2264
+  name vpn.openvpn
+vlan 2265
+  name office.test
+vlan 2266
+  name n4.office.rtskap-share
+vlan 2267
+  name demo.net-mgmt
+vlan 2268
+  name n4.common.omailsrv
+vlan 2269
+  name n4.common.expressf
+vlan 2270
+  name n4.common.expressb
+vlan 2271
+  name common.dns
+vlan 2272
+  name n4.common.demo-usergate
+vlan 2329
+  name common.offsrv
+vlan 2331
+  name dev.devtest1
+vlan 2343
+  name n4.prod.infra-it
+vlan 2344
+  name n4.prod.infra
+vlan 2345
+  name n4.prod.internal-44
+vlan 2451
+  name prod.prxmx-k8s
+vlan 2452
+  name n4.prod.virus-scan
+vlan 2453
+  name n4.prod.nemizida-waf
+vlan 2454
+  name n4.prod.market
+vlan 2455
+  name n4.prod.infra-223
+vlan 2476
+  name n4.common.223-dmz
+vlan 2477
+  name n4-devtest-k8s-cl-shared
+vlan 2478
+  name n4-devtest-common.k8s-mz2
+vlan 2479
+  name n4.devtest-dome-net
+vlan 2480
+  name n4.devtest-dome-internal
+vlan 2481
+  name common.dev-db
+vlan 2482
+  name n4.devtest-dome-srv
+vlan 2486
+  name n4.common.suset-ap
+vlan 2487
+  name n4.common.suset-db
+vlan 2765
+  name n4.heartbeat.proxmox
+vlan 2767
+  name n4.proxmox.heartbeat
+
+spanning-tree vlan 1-3900 priority 16384
+ip prefix-list s-o1 permit 172.18.4.0/24 
+ip prefix-list s-o1 permit 172.18.165.0/24 
+ip prefix-list s-o1 permit 185.179.86.3/32 
+ip prefix-list s-o1 permit 185.179.86.4/32 
+ip prefix-list s-o1 permit 185.179.86.8/32 
+route-map s-o1 permit 10
+  match ip address prefix-list s-o1 
+  set metric 1 
+  set metric-type type-1
+vrf context management
+  ip route 0.0.0.0/0 172.21.64.33
+vrf context test
+  description xcvrs test
+vrf context vpc-ka
+no hardware access-list update atomic
+hardware access-list update default-result permit
+vpc domain 1
+  peer-switch
+  role priority 100
+  peer-keepalive destination 192.254.0.1 source 192.254.0.2 vrf vpc-ka
+  peer-gateway
+  layer3 peer-router
+  auto-recovery
+  ip arp synchronize
+
+
+interface Vlan1
+  no ip redirects
+  no ipv6 redirects
+
+interface Vlan1720
+  description n4-rt-ec-1/2 vlan1720
+  no shutdown
+  no ip redirects
+  ip address 172.21.5.108/29
+  no ipv6 redirects
+  ip ospf cost 20
+  no ip ospf passive-interface
+  ip router ospf 1 area 0.0.0.0
+
+interface Vlan1737
+  description n4-rt-65-1/2.common
+  no shutdown
+  no ip redirects
+  ip address 172.21.7.134/29
+  no ipv6 redirects
+  no ip ospf passive-interface
+  ip router ospf 1 area 0.0.0.0
+  hsrp 0 
+    preempt delay reload 300 
+    priority 254
+    ip 172.21.7.132
+
+interface Vlan1739
+  description n4-rt-asa-1.man
+  no shutdown
+  no ip redirects
+  ip address 172.21.7.158/28
+  no ipv6 redirects
+  ip router ospf 1 area 0.0.0.0
+  hsrp 0 
+    preempt delay reload 300 
+    priority 254
+    ip 172.21.7.145
+
+interface Vlan1743
+  description n4-rt-asa-1/2.office.inside
+  no shutdown
+  no ip redirects
+  ip address 172.21.7.27/29
+  no ipv6 redirects
+  ip router ospf 1 area 0.0.0.0
+  hsrp 0 
+    preempt delay reload 300 
+    priority 254
+    ip 172.21.7.25
+
+interface Vlan1806
+  description docs
+  no shutdown
+  ip access-group docs-from in
+  ip access-group docs-to out
+  no ip redirects
+  ip address 172.18.6.253/24
+  no ipv6 redirects
+  ip ospf cost 1
+  ip router ospf 1 area 0.0.0.0
+  hsrp 0 
+    preempt delay reload 300 
+    priority 254
+    ip 172.18.6.1
+
+interface Vlan1807
+  description office-hv
+  no shutdown
+  ip access-group ofhv-to out
+  no ip redirects
+  ip address 172.18.7.253/24
+  no ipv6 redirects
+  ip ospf cost 1
+  ip router ospf 1 area 0.0.0.0
+  hsrp 0 
+    preempt delay reload 300 
+    priority 254
+    ip 172.18.7.1
+
+interface Vlan1822
+  description adfs
+  no shutdown
+  no ip redirects
+  ip address 172.18.9.253/25
+  no ipv6 redirects
+  ip ospf cost 1
+  ip router ospf 1 area 0.0.0.0
+  hsrp 0 
+    preempt delay reload 300 
+    priority 254
+    ip 172.18.9.129
+
+interface Vlan1864
+  description offsrv(ovmail)
+  no shutdown
+  ip access-group offsrv-to out
+  no ip redirects
+  ip address 172.18.64.253/24
+  no ipv6 redirects
+  ip ospf cost 1
+  ip router ospf 1 area 0.0.0.0
+  hsrp 0 
+    preempt delay reload 300 
+    priority 254
+    ip 172.18.64.1
+
+interface Vlan1871
+  description pbx
+  no shutdown
+  ip access-group pbx-from in
+  ip access-group pbx-to out
+  no ip redirects
+  ip address 172.18.71.253/24
+  no ipv6 redirects
+  ip ospf cost 1
+  ip router ospf 1 area 0.0.0.0
+  hsrp 0 
+    preempt delay reload 300 
+    priority 254
+    ip 172.18.71.1
+
+interface Vlan2123
+  description onec
+  no shutdown
+  ip access-group onec-to out
+  no ip redirects
+  ip address 172.18.11.237/28
+  no ipv6 redirects
+  ip ospf cost 1
+  ip router ospf 1 area 0.0.0.0
+  hsrp 0 
+    preempt delay reload 300 
+    priority 254
+    ip 172.18.11.225
+
+interface Vlan2266
+  description rtskap share
+  no shutdown
+  ip access-group kpshare-to out
+  no ip redirects
+  ip address 172.18.166.254/24
+  no ipv6 redirects
+  ip ospf cost 1
+  ip router ospf 1 area 0.0.0.0
+  hsrp 0 
+    preempt delay reload 300 
+    priority 254
+    ip 172.18.166.1
+
+interface Vlan2453
+  no shutdown
+  no ip redirects
+  no ipv6 redirects
+
+interface Vlan2479
+  no shutdown
+  no ip redirects
+  ip address 10.91.4.3/29
+  no ipv6 redirects
+
+interface port-channel1
+  description VPC Peer Link (n4-rt-n9k-1 <-> n4-rt-n9k-2)
+  switchport
+  switchport mode trunk
+  spanning-tree port type network
+  vpc peer-link
+
+interface port-channel2
+  description n4-rt-asa-1 pri
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1742-1743,1804,2124-2125,2143,2151,2265
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  mtu 9216
+  vpc 2
+
+interface port-channel3
+  description n4-rt-asa-1 sec
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1742-1743,1804,2124-2125,2143,2151,2265
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  mtu 9216
+  vpc 3
+
+interface port-channel9
+  description n4-rt-n9k-3/4 [po9]
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1,270,1720,1737,1742,1804-1808,1810-1815,1817,1819,1822,1827,1843,1864,1868-1871,1879,1883-1887,1889-1892,1894-1895,2123-2126,2134-2136,2143,2151-2152,2155-2159,2163-2165,2167-2168,2232,2234-2236,2238-2240,2242-2245,2248-2255,2257,2259,2262-2264,2266-2272,2328-2331,2333,2340-2345,2347-2348,2451-2455,2476-2482,2486-2487,2716,2732
+  mtu 9216
+  vpc 9
+
+interface port-channel101
+  description =urssdac-- gz-bi01 old
+  switchport
+  switchport access vlan 1819
+  switchport trunk allowed vlan 1819
+  spanning-tree port type edge
+  spanning-tree bpduguard enable
+  mtu 9216
+  vpc 101
+
+interface port-channel103
+  description =urshdtc-- gz-bi-vh1 new
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1819,2248
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  mtu 9216
+  vpc 103
+
+interface port-channel105
+  description =urssdac-- gz-bi01 new
+  switchport
+  switchport access vlan 1819
+  spanning-tree port type edge
+  spanning-tree bpduguard enable
+  mtu 9216
+  speed 10000
+  duplex full
+
+interface port-channel107
+  description =urshdtpva gz-inf3     
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 270,1808,1810,1812-1815,1819,1827,1843,1864,1868-1871,1879-1880,1883-1887,1889-1892,1894-1895,2134-2136,2140,2142,2152,2156-2157,2159,2163-2165,2232,2234-2236,2239-2240,2242-2245,2248-2250,2253-2255,2257,2259,2264,2271,2328-2330,2333,2340-2345,2347,2455,2476-2478,2486-2487,2716,2732
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  mtu 9216
+  vpc 107
+
+interface port-channel108
+  description =urshdtpva gz-inf2     
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 270,1808,1810,1812-1815,1819,1827,1843,1864,1868-1871,1879,1883-1887,1889-1892,1894-1895,2134-2136,2140,2142,2152,2156-2157,2159,2163-2165,2232,2234-2236,2239-2240,2242-2245,2248-2250,2253-2255,2257,2259,2264,2271,2328-2330,2333,2340-2345,2347,2454-2455,2476-2478,2486-2487,2716,2732
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  mtu 9216
+  vpc 108
+
+interface port-channel109
+  description =urshdtpva gz-inf17
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 270,1808,1810,1812-1815,1819,1827,1843,1864,1868-1871,1879-1880,1883-1887,1889-1892,1894-1895,2134-2136,2140,2142,2152,2156-2157,2159,2163-2165,2232,2234-2236,2239-2240,2242-2245,2248-2250,2253-2255,2257,2259,2264,2271,2328-2330,2333,2340-2345,2347,2454-2455,2476-2478,2486-2487,2716,2732
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  mtu 9216
+  vpc 109
+
+interface port-channel110
+  description =urshdtpva gz-inf16 lan
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 270,1808,1810,1812-1815,1819,1827,1843,1864,1868-1871,1879-1880,1883-1887,1889-1892,1894-1895,2134-2136,2140,2142,2152,2156-2157,2159,2163-2165,2232,2234-2236,2239-2240,2242-2245,2248-2250,2253-2255,2257,2259,2264,2271,2328-2330,2333,2340-2345,2347,2455,2476-2478,2486-2487,2716,2732
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  mtu 9216
+  vpc 110
+
+interface port-channel111
+  description 1c-buh-2  
+  switchport
+  switchport access vlan 2123
+  spanning-tree port type edge
+  spanning-tree bpduguard enable
+  mtu 9216
+  vpc 111
+
+interface port-channel112
+  description =urshdcp-- gz-sql02
+  switchport
+  switchport mode trunk
+  switchport access vlan 1815
+  switchport trunk allowed vlan 1815
+  mtu 9216
+  vpc 112
+
+interface port-channel113
+  description =urshdtpva gz-inf14
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 270,1808,1810,1812-1815,1819,1827,1843,1864,1868-1871,1879-1880,1883-1887,1889-1892,1894-1895,2134-2136,2140,2142,2152,2156-2157,2159,2163-2165,2232,2234-2236,2239-2240,2242-2245,2248-2250,2253-2255,2257,2259,2264,2271,2328-2330,2333,2340-2345,2347,2455,2476-2478,2486-2487,2716,2732
+  spanning-tree port type edge
+  spanning-tree bpduguard enable
+  mtu 9216
+  vpc 113
+
+interface port-channel114
+  description =urshdt--- new-srv
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1813
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  mtu 9216
+  vpc 114
+
+interface port-channel115
+  description =urshdcd-- dev-gz-vh9
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 2155-2158,2257,2259,2330-2331,2476-2478,2481
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  mtu 9216
+  vpc 115
+
+interface port-channel116
+  description =urshdtpva gz-inf1
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 270,1808,1810,1812-1815,1819,1827,1843,1864,1868-1871,1879-1880,1883-1887,1889-1892,1894-1895,2134-2136,2140,2142,2152,2156-2157,2159,2163-2165,2232,2234-2236,2239-2240,2242-2245,2248-2250,2253-2255,2257,2259,2264,2271,2328-2330,2333,2340-2342,2344-2345,2347,2455,2476-2478,2486-2487,2716,2732
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  mtu 9216
+  vpc 116
+
+interface port-channel117
+  description office-vh4
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1804,1806-1807,1810,1813-1815,1819,1822,1864,1868,2120-2121,2123,2126,2135,2235,2237-2239,2241,2251-2252,2258,2266,2269-2270,2329,2732
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  mtu 9216
+
+interface port-channel119
+  description =urshdcp-- gz-devops-vh5
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 270,1804,1808,1810,1812-1815,1819,1827,1843,1864,1868-1871,1879,1883-1887,1889-1892,1894-1895,2134-2136,2140,2142,2152,2156-2157,2159,2163-2165,2232,2234-2236,2239-2240,2242-2245,2248-2250,2253-2255,2257,2259,2264,2328,2330,2333,2340-2344,2347,2451-2452,2454,2476-2478,2486-2487,2716,2732
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  mtu 9216
+  vpc 119
+
+interface port-channel120
+  description =urshdcp-- gz-devops-vh4
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 270,1804,1808,1810,1812-1815,1819,1827,1843,1864,1868-1871,1879,1883-1887,1889-1892,1894-1895,2134-2136,2140,2142,2152,2156-2157,2159,2163-2165,2232,2234-2236,2239-2240,2242-2245,2248-2250,2253-2255,2257,2259,2264,2328,2330,2333,2340-2344,2347,2451-2452,2454,2476-2478,2486-2487,2716,2732
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  mtu 9216
+  vpc 120
+
+interface port-channel122
+  description dev-gz-tstkvm
+  switchport
+  switchport mode trunk
+  switchport access vlan 2257
+  switchport trunk allowed vlan 2257,2259,2330-2331,2476-2478
+  mtu 9216
+  vpc 122
+
+interface port-channel127
+  description =urshdtovc office-vh1
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1804,1806-1807,1810,1813-1815,1819,1822,1864,1868,2120-2121,2123,2126,2135,2235,2237-2239,2241,2251-2252,2258,2265-2266,2268-2270,2329,2732
+  mtu 9216
+  vpc 127
+
+interface port-channel128
+  description =urshdcd-- dev-gz-vh1
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 2155-2158,2257,2259,2330-2331,2476-2478,2481
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  mtu 9216
+  vpc 128
+
+interface port-channel129
+  description =urshdcd-- dev-gz-vh2
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 2155-2158,2257,2259,2330-2331,2476-2478,2481
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  mtu 9216
+  vpc 129
+
+interface port-channel130
+  description =urshdcd-- dev-gz-vh3
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 2155-2158,2257,2259,2330-2331,2476-2478,2481-2482
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  mtu 9216
+  vpc 130
+
+interface port-channel131
+  description =urshdcd-- dev-gz-vh4
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 2155-2158,2257,2259,2330-2331,2476-2478,2481-2482
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  mtu 9216
+  vpc 131
+
+interface port-channel134
+  description =urshdtpva gz-inf15
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 270,1808,1810,1812-1815,1819,1827,1843,1864,1868-1871,1879-1880,1883-1887,1889-1892,1894-1895,2134-2136,2140,2142,2152,2156-2157,2159,2163-2165,2232,2234-2236,2239-2240,2242-2245,2248-2250,2253-2255,2257,2259,2264,2271,2328-2330,2333,2340-2345,2347-2348,2455,2476-2478,2486-2487,2716,2732
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  mtu 9216
+  vpc 134
+
+interface port-channel135
+  description =urshdcd-- dev-gz-vh10
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 2155-2158,2257,2259,2330-2331,2476-2478,2481
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  mtu 9216
+  vpc 135
+
+interface port-channel137
+  description =urshdcp-- gz-pve-devops3
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 270,1808,1810,1812-1815,1819,1827,1843,1864,1868-1871,1879,1883-1887,1889-1892,1894-1895,2134-2136,2140,2142,2152,2156-2157,2159,2163-2165,2232,2234-2236,2239-2240,2242-2245,2248-2250,2253-2255,2257,2259,2264,2328,2330,2333,2340-2344,2347,2451-2452,2454,2476-2478,2486-2487,2716,2732
+  mtu 9216
+  vpc 137
+
+interface port-channel138
+  description =urshdcp-- gz-inf18
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 270,1808,1810,1812-1815,1819,1827,1843,1864,1868-1871,1879-1880,1883-1887,1889-1892,1894-1895,2134-2136,2140,2142,2152,2156-2157,2159,2163-2165,2232,2234-2236,2239-2240,2242-2245,2248-2250,2253-2255,2257,2259,2264,2271,2328-2330,2333,2340-2345,2347,2451-2452,2454-2455,2476-2478,2486-2487,2716,2732
+  mtu 9216
+  vpc 138
+
+interface port-channel140
+  description =urshdcp-- gz-sql01
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1815
+  mtu 9216
+  vpc 140
+
+interface port-channel141
+  description gz-inf-4(n4-rt-usg-1)
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1813,2267,2272,2479-2480,2486-2487
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  mtu 9216
+  vpc 141
+
+interface Ethernet1/1
+  description =urssdcc-- gz-bi01
+  switchport
+  switchport access vlan 1819
+  switchport trunk allowed vlan 1819
+  mtu 9216
+  channel-group 101 mode active
+  no shutdown
+
+interface Ethernet1/2
+  description =urshma--- gz-ib ipmi
+  switchport
+  switchport access vlan 1817
+  spanning-tree port type edge
+  spanning-tree bpduguard enable
+  no shutdown
+
+interface Ethernet1/3
+  description =urshdac-- gz-bi-vh1 new
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1819,2248
+  mtu 9216
+  fec off
+  channel-group 103 mode active
+  no shutdown
+
+interface Ethernet1/4
+  description office-vh4 ipmi
+  switchport
+  switchport access vlan 1817
+  spanning-tree port type edge
+  spanning-tree bpduguard enable
+  speed 1000
+  no shutdown
+
+interface Ethernet1/5
+  description =urshdac-- gz-bi01 new
+  switchport
+  switchport access vlan 1819
+  mtu 9216
+  speed 10000
+  duplex full
+  channel-group 105 mode active
+  no shutdown
+
+interface Ethernet1/6
+  description gz-bi01 srv ipmi
+  switchport
+  switchport access vlan 1817
+  spanning-tree port type edge
+  spanning-tree bpduguard enable
+  no shutdown
+
+interface Ethernet1/7
+  description =urshdcp-- gz-inf3   
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 270,1808,1810,1812-1815,1819,1827,1843,1864,1868-1871,1879-1880,1883-1887,1889-1892,1894-1895,2134-2136,2140,2142,2152,2156-2157,2159,2163-2165,2232,2234-2236,2239-2240,2242-2245,2248-2250,2253-2255,2257,2259,2264,2271,2328-2330,2333,2340-2345,2347,2455,2476-2478,2486-2487,2716,2732
+  mtu 9216
+  channel-group 107 mode active
+  no shutdown
+
+interface Ethernet1/8
+  description =urshdcp-- gz-inf2   
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 270,1808,1810,1812-1815,1819,1827,1843,1864,1868-1871,1879,1883-1887,1889-1892,1894-1895,2134-2136,2140,2142,2152,2156-2157,2159,2163-2165,2232,2234-2236,2239-2240,2242-2245,2248-2250,2253-2255,2257,2259,2264,2271,2328-2330,2333,2340-2345,2347,2454-2455,2476-2478,2486-2487,2716,2732
+  mtu 9216
+  channel-group 108 mode active
+  no shutdown
+
+interface Ethernet1/9
+  description =urshdcp-- gz-inf17
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 270,1808,1810,1812-1815,1819,1827,1843,1864,1868-1871,1879-1880,1883-1887,1889-1892,1894-1895,2134-2136,2140,2142,2152,2156-2157,2159,2163-2165,2232,2234-2236,2239-2240,2242-2245,2248-2250,2253-2255,2257,2259,2264,2271,2328-2330,2333,2340-2345,2347,2454-2455,2476-2478,2486-2487,2716,2732
+  mtu 9216
+  channel-group 109 mode active
+  no shutdown
+
+interface Ethernet1/10
+  description =urshdtpva gz-inf16 lan
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 270,1808,1810,1812-1815,1819,1827,1843,1864,1868-1871,1879-1880,1883-1887,1889-1892,1894-1895,2134-2136,2140,2142,2152,2156-2157,2159,2163-2165,2232,2234-2236,2239-2240,2242-2245,2248-2250,2253-2255,2257,2259,2264,2271,2328-2330,2333,2340-2345,2347,2455,2476-2478,2486-2487,2716,2732
+  mtu 9216
+  channel-group 110 mode active
+  no shutdown
+
+interface Ethernet1/11
+  description 1c-buh-2
+  switchport
+  switchport access vlan 2123
+  mtu 9216
+  channel-group 111 mode active
+  no shutdown
+
+interface Ethernet1/12
+  description =urshdcp-- gz-sql02
+  switchport
+  switchport mode trunk
+  switchport access vlan 1815
+  switchport trunk allowed vlan 1815
+  mtu 9216
+  channel-group 112 mode active
+  no shutdown
+
+interface Ethernet1/13
+  description =urshdtpva gz-inf14
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 270,1808,1810,1812-1815,1819,1827,1843,1864,1868-1871,1879-1880,1883-1887,1889-1892,1894-1895,2134-2136,2140,2142,2152,2156-2157,2159,2163-2165,2232,2234-2236,2239-2240,2242-2245,2248-2250,2253-2255,2257,2259,2264,2271,2328-2330,2333,2340-2345,2347,2455,2476-2478,2486-2487,2716,2732
+  spanning-tree port type edge
+  spanning-tree bpduguard enable
+  mtu 9216
+  channel-group 113 mode active
+  no shutdown
+
+interface Ethernet1/14
+  description =urshdcp-- new-srv
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1813
+  mtu 9216
+  channel-group 114 mode active
+  no shutdown
+
+interface Ethernet1/15
+  description =urshdcd-- dev-gz-vh9
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 2155-2158,2257,2259,2330-2331,2476-2478,2481
+  mtu 9216
+  channel-group 115 mode active
+  no shutdown
+
+interface Ethernet1/16
+  description =urshdcp-- gz-inf1
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 270,1808,1810,1812-1815,1819,1827,1843,1864,1868-1871,1879-1880,1883-1887,1889-1892,1894-1895,2134-2136,2140,2142,2152,2156-2157,2159,2163-2165,2232,2234-2236,2239-2240,2242-2245,2248-2250,2253-2255,2257,2259,2264,2271,2328-2330,2333,2340-2342,2344-2345,2347,2455,2476-2478,2486-2487,2716,2732
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  mtu 9216
+  channel-group 116 mode active
+  no shutdown
+
+interface Ethernet1/17
+  description office-vh4
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1804,1806-1807,1810,1813-1815,1819,1822,1864,1868,2120-2121,2123,2126,2135,2235,2237-2239,2241,2251-2252,2258,2266,2269-2270,2329,2732
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  mtu 9216
+  channel-group 117 mode active
+  no shutdown
+
+interface Ethernet1/18
+  description gz-dc1 ipmi
+  switchport
+  switchport access vlan 1817
+  spanning-tree port type edge
+  spanning-tree bpduguard enable
+  no shutdown
+
+interface Ethernet1/19
+  description =urshdcp-- gz-devops-vh5
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 270,1804,1808,1810,1812-1815,1819,1827,1843,1864,1868-1871,1879,1883-1887,1889-1892,1894-1895,2134-2136,2140,2142,2152,2156-2157,2159,2163-2165,2232,2234-2236,2239-2240,2242-2245,2248-2250,2253-2255,2257,2259,2264,2328,2330,2333,2340-2344,2347,2451-2452,2454,2476-2478,2486-2487,2716,2732
+  mtu 9216
+  channel-group 119 mode active
+  no shutdown
+
+interface Ethernet1/20
+  description =urshdcp-- gz-devops-vh4
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 270,1804,1808,1810,1812-1815,1819,1827,1843,1864,1868-1871,1879,1883-1887,1889-1892,1894-1895,2134-2136,2140,2142,2152,2156-2157,2159,2163-2165,2232,2234-2236,2239-2240,2242-2245,2248-2250,2253-2255,2257,2259,2264,2328,2330,2333,2340-2344,2347,2451-2452,2454,2476-2478,2486-2487,2716,2732
+  mtu 9216
+  channel-group 120 mode active
+  no shutdown
+
+interface Ethernet1/21
+  description gz-custom1 lan
+  switchport
+  switchport access vlan 1812
+  spanning-tree port type edge
+  spanning-tree bpduguard enable
+  mtu 9216
+  no shutdown
+
+interface Ethernet1/22
+  description dev-gz-tstkvm
+  switchport
+  switchport mode trunk
+  switchport access vlan 2257
+  switchport trunk allowed vlan 2257,2259,2330-2331,2476-2478
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  mtu 9216
+  channel-group 122 mode active
+  no shutdown
+
+interface Ethernet1/23
+  description n4-rt-asa-1 pri
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1742-1743,1804,2124-2125,2143,2151,2265
+  mtu 9216
+  channel-group 2 mode active
+  no shutdown
+
+interface Ethernet1/24
+  description n4-rt-asa-1 sec
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1742-1743,1804,2124-2125,2143,2151,2265
+  mtu 9216
+  channel-group 3 mode active
+  no shutdown
+
+interface Ethernet1/25
+  description n4-rt-asa-1 sec man0
+  switchport
+  switchport access vlan 1739
+  spanning-tree port type edge
+  spanning-tree bpduguard enable
+  no shutdown
+
+interface Ethernet1/26
+  description ipmi gz-pve-devops2 172.18.17.39
+  switchport
+  switchport access vlan 1817
+  spanning-tree port type edge
+  spanning-tree bpduguard enable
+  no shutdown
+
+interface Ethernet1/27
+  description office-vh1
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1804,1806-1807,1810,1813-1815,1819,1822,1864,1868,2120-2121,2123,2126,2135,2235,2237-2239,2241,2251-2252,2258,2265-2266,2268-2270,2329,2732
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  mtu 9216
+  channel-group 127 mode active
+  no shutdown
+
+interface Ethernet1/28
+  description =urshdcd-- dev-gz-vh1
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 2155-2158,2257,2259,2330-2331,2476-2478,2481
+  mtu 9216
+  channel-group 128 mode active
+  no shutdown
+
+interface Ethernet1/29
+  description =urshdcd-- dev-gz-vh2
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 2155-2158,2257,2259,2330-2331,2476-2478,2481
+  mtu 9216
+  channel-group 129 mode active
+  no shutdown
+
+interface Ethernet1/30
+  description =urshdcd-- dev-gz-vh3
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 2155-2158,2257,2259,2330-2331,2476-2478,2481-2482
+  mtu 9216
+  channel-group 130 mode active
+  no shutdown
+
+interface Ethernet1/31
+  description =urshdcd-- dev-gz-vh4
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 2155-2158,2257,2259,2330-2331,2476-2478,2481-2482
+  mtu 9216
+  channel-group 131 mode active
+  no shutdown
+
+interface Ethernet1/32
+  description heartbeat gz-pve-devops1
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 2765,2767
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  no shutdown
+
+interface Ethernet1/33
+  description heartbeat gz-pve-devops2
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 2765,2767
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  no shutdown
+
+interface Ethernet1/34
+  description =urshdtpva gz-inf15 lan
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 270,1808,1810,1812-1815,1819,1827,1843,1864,1868-1871,1879-1880,1883-1887,1889-1892,1894-1895,2134-2136,2140,2142,2152,2156-2157,2159,2163-2165,2232,2234-2236,2239-2240,2242-2245,2248-2250,2253-2255,2257,2259,2264,2271,2328-2330,2333,2340-2345,2347-2348,2455,2476-2478,2486-2487,2716,2732
+  mtu 9216
+  channel-group 134 mode active
+  no shutdown
+
+interface Ethernet1/35
+  description =urshdcd-- dev-gz-vh10
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 2155-2158,2257,2259,2330-2331,2476-2478,2481
+  mtu 9216
+  channel-group 135 mode active
+  no shutdown
+
+interface Ethernet1/36
+  description heartbeat gz-devops-vh3
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 2765,2767
+  spanning-tree port type edge trunk
+  spanning-tree bpduguard enable
+  mtu 9216
+  no shutdown
+
+interface Ethernet1/37
+  description =urshdcp-- gz-devops-vh3
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 270,1808,1810,1812-1815,1819,1827,1843,1864,1868-1871,1879,1883-1887,1889-1892,1894-1895,2134-2136,2140,2142,2152,2156-2157,2159,2163-2165,2232,2234-2236,2239-2240,2242-2245,2248-2250,2253-2255,2257,2259,2264,2328,2330,2333,2340-2344,2347,2451-2452,2454,2476-2478,2486-2487,2716,2732
+  mtu 9216
+  channel-group 137 mode active
+  no shutdown
+
+interface Ethernet1/38
+  description =urshdcp-- gz-inf18
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 270,1808,1810,1812-1815,1819,1827,1843,1864,1868-1871,1879-1880,1883-1887,1889-1892,1894-1895,2134-2136,2140,2142,2152,2156-2157,2159,2163-2165,2232,2234-2236,2239-2240,2242-2245,2248-2250,2253-2255,2257,2259,2264,2271,2328-2330,2333,2340-2345,2347,2451-2452,2454-2455,2476-2478,2486-2487,2716,2732
+  mtu 9216
+  channel-group 138 mode active
+  no shutdown
+
+interface Ethernet1/39
+  description ipmi gz-inf18
+  switchport
+  switchport access vlan 1817
+  spanning-tree port type edge
+  spanning-tree bpduguard enable
+  speed 1000
+  no shutdown
+
+interface Ethernet1/40
+  description =urshdcp-- gz-sql01
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1815
+  mtu 9216
+  channel-group 140 mode active
+  no shutdown
+
+interface Ethernet1/41
+  description gz-inf-4(n4-rt-usg-1)
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1813,2267,2272,2479-2480,2486-2487
+  mtu 9216
+  channel-group 141 mode active
+  no shutdown
+
+interface Ethernet1/42
+  description n4-rt-asa-1 sec
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1742-1743,1804,2124-2125,2143,2151,2265
+  mtu 9216
+  channel-group 3 mode active
+  no shutdown
+
+interface Ethernet1/43
+  description n4-rt-asa-1 pri
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1742-1743,1804,2124-2125,2143,2151,2265
+  mtu 9216
+  channel-group 2 mode active
+  no shutdown
+
+interface Ethernet1/44
+  description gis-nr2-cont-1/2 reserved
+  switchport
+  switchport access vlan 2167
+  spanning-tree port type edge
+  spanning-tree bpduguard enable
+  no shutdown
+
+interface Ethernet1/45
+  description gis-nr2-cont-1/2 reserved
+  switchport
+  switchport access vlan 2168
+  spanning-tree port type edge
+  spanning-tree bpduguard enable
+  no shutdown
+
+interface Ethernet1/46
+  description n4-rt-n9k-3 [Eth1/42]
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1,270,1720,1737,1742,1804-1808,1810-1815,1817,1819,1822,1827,1843,1864,1868-1871,1879,1883-1887,1889-1892,1894-1895,2123-2126,2134-2136,2143,2151-2152,2155-2159,2163-2165,2167-2168,2232,2234-2236,2238-2240,2242-2245,2248-2255,2257,2259,2262-2264,2266-2272,2328-2331,2333,2340-2345,2347-2348,2451-2455,2476-2482,2486-2487,2716,2732
+  mtu 9216
+  channel-group 9 mode active
+  no shutdown
+
+interface Ethernet1/47
+  description n4-rt-n9k-4 [Eth1/42]
+  switchport
+  switchport mode trunk
+  switchport trunk allowed vlan 1,270,1720,1737,1742,1804-1808,1810-1815,1817,1819,1822,1827,1843,1864,1868-1871,1879,1883-1887,1889-1892,1894-1895,2123-2126,2134-2136,2143,2151-2152,2155-2159,2163-2165,2167-2168,2232,2234-2236,2238-2240,2242-2245,2248-2255,2257,2259,2262-2264,2266-2272,2328-2331,2333,2340-2345,2347-2348,2451-2455,2476-2482,2486-2487,2716,2732
+  mtu 9216
+  channel-group 9 mode active
+  no shutdown
+
+interface Ethernet1/48
+  description KeepaLive
+  vrf member vpc-ka
+  ip address 192.254.0.2/30
+  no shutdown
+
+interface Ethernet1/49
+  description VPC Peer Link
+  switchport
+  switchport mode trunk
+  channel-group 1 mode active
+  no shutdown
+
+interface Ethernet1/50
+  description VPC Peer Link
+  switchport
+  switchport mode trunk
+  channel-group 1 mode active
+  no shutdown
+
+interface Ethernet1/51
+  description VPC Peer Link
+  switchport
+  switchport mode trunk
+  channel-group 1 mode active
+  no shutdown
+
+interface Ethernet1/52
+  description VPC Peer Link
+  switchport
+  switchport mode trunk
+  channel-group 1 mode active
+  no shutdown
+
+interface Ethernet1/53
+  description VPC Peer Link
+  switchport
+  switchport mode trunk
+  channel-group 1 mode active
+  no shutdown
+
+interface Ethernet1/54
+  description VPC Peer Link
+  switchport
+  switchport mode trunk
+  channel-group 1 mode active
+  no shutdown
+
+interface mgmt0
+  description n4-rt-man-1 [1/0/22]
+  vrf member management
+  ip address 172.21.64.35/29
+
+interface loopback0
+  ip address 172.21.0.8/32
+  ip router ospf 1 area 0.0.0.0
+cli alias name wr copy run start
+line console
+line vty
+  exec-timeout 120
+boot nxos bootflash:/nxos.9.3.7.bin 
+router ospf 1
+  router-id 172.21.0.8
+  redistribute static route-map s-o1
+  log-adjacency-changes detail
+  auto-cost reference-bandwidth 100000 Mbps
+  passive-interface default
+ip load-sharing address source-destination rotate 32
+monitor session 1 type erspan-source
+  erspan-id 8
+  vrf default
+  destination ip 172.18.100.16
+  mtu 512
+  filter vlan 2163 
+monitor session 3 type erspan-source
+  erspan-id 3
+  vrf default
+  destination ip 172.18.10.25
+  filter vlan 1822 
+monitor session 5 type erspan-source
+  erspan-id 5
+  vrf default
+  filter access-group vam-ng-hc
+  destination ip 172.18.10.16
+  source interface port-channel113 rx
+monitor session 6 type erspan-source
+  erspan-id 106
+  vrf default
+  destination ip 172.18.10.16
+  mtu 512
+
+monitor erspan origin ip-address 172.21.0.8 global
+
+logging server 172.18.10.10 5 use-vrf default facility local3
+logging server 172.18.10.100 5 use-vrf default facility local3
+logging source-interface loopback0
+logging timestamp milliseconds
+logging origin-id hostname
+no logging rate-limit
+
