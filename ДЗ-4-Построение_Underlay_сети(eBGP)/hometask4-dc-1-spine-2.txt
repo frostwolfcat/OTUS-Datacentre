@@ -1,5 +1,7 @@
 route-map rd-conn permit 10
   match interface loopback1
+route-map rd-conn permit 20
+  match interface loopback2
 feature bgp
 router bgp 65000
   router-id 10.0.2.0

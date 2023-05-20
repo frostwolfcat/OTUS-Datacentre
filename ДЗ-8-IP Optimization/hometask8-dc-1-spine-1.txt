@@ -1,3 +1,10 @@
+
+
+!Command: show running-config
+!Running configuration last done at: Sat May 20 21:52:38 2023
+!Time: Sat May 20 21:52:39 2023
+
+version 9.3(7a) Bios:version  
 hostname dc1-org-n9k-1c
 vdc dc1-org-n9k-1c id 1
   limit-resource vlan minimum 16 maximum 4094
@@ -15,12 +22,10 @@ feature vn-segment-vlan-based
 feature nv overlay
 
 no password strength-check
-username admin password 5 $5$GIKJDE$zfDP0/A8MZLU8nSZ6ZN4uHszQll4nPhFceyPt1m72UD 
- role network-admin
+username admin password 5 $5$GIKJDE$zfDP0/A8MZLU8nSZ6ZN4uHszQll4nPhFceyPt1m72UD  role network-admin
 ip domain-lookup
 copp profile strict
-snmp-server user admin network-admin auth md5 0xae0649a2de80ccce729ecf1aa582e5cd
- priv 0xae0649a2de80ccce729ecf1aa582e5cd localizedkey
+snmp-server user admin network-admin auth md5 0x48b11919f5000af6ad3e24afbd8cd90e priv 0x48b11919f5000af6ad3e24afbd8cd90e localizedkey
 rmon event 1 log trap public description FATAL(1) owner PMON@FATAL
 rmon event 2 log trap public description CRITICAL(2) owner PMON@CRITICAL
 rmon event 3 log trap public description ERROR(3) owner PMON@ERROR
@@ -35,7 +40,6 @@ route-map rd-conn permit 10
   match interface loopback1 
 route-map rd-conn permit 20
   match interface loopback2 
-vrf context common
 vrf context devtest
 vrf context management
 vrf context prod
@@ -251,3 +255,9 @@ router bgp 65000
     remote-as 65003
     timers 3 9
     address-family ipv4 unicast
+
+
+!
+
+
+!end

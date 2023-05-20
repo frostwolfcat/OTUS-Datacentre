@@ -1,3 +1,10 @@
+
+
+!Command: show running-config
+!Running configuration last done at: Sat May 20 21:52:41 2023
+!Time: Sat May 20 21:52:41 2023
+
+version 9.3(7a) Bios:version
 hostname dc1-org-n9k-b1
 vdc dc1-org-n9k-b1 id 1
   limit-resource vlan minimum 16 maximum 4094
@@ -15,12 +22,10 @@ feature vn-segment-vlan-based
 feature nv overlay
 
 no password strength-check
-username admin password 5 $5$MOPHCA$dMboqP.XIcZGC523Np0rldyG1NU6VylrJfsDRDGVoJC
- role network-admin
+username admin password 5 $5$MOPHCA$dMboqP.XIcZGC523Np0rldyG1NU6VylrJfsDRDGVoJC  role network-admin
 ip domain-lookup
 copp profile strict
-snmp-server user admin network-admin auth md5 0x77ecc2dda988cf7bf0230b27fe182c7b
- priv 0x77ecc2dda988cf7bf0230b27fe182c7b localizedkey
+snmp-server user admin network-admin auth md5 0x77ecc2dda988cf7bf0230b27fe182c7b priv 0x77ecc2dda988cf7bf0230b27fe182c7b localizedkey
 rmon event 1 log trap public description FATAL(1) owner PMON@FATAL
 rmon event 2 log trap public description CRITICAL(2) owner PMON@CRITICAL
 rmon event 3 log trap public description ERROR(3) owner PMON@ERROR
@@ -28,10 +33,14 @@ rmon event 4 log trap public description WARNING(4) owner PMON@WARNING
 rmon event 5 log trap public description INFORMATION(5) owner PMON@INFO
 
 fabric forwarding anycast-gateway-mac 1000.0000.0000
-vlan 1,31,41,43,151,1000
+system vlan nve-overlay id 1000,2000,3000
+vlan 1,31-32,41,43,151,1000,2000,3000
 vlan 31
   name common-vlan31
   vn-segment 10031
+vlan 32
+  name l3vni-test
+  vn-segment 10032
 vlan 41
   name devtest-vlan41
   vn-segment 10041
@@ -41,8 +50,14 @@ vlan 151
   name prod-vlan151
   vn-segment 10151
 vlan 1000
-  name l3vpn-overlay
+  name l3vpn-overlay-common
   vn-segment 10000
+vlan 2000
+  name l3vpn-overlay-devtest
+  vn-segment 20000
+vlan 3000
+  name l3vpn-overlay-prod
+  vn-segment 30000
 
 route-map UNCHANGED permit 10
   set ip next-hop unchanged
@@ -69,6 +84,9 @@ vrf context prod
   address-family ipv4 unicast
     route-target both auto
     route-target both auto evpn
+hardware access-list tcam region racl 512
+hardware access-list tcam region e-racl 256
+hardware access-list tcam region arp-ether 256 double-wide
 
 
 interface Vlan1
@@ -79,6 +97,14 @@ interface Vlan31
   vrf member common
   no ip redirects
   ip address 10.3.1.254/24
+  fabric forwarding mode anycast-gateway
+
+interface Vlan32
+  description dc1-leaf-vl-32
+  no shutdown
+  vrf member common
+  no ip redirects
+  ip address 10.3.2.254/24
   fabric forwarding mode anycast-gateway
 
 interface Vlan41
@@ -102,13 +128,35 @@ interface Vlan151
   ip address 10.15.1.254/24
   fabric forwarding mode anycast-gateway
 
+interface Vlan1000
+  no shutdown
+  vrf member common
+  no ip redirects
+  ip forward
+
+interface Vlan2000
+  no shutdown
+  vrf member devtest
+  no ip redirects
+  ip forward
+
+interface Vlan3000
+  no shutdown
+  vrf member prod
+  no ip redirects
+  ip forward
+
 interface nve1
   no shutdown
   host-reachability protocol bgp
   source-interface loopback2
   global ingress-replication protocol bgp
+  member vni 10000 associate-vrf
   member vni 10001-11000
+    suppress-arp
     ingress-replication protocol bgp
+  member vni 20000 associate-vrf
+  member vni 30000 associate-vrf
 
 interface Ethernet1/1
   description p2p-link-from-dc1-leaf-03-to-dc1-spine-1
@@ -125,6 +173,8 @@ interface Ethernet1/2
   no shutdown
 
 interface Ethernet1/3
+  description 10.3.2.10
+  switchport access vlan 32
   mtu 9216
 
 interface Ethernet1/4
@@ -302,6 +352,7 @@ icam monitor scale
 
 line console
 line vty
+boot nxos bootflash:/nxos.9.3.7a.bin sup-1
 router bgp 65003
   router-id 10.0.1.3
   bestpath as-path multipath-relax
@@ -313,7 +364,7 @@ router bgp 65003
     nexthop route-map UNCHANGED
     retain route-target all
   template peer fw
-    remote-as 65100
+    remote-as 65500
     timers 3 9
     address-family ipv4 unicast
   template peer spine
@@ -327,6 +378,7 @@ router bgp 65003
     address-family l2vpn evpn
       send-community
       send-community extended
+      route-map UNCHANGED in
       route-map UNCHANGED out
   neighbor 10.1.2.0
     remote-as 65000
@@ -335,8 +387,43 @@ router bgp 65003
     address-family l2vpn evpn
       send-community
       send-community extended
+      route-map UNCHANGED in
       route-map UNCHANGED out
   neighbor 10.2.1.4
     inherit peer spine
   neighbor 10.2.2.4
     inherit peer spine
+  vrf common
+    router-id 10.2.0.1
+    address-family ipv4 unicast
+      advertise l2vpn evpn
+      aggregate-address 10.3.0.0/16 summary-only
+      export-gateway-ip
+    neighbor 10.2.0.2
+      remote-as 65500
+      local-as 65501 no-prepend replace-as
+      timers 3 9
+      address-family ipv4 unicast
+evpn
+  vni 10031 l2
+    rd 10.1.2.3:1
+    route-target import 1:10031
+    route-target export 1:10031
+  vni 10032 l2
+    rd 10.1.2.3:132
+    route-target import 1:10032
+    route-target export 1:10032
+  vni 10041 l2
+    rd 10.1.2.3:2
+    route-target import 1:10041
+    route-target export 1:10041
+  vni 10151 l2
+    rd 10.1.2.3:3
+    route-target import 1:10151
+    route-target export 1:10151
+
+
+!
+
+
+!end
