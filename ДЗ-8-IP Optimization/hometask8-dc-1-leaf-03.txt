@@ -1,8 +1,8 @@
 
 
 !Command: show running-config
-!Running configuration last done at: Sat May 20 21:52:41 2023
-!Time: Sat May 20 21:52:41 2023
+!Running configuration last done at: Wed Sep  6 19:41:37 2023
+!Time: Wed Sep  6 19:41:37 2023
 
 version 9.3(7a) Bios:version
 hostname dc1-org-n9k-b1
@@ -32,7 +32,7 @@ rmon event 3 log trap public description ERROR(3) owner PMON@ERROR
 rmon event 4 log trap public description WARNING(4) owner PMON@WARNING
 rmon event 5 log trap public description INFORMATION(5) owner PMON@INFO
 
-fabric forwarding anycast-gateway-mac 1000.0000.0000
+fabric forwarding anycast-gateway-mac 0001.0001.0001
 system vlan nve-overlay id 1000,2000,3000
 vlan 1,31-32,41,43,151,1000,2000,3000
 vlan 31
@@ -59,6 +59,9 @@ vlan 3000
   name l3vpn-overlay-prod
   vn-segment 30000
 
+ip prefix-list ALLVRF seq 10 permit 10.0.0.0/8 le 32
+route-map FIREWALL permit 10
+  match ip address prefix-list ALLVRF
 route-map UNCHANGED permit 10
   set ip next-hop unchanged
 route-map rd-conn permit 10
@@ -69,21 +72,27 @@ vrf context common
   vni 10000
   rd 10.1.2.3:10000
   address-family ipv4 unicast
-    route-target both auto
-    route-target both auto evpn
+    route-target import 10000:10000
+    route-target import 10000:10000 evpn
+    route-target export 10000:10000
+    route-target export 10000:10000 evpn
 vrf context devtest
   vni 20000
   rd 10.1.2.3:20000
   address-family ipv4 unicast
-    route-target both auto
-    route-target both auto evpn
+    route-target import 20000:20000
+    route-target import 20000:20000 evpn
+    route-target export 20000:20000
+    route-target export 20000:20000 evpn
 vrf context management
 vrf context prod
   vni 30000
   rd 10.1.2.3:30000
   address-family ipv4 unicast
-    route-target both auto
-    route-target both auto evpn
+    route-target import 30000:30000
+    route-target import 30000:30000 evpn
+    route-target export 30000:30000
+    route-target export 30000:30000 evpn
 hardware access-list tcam region racl 512
 hardware access-list tcam region e-racl 256
 hardware access-list tcam region arp-ether 256 double-wide
@@ -200,10 +209,6 @@ interface Ethernet1/5.41
   encapsulation dot1q 41
   vrf member devtest
   ip address 10.2.0.5/30
-  no shutdown
-
-interface Ethernet1/5.141
-  mtu 9216
   no shutdown
 
 interface Ethernet1/5.151
@@ -397,12 +402,37 @@ router bgp 65003
     router-id 10.2.0.1
     address-family ipv4 unicast
       advertise l2vpn evpn
+      redistribute direct route-map FIREWALL
       aggregate-address 10.3.0.0/16 summary-only
       export-gateway-ip
     neighbor 10.2.0.2
-      remote-as 65500
-      local-as 65501 no-prepend replace-as
+      remote-as 65100
+      local-as 65003031 no-prepend replace-as
       timers 3 9
+      address-family ipv4 unicast
+  vrf devtest
+    router-id 10.2.0.5
+    address-family ipv4 unicast
+      advertise l2vpn evpn
+      redistribute direct route-map FIREWALL
+      aggregate-address 10.4.0.0/16 summary-only
+      maximum-paths 64
+      export-gateway-ip
+    neighbor 10.2.0.6
+      remote-as 65100
+      local-as 65003041 no-prepend replace-as
+      address-family ipv4 unicast
+  vrf prod
+    router-id 10.2.0.9
+    address-family ipv4 unicast
+      advertise l2vpn evpn
+      redistribute direct route-map FIREWALL
+      aggregate-address 10.15.0.0/16 summary-only
+      maximum-paths 64
+      export-gateway-ip
+    neighbor 10.2.0.10
+      remote-as 65100
+      local-as 65003151 no-prepend replace-as
       address-family ipv4 unicast
 evpn
   vni 10031 l2

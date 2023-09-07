@@ -1,10 +1,10 @@
 
 
 !Command: show running-config
-!Running configuration last done at: Sat May 20 21:52:48 2023
-!Time: Sat May 20 21:52:48 2023
+!Running configuration last done at: Wed Sep  6 19:43:44 2023
+!Time: Wed Sep  6 19:43:44 2023
 
-version 9.3(7a) Bios:version  
+version 9.3(7a) Bios:version
 hostname dc1-org-n9k-1
 vdc dc1-org-n9k-1 id 1
   limit-resource vlan minimum 16 maximum 4094
@@ -25,7 +25,7 @@ no password strength-check
 username admin password 5 $5$ILFHHG$01Xtwmbn8U8INCwVWCCUNSZu7XKaBEzYMwYZ1BiHVn9  role network-admin
 ip domain-lookup
 copp profile strict
-snmp-server user admin network-admin auth md5 0x5843b9c02b5effe9a862e41887d51e87 priv 0x5843b9c02b5effe9a862e41887d51e87 localizedkey
+snmp-server user admin network-admin auth md5 0x8db34b900b9c65ed98712853175107ad priv 0x8db34b900b9c65ed98712853175107ad localizedkey
 rmon event 1 log trap public description FATAL(1) owner PMON@FATAL
 rmon event 2 log trap public description CRITICAL(2) owner PMON@CRITICAL
 rmon event 3 log trap public description ERROR(3) owner PMON@ERROR
@@ -60,28 +60,34 @@ vlan 3000
 route-map UNCHANGED permit 10
   set ip next-hop unchanged
 route-map rd-conn permit 10
-  match interface loopback1 
+  match interface loopback1
 route-map rd-conn permit 20
-  match interface loopback2 
+  match interface loopback2
 vrf context common
   vni 10000
   rd 10.1.2.1:10000
   address-family ipv4 unicast
-    route-target both auto
-    route-target both auto evpn
+    route-target import 10000:10000
+    route-target import 10000:10000 evpn
+    route-target export 10000:10000
+    route-target export 10000:10000 evpn
 vrf context devtest
   vni 20000
   rd 10.1.2.1:20000
   address-family ipv4 unicast
-    route-target both auto
-    route-target both auto evpn
+    route-target import 20000:20000
+    route-target import 20000:20000 evpn
+    route-target export 20000:20000
+    route-target export 20000:20000 evpn
 vrf context management
 vrf context prod
   vni 30000
   rd 10.1.2.1:30000
   address-family ipv4 unicast
-    route-target both auto
-    route-target both auto evpn
+    route-target import 30000:30000
+    route-target import 30000:30000 evpn
+    route-target export 30000:30000
+    route-target export 30000:30000 evpn
 hardware access-list tcam region racl 512
 hardware access-list tcam region e-racl 256
 hardware access-list tcam region arp-ether 256 double-wide
@@ -354,6 +360,14 @@ router bgp 65001
   neighbor 10.2.2.0
     inherit peer spine
   vrf common
+    address-family ipv4 unicast
+      advertise l2vpn evpn
+      maximum-paths 64
+  vrf devtest
+    address-family ipv4 unicast
+      advertise l2vpn evpn
+      maximum-paths 64
+  vrf prod
     address-family ipv4 unicast
       advertise l2vpn evpn
       maximum-paths 64
