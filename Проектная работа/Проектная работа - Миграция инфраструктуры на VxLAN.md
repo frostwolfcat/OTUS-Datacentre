@@ -206,17 +206,9 @@
 |dc1-org-n9k-s2	|10.103.2.8	|/31	|p2p-leaf5-sp2|
 
 
-|From-leaf	|To-desc	|ip|	From-spine|	To-desc|	ip|
-|:---------:|:-----------:|:---:|:-----------:|:-----------:|:-----------:|:-----------:|
-|dc1-org-n9k-1	|To-[dc1-org-n9k-1c]Po-12|	10.103.1.1	|dc1-org-n9k-1c	|To-[dc1-org-n9k-1]Po-21|	10.103.1.0|
-|dc1-org-n9k-1	|To-[dc1-org-n9k-2c]Po-12|	10.103.2.1	|dc1-org-n9k-2c	|To-[dc1-org-n9k-1]Po-43|	10.103.2.0|
-|dc1-org-n9k-2	|To-[dc1-org-n9k-1c]Po-34|	10.103.1.3	|dc1-org-n9k-1c	|To-[dc1-org-n9k-2]Po-21|	10.103.1.2|
-|dc1-org-n9k-2	|To-[dc1-org-n9k-2c]Po-34|	10.103.2.3	|dc1-org-n9k-2c	|To-[dc1-org-n9k-2]Po-43|	10.103.2.2|
-|dc1-org-n9k-3	|To-[dc1-org-n9k-1c]Po-56|	10.103.1.5	|dc1-org-n9k-1c	|To-[dc1-org-n9k-3]Po-21|	10.103.1.4|
-|dc1-org-n9k-3	|To-[dc1-org-n9k-2c]Po-56|	10.103.2.5	|dc1-org-n9k-2c	|To-[dc1-org-n9k-3]Po-43|	10.103.2.4|
-|dc1-org-n9k-4	|To-[dc1-org-n9k-1c]Po-78|	10.103.1.7	|dc1-org-n9k-1c	|To-[dc1-org-n9k-4]Po-21|	10.103.1.6|
-|dc1-org-n9k-4	|To-[dc1-org-n9k-2c]Po-78|	10.103.2.7	|dc1-org-n9k-2c	|To-[dc1-org-n9k-4]Po-43|	10.103.2.6|
-```
+
+
+
 
 
 #### Проверка работы VPC:
