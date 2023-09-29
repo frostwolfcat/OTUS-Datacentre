@@ -1,0 +1,14 @@
+ FW
+
+neighbor 10.103.3.1
+    remote-as 65005
+    address-family ipv4 unicast
+
+BL
+neighbor 10.103.3.0
+      remote-as 65032
+      timers 3 9
+      address-family ipv4 unicast
+no aggregate-address 10.105.0.0/16 summary-only
+no aggregate-address 10.106.0.0/16 summary-only
+no aggregate-address 10.107.0.0/16 summary-only

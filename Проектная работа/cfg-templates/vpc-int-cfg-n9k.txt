@@ -1,0 +1,14 @@
+interface port-channel120
+  description vpc-po-120-to-test-srv
+  switchport access vlan 3006
+  mtu 9216
+  vpc 120
+
+
+interface Ethernet1/20
+  description to-vpc-test-srv
+  switchport mode access
+  switchport access vlan 3006
+  mtu 9216in
+  channel-group 120
+

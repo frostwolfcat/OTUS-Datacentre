@@ -1,0 +1,463 @@
+
+
+!Command: show running-config
+!Running configuration last done at: Fri Sep 29 16:40:57 2023
+!Time: Fri Sep 29 16:40:58 2023
+
+version 9.3(7a) Bios:version
+hostname dc1-org-n9k-1
+vdc dc1-org-n9k-1 id 1
+  limit-resource vlan minimum 16 maximum 4094
+  limit-resource vrf minimum 2 maximum 4096
+  limit-resource port-channel minimum 0 maximum 511
+  limit-resource u4route-mem minimum 248 maximum 248
+  limit-resource u6route-mem minimum 96 maximum 96
+  limit-resource m4route-mem minimum 58 maximum 58
+  limit-resource m6route-mem minimum 8 maximum 8
+
+cfs eth distribute
+nv overlay evpn
+feature bgp
+feature fabric forwarding
+feature udld
+feature interface-vlan
+feature vn-segment-vlan-based
+feature lacp
+feature vpc
+feature nv overlay
+
+no password strength-check
+username admin password 5 $5$ILFHHG$01Xtwmbn8U8INCwVWCCUNSZu7XKaBEzYMwYZ1BiHVn9  role network-admin
+ip domain-lookup
+copp profile strict
+snmp-server user admin network-admin auth md5 0x8db34b900b9c65ed98712853175107ad priv 0x8db34b900b9c65ed98712853175107ad localizedkey
+rmon event 1 log trap public description FATAL(1) owner PMON@FATAL
+rmon event 2 log trap public description CRITICAL(2) owner PMON@CRITICAL
+rmon event 3 log trap public description ERROR(3) owner PMON@ERROR
+rmon event 4 log trap public description WARNING(4) owner PMON@WARNING
+rmon event 5 log trap public description INFORMATION(5) owner PMON@INFO
+
+fabric forwarding anycast-gateway-mac 0001.0001.0001
+vlan 1,777,3000-3008
+vlan 777
+  name infra-backup
+vlan 3000
+  name prod-proj1
+  vn-segment 13000
+vlan 3001
+  name prod-proj2
+  vn-segment 13001
+vlan 3002
+  name prod-proj3
+  vn-segment 13002
+vlan 3003
+  name common-net1
+  vn-segment 13003
+vlan 3004
+  name common-net2
+  vn-segment 13004
+vlan 3005
+  name common-net3
+  vn-segment 13005
+vlan 3006
+  name dev-proj1
+  vn-segment 13006
+vlan 3007
+  name dev-proj2
+  vn-segment 13007
+vlan 3008
+  name dev-proj3
+  vn-segment 13008
+
+route-map UNCHANGED permit 10
+  set ip next-hop unchanged
+route-map rd-conn permit 10
+  match interface loopback1
+route-map rd-conn permit 20
+  match interface loopback2
+vrf context management
+vrf context vpc-ka
+hardware access-list tcam region racl 512
+hardware access-list tcam region e-racl 256
+hardware access-list tcam region arp-ether 256 double-wide
+port-channel load-balance src-dst mac
+vpc domain 10
+  peer-switch
+  role priority 100
+  peer-keepalive destination 192.168.200.1 source 192.168.200.0 vrf vpc-ka
+  delay restore 240
+  peer-gateway
+  layer3 peer-router
+  auto-recovery
+  delay restore interface-vlan 80
+  ip arp synchronize
+
+
+interface Vlan1
+  no ip redirects
+  no ipv6 redirects
+
+interface Vlan3000
+  description dc1-leaf-vl-3000
+  no shutdown
+  no ip redirects
+  ip address 10.105.1.254/24
+  no ipv6 redirects
+  fabric forwarding mode anycast-gateway
+
+interface Vlan3001
+  description dc1-leaf-vl-3001
+  no shutdown
+  no ip redirects
+  ip address 10.105.2.254/24
+  no ipv6 redirects
+  fabric forwarding mode anycast-gateway
+
+interface Vlan3002
+  description dc1-leaf-vl-3002
+  no shutdown
+  no ip redirects
+  ip address 10.105.3.254/24
+  no ipv6 redirects
+  fabric forwarding mode anycast-gateway
+
+interface Vlan3003
+  description dc1-leaf-vl-3003
+  no shutdown
+  no ip redirects
+  ip address 10.106.1.254/24
+  no ipv6 redirects
+  fabric forwarding mode anycast-gateway
+
+interface Vlan3004
+  description dc1-leaf-vl-3004
+  no shutdown
+  no ip redirects
+  ip address 10.106.2.254/24
+  no ipv6 redirects
+  fabric forwarding mode anycast-gateway
+
+interface Vlan3005
+  description dc1-leaf-vl-3005
+  no shutdown
+  no ip redirects
+  ip address 10.106.3.254/24
+  no ipv6 redirects
+  fabric forwarding mode anycast-gateway
+
+interface Vlan3006
+  description dc1-leaf-vl-3006
+  no shutdown
+  no ip redirects
+  ip address 10.107.1.254/24
+  no ipv6 redirects
+  fabric forwarding mode anycast-gateway
+
+interface Vlan3007
+  description dc1-leaf-vl-3007
+  no shutdown
+  no ip redirects
+  ip address 10.107.2.254/24
+  no ipv6 redirects
+  fabric forwarding mode anycast-gateway
+
+interface Vlan3008
+  description dc1-leaf-vl-3008
+  no shutdown
+  no ip redirects
+  ip address 10.107.3.254/24
+  no ipv6 redirects
+  fabric forwarding mode anycast-gateway
+
+interface port-channel21
+  description To-[dc1-org-n9k-1c]Po-12
+  no switchport
+  mtu 9216
+  ip address 10.103.1.1/31
+
+interface port-channel43
+  description To-[dc1-org-n9k-2c]Po-12
+  no switchport
+  mtu 9216
+  ip address 10.103.2.1/31
+
+interface port-channel120
+  description vpc-po-120-to-test-srv
+  switchport access vlan 3006
+  mtu 9216
+  vpc 120
+
+interface port-channel1000
+  description vpc-peer-link
+  switchport mode trunk
+  spanning-tree port type network
+  vpc peer-link
+
+interface nve1
+  no shutdown
+  host-reachability protocol bgp
+  advertise virtual-rmac
+  source-interface loopback2
+  member vni 13000-14000
+    suppress-arp
+    ingress-replication protocol bgp
+
+interface Ethernet1/1
+  description To-[dc1-org-n9k-1c]Po-12
+  no switchport
+  mtu 9216
+  channel-group 21 mode active
+  no shutdown
+
+interface Ethernet1/2
+  description To-[dc1-org-n9k-1c]Po-12
+  no switchport
+  mtu 9216
+  channel-group 21 mode active
+  no shutdown
+
+interface Ethernet1/3
+  description To-[dc1-org-n9k-2c]Po-12
+  no switchport
+  mtu 9216
+  channel-group 43 mode active
+  no shutdown
+
+interface Ethernet1/4
+  description To-[dc1-org-n9k-2c]Po-12
+  no switchport
+  mtu 9216
+  channel-group 43 mode active
+  no shutdown
+
+interface Ethernet1/5
+  description vpc-keep-alive-link
+  no switchport
+  vrf member vpc-ka
+  ip address 192.168.200.0/31
+  no shutdown
+
+interface Ethernet1/6
+  description vpc-peer-link-member
+  switchport mode trunk
+  channel-group 1000 mode active
+
+interface Ethernet1/7
+  description vpc-peer-link-member
+  switchport mode trunk
+  channel-group 1000 mode active
+
+interface Ethernet1/8
+
+interface Ethernet1/9
+
+interface Ethernet1/10
+
+interface Ethernet1/11
+
+interface Ethernet1/12
+
+interface Ethernet1/13
+
+interface Ethernet1/14
+
+interface Ethernet1/15
+  description orphan-prod-term
+  switchport access vlan 3000
+
+interface Ethernet1/16
+
+interface Ethernet1/17
+
+interface Ethernet1/18
+
+interface Ethernet1/19
+
+interface Ethernet1/20
+  description to-vpc-test-srv
+  switchport access vlan 3006
+  mtu 9216
+  channel-group 120
+
+interface Ethernet1/21
+
+interface Ethernet1/22
+
+interface Ethernet1/23
+
+interface Ethernet1/24
+
+interface Ethernet1/25
+
+interface Ethernet1/26
+
+interface Ethernet1/27
+
+interface Ethernet1/28
+
+interface Ethernet1/29
+
+interface Ethernet1/30
+
+interface Ethernet1/31
+
+interface Ethernet1/32
+
+interface Ethernet1/33
+
+interface Ethernet1/34
+
+interface Ethernet1/35
+
+interface Ethernet1/36
+
+interface Ethernet1/37
+
+interface Ethernet1/38
+
+interface Ethernet1/39
+
+interface Ethernet1/40
+
+interface Ethernet1/41
+
+interface Ethernet1/42
+
+interface Ethernet1/43
+
+interface Ethernet1/44
+
+interface Ethernet1/45
+
+interface Ethernet1/46
+
+interface Ethernet1/47
+
+interface Ethernet1/48
+
+interface Ethernet1/49
+
+interface Ethernet1/50
+
+interface Ethernet1/51
+
+interface Ethernet1/52
+
+interface Ethernet1/53
+
+interface Ethernet1/54
+
+interface Ethernet1/55
+
+interface Ethernet1/56
+
+interface Ethernet1/57
+
+interface Ethernet1/58
+
+interface Ethernet1/59
+
+interface Ethernet1/60
+
+interface Ethernet1/61
+
+interface Ethernet1/62
+
+interface Ethernet1/63
+
+interface Ethernet1/64
+
+interface mgmt0
+  vrf member management
+
+interface loopback1
+  ip address 10.101.0.1/32
+  ip address 10.101.200.1/32 secondary
+
+interface loopback2
+  ip address 10.102.0.1/32
+  ip address 10.102.200.1/32 secondary
+icam monitor scale
+
+line console
+line vty
+boot nxos bootflash:/nxos.9.3.7a.bin sup-1
+router bgp 65003
+  router-id 10.101.0.1
+  bestpath as-path multipath-relax
+  reconnect-interval 12
+  address-family ipv4 unicast
+    redistribute direct route-map rd-conn
+    maximum-paths 64
+  address-family l2vpn evpn
+    nexthop route-map UNCHANGED
+    retain route-target all
+  template peer spine
+    remote-as 65002
+    timers 3 9
+    address-family ipv4 unicast
+  neighbor 10.102.1.0
+    remote-as 65002
+    update-source loopback2
+    ebgp-multihop 3
+    address-family l2vpn evpn
+      disable-peer-as-check
+      send-community
+      send-community extended
+      route-map UNCHANGED out
+  neighbor 10.102.2.0
+    remote-as 65002
+    update-source loopback2
+    ebgp-multihop 3
+    address-family l2vpn evpn
+      disable-peer-as-check
+      send-community
+      send-community extended
+      route-map UNCHANGED out
+  neighbor 10.103.1.0
+    inherit peer spine
+  neighbor 10.103.2.0
+    inherit peer spine
+evpn
+  vni 13000 l2
+    rd 10.102.0.1:3000
+    route-target import 1:13000
+    route-target export 1:13000
+  vni 13001 l2
+    rd 10.102.0.1:3001
+    route-target import 1:13001
+    route-target export 1:13001
+  vni 13002 l2
+    rd 10.102.0.1:3002
+    route-target import 1:13002
+    route-target export 1:13002
+  vni 13003 l2
+    rd 10.102.0.1:3003
+    route-target import 1:13003
+    route-target export 1:13003
+  vni 13004 l2
+    rd 10.102.0.1:3004
+    route-target import 1:13004
+    route-target export 1:13004
+  vni 13005 l2
+    rd 10.102.0.1:3005
+    route-target import 1:13005
+    route-target export 1:13005
+  vni 13006 l2
+    rd 10.102.0.1:3006
+    route-target import 1:13006
+    route-target export 1:13006
+  vni 13007 l2
+    rd 10.102.0.1:3007
+    route-target import 1:13007
+    route-target export 1:13007
+  vni 13008 l2
+    rd 10.102.0.1:3008
+    route-target import 1:13008
+    route-target export 1:13008
+
+
+!
+
+
+!end

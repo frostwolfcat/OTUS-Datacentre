@@ -1,0 +1,88 @@
+#lo-int
+
+dc1-org-n9k1	10.101.0.1	/32	lo1
+dc1-org-n9k1	10.102.0.1	/32	lo2
+dc1-org-n9k2	10.101.0.2	/32	lo1
+dc1-org-n9k2	10.102.0.2	/32	lo2
+dc1-org-n9k3	10.101.0.3	/32	lo1
+dc1-org-n9k3	10.102.0.3	/32	lo2
+dc1-org-n9k4	10.101.0.4	/32	lo1
+dc1-org-n9k4	10.102.0.4	/32	lo2
+dc1-org-n9k1c	10.101.1.0	/32	lo1
+dc1-org-n9k1c	10.102.1.0	/32	lo2
+dc1-org-n9k2c	10.101.2.0	/32	lo1
+dc1-org-n9k2c	10.102.2.0	/32	lo2
+
+interface loopback1
+  ip address 10.101.2.0/32
+interface loopback2
+  ip address 10.102.2.0/32
+
+#initial bgp (spine)
+
+
+
+route-map UNCHANGED permit 10
+  set ip next-hop unchanged
+route-map rd-conn permit 10
+  match interface loopback1 
+route-map rd-conn permit 20
+  match interface loopback2 
+
+
+
+router bgp 65002
+  router-id 10.101.2.0
+  reconnect-interval 12
+  address-family ipv4 unicast
+    redistribute direct route-map rd-conn
+  address-family l2vpn evpn
+    nexthop route-map UNCHANGED
+    retain route-target all
+ neighbor 10.103.2.1
+    remote-as 65003
+    timers 3 9
+    address-family ipv4 unicast
+ neighbor 10.103.2.3
+    remote-as 65003
+    timers 3 9
+    address-family ipv4 unicast
+ neighbor 10.103.2.5
+    remote-as 65005
+    timers 3 9
+    address-family ipv4 unicast
+ neighbor 10.103.2.7
+    remote-as 65005
+    timers 3 9
+    address-family ipv4 unicast
+
+------------------------------------
+
+# LEAF BGP
+
+route-map UNCHANGED permit 10
+  set ip next-hop unchanged
+route-map rd-conn permit 10
+  match interface loopback1
+route-map rd-conn permit 20
+  match interface loopback2
+
+
+router bgp 65005
+  router-id 10.101.0.4
+  bestpath as-path multipath-relax
+  reconnect-interval 12
+  address-family ipv4 unicast
+    redistribute direct route-map rd-conn
+    maximum-paths 64
+  address-family l2vpn evpn
+    nexthop route-map UNCHANGED
+    retain route-target all
+  template peer spine
+    remote-as 65002
+    timers 3 9
+    address-family ipv4 unicast
+  neighbor 10.103.1.6
+    inherit peer spine
+  neighbor 10.103.2.6
+    inherit peer spine

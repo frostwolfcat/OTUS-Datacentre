@@ -1,0 +1,63 @@
+#advertise the next hop using the primary IP address
+
+address-family l2vpn evpn
+    advertise-pip
+
+
+#evpn-neighbors-on-leaf
+ neighbor 10.102.1.0
+    remote-as 65002
+    update-source loopback2
+    ebgp-multihop 3
+    address-family l2vpn evpn
+      disable-peer-as-check
+      send-community
+      send-community extended
+      route-map UNCHANGED out
+  neighbor 10.102.2.0
+    remote-as 65002
+    update-source loopback2
+    ebgp-multihop 3
+    address-family l2vpn evpn
+      disable-peer-as-check
+      send-community
+      send-community extended
+      route-map UNCHANGED out
+
+#evpn-neighbors-on-spine
+  neighbor 10.102.0.1
+    remote-as 65003
+    update-source loopback2
+    ebgp-multihop 3
+    address-family l2vpn evpn
+      disable-peer-as-check
+      send-community
+      send-community extended
+      route-map UNCHANGED out
+  neighbor 10.102.0.2
+    remote-as 65003
+    update-source loopback2
+    ebgp-multihop 3
+    address-family l2vpn evpn
+      disable-peer-as-check
+      send-community
+      send-community extended
+      route-map UNCHANGED out
+  neighbor 10.102.0.3
+    remote-as 65005
+    update-source loopback2
+    ebgp-multihop 3
+    address-family l2vpn evpn
+      disable-peer-as-check
+      send-community
+      send-community extended
+      route-map UNCHANGED out
+  neighbor 10.102.0.4
+    remote-as 65005
+    update-source loopback2
+    ebgp-multihop 3
+    address-family l2vpn evpn
+      disable-peer-as-check
+      send-community
+      send-community extended
+      route-map UNCHANGED out

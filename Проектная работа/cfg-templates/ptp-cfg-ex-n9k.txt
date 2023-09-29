@@ -1,0 +1,222 @@
+SPINE
+
+interface port-channel12
+  description To-[dc1-org-n9k-1]Po-21
+  no switchport
+  mtu 9216
+  ip address 10.103.1.0/31
+
+interface Ethernet1/1-2
+  description To-[dc1-org-n9k-1]Po-21
+  no switchport
+  mtu 9216
+  channel-group 12 mode active
+
+
+interface port-channel34
+  description To-[dc1-org-n9k-2]Po-21
+  no switchport
+  mtu 9216
+  ip address 10.103.1.2/31
+
+interface Ethernet1/3-4
+  description To-[dc1-org-n9k-2]Po-21
+  no switchport
+  mtu 9216
+  channel-group 34 mode active
+
+
+interface port-channel56
+  description To-[dc1-org-n9k-3]Po-21
+  no switchport
+  mtu 9216
+  ip address 10.103.1.4/31
+
+interface Ethernet1/5-6
+  description To-[dc1-org-n9k-3]Po-21
+  no switchport
+  mtu 9216
+  channel-group 56 mode active
+
+
+
+interface port-channel78
+  description To-[dc1-org-n9k-4]Po-21
+  no switchport
+  mtu 9216
+  ip address 10.103.1.6/31
+
+interface Ethernet1/7-8
+  description To-[dc1-org-n9k-4]Po-21
+  no switchport
+  mtu 9216
+  channel-group 78 mode active
+
+_________________________________________
+
+
+interface port-channel12
+  description To-[dc1-org-n9k-1]Po-43
+  no switchport
+  mtu 9216
+  ip address 10.103.2.0/31
+
+interface Ethernet1/1-2
+  description To-[dc1-org-n9k-1]Po-43
+  no switchport
+  mtu 9216
+  channel-group 12 mode active
+
+
+interface port-channel34
+  description To-[dc1-org-n9k-2]Po-43
+  no switchport
+  mtu 9216
+  ip address 10.103.2.2/31
+
+interface Ethernet1/3-4
+  description To-[dc1-org-n9k-2]Po-43
+  no switchport
+  mtu 9216
+  channel-group 34 mode active
+
+
+interface port-channel56
+  description To-[dc1-org-n9k-3]Po-43
+  no switchport
+  mtu 9216
+  ip address 10.103.2.4/31
+
+interface Ethernet1/5-6
+  description To-[dc1-org-n9k-3]Po-43
+  no switchport
+  mtu 9216
+  channel-group 56 mode active
+
+
+
+interface port-channel78
+  description To-[dc1-org-n9k-4]Po-43
+  no switchport
+  mtu 9216
+  ip address 10.103.2.6/31
+
+interface Ethernet1/7-8
+  description To-[dc1-org-n9k-4]Po-43
+  no switchport
+  mtu 9216
+  channel-group 78 mode active
+
+
+
+LEAF
+------------------------------------------
+
+interface port-channel21
+  description To-[dc1-org-n9k-1c]Po-12
+  no switchport
+  mtu 9216
+  ip address 10.103.1.1/31
+
+interface Ethernet1/1-2
+  description To-[dc1-org-n9k-1c]Po-12
+  no switchport
+  mtu 9216
+  channel-group 21 mode active
+
+interface port-channel43
+  description To-[dc1-org-n9k-2c]Po-12
+  no switchport
+  mtu 9216
+  ip address 10.103.2.1/31
+
+interface Ethernet1/3-4
+  description To-[dc1-org-n9k-2c]Po-12
+  no switchport
+  mtu 9216
+  channel-group 43 mode active
+
+-------------------------------------
+
+interface port-channel21
+  description To-[dc1-org-n9k-1c]Po-34
+  no switchport
+  mtu 9216
+  ip address 10.103.1.3/31
+
+interface Ethernet1/1-2
+  description To-[dc1-org-n9k-1c]Po-34
+  no switchport
+  mtu 9216
+  channel-group 21 mode active
+
+interface port-channel43
+  description To-[dc1-org-n9k-2c]Po-34
+  no switchport
+  mtu 9216
+  ip address 10.103.2.3/31
+
+interface Ethernet1/3-4
+  description To-[dc1-org-n9k-2c]Po-34
+  no switchport
+  mtu 9216
+  channel-group 43 mode active
+
+-------------------------------------
+
+interface port-channel21
+  description To-[dc1-org-n9k-1c]Po-56
+  no switchport
+  mtu 9216
+  ip address 10.103.1.5/31
+
+interface Ethernet1/1-2
+  description To-[dc1-org-n9k-1c]Po-56
+  no switchport
+  mtu 9216
+  channel-group 21 mode active
+
+interface port-channel43
+  description To-[dc1-org-n9k-2c]Po-56
+  no switchport
+  mtu 9216
+  ip address 10.103.2.5/31
+
+interface Ethernet1/3-4
+  description To-[dc1-org-n9k-2c]Po-56
+  no switchport
+  mtu 9216
+  channel-group 43 mode active
+
+
+--------------------------------------
+
+
+interface port-channel21
+  description To-[dc1-org-n9k-1c]Po-78
+  no switchport
+  mtu 9216
+  ip address 10.103.1.7/31
+
+interface Ethernet1/1-2
+  description To-[dc1-org-n9k-1c]Po-78
+  no switchport
+  mtu 9216
+  channel-group 21 mode active
+
+interface port-channel43
+  description To-[dc1-org-n9k-2c]Po-78
+  no switchport
+  mtu 9216
+  ip address 10.103.2.7/31
+
+interface Ethernet1/3-4
+  description To-[dc1-org-n9k-2c]Po-78
+  no switchport
+  mtu 9216
+  channel-group 43 mode active
+
+
+
+interface ethernet 1/1-4
+no shutdown

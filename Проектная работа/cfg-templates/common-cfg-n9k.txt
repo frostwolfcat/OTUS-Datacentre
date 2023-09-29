@@ -1,0 +1,26 @@
+#features and etc
+nv overlay evpn
+feature bgp
+feature interface-vlan
+feature vn-segment-vlan-based
+feature nv overlay
+
+#stuff
+no password strength-check
+username admin password 5 $5$ILFHHG$01Xtwmbn8U8INCwVWCCUNSZu7XKaBEzYMwYZ1BiHVn9  role network-admin
+ip domain-lookup
+copp profile strict
+snmp-server user admin network-admin auth md5 0x8db34b900b9c65ed98712853175107ad priv 0x8db34b900b9c65ed98712853175107ad localizedkey
+rmon event 1 log trap public description FATAL(1) owner PMON@FATAL
+rmon event 2 log trap public description CRITICAL(2) owner PMON@CRITICAL
+rmon event 3 log trap public description ERROR(3) owner PMON@ERROR
+rmon event 4 log trap public description WARNING(4) owner PMON@WARNING
+rmon event 5 log trap public description INFORMATION(5) owner PMON@INFO
+
+#tcam region change for arp-suppression
+hardware access-list tcam region racl 512
+hardware access-list tcam region e-racl 256
+hardware access-list tcam region arp-ether 256 double-wide
+
+#for pnet-lab booting
+boot nxos bootflash:/nxos.9.3.7a.bin sup-1

@@ -1,0 +1,55 @@
+#features and etc
+nv overlay evpn
+feature bgp
+feature interface-vlan
+feature vn-segment-vlan-based
+feature nv overlay
+
+#features vpc
+feature vpc
+feature fabric forwarding
+feature udld
+feature lacp
+cfs eth distribute
+
+#VPC and lb method cfg
+port-channel load-balance src-dst mac
+vpc domain 30
+  peer-switch
+  role priority 100
+  peer-keepalive destination 192.168.200.0 source 192.168.200.1 vrf vpc-ka
+  delay restore 240
+  peer-gateway
+  layer3 peer-router
+  auto-recovery
+  delay restore interface-vlan 80
+  ip arp synchronize
+
+#vpc-ka
+vrf context vpc-ka
+interface Ethernet1/5
+  description vpc-keep-alive-link
+  no switchport
+  vrf member vpc-ka
+  ip address 192.168.200.0/31
+  no shutdown
+
+#peer-link cfg
+interface port-channel1000
+  description vpc-peer-link
+  switchport mode trunk
+  spanning-tree port type network
+  vpc peer-link
+
+interface Ethernet1/6
+  description vpc-peer-link-member
+  switchport mode trunk
+  channel-group 1000 mode active
+
+interface Ethernet1/7
+  description vpc-peer-link-member
+  switchport mode trunk
+  channel-group 1000 mode active
+
+# infra-vlans on EX series
+system nve infra-vlans 777
